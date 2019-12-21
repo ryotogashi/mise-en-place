@@ -14,8 +14,12 @@ const BasicStyledButton = styled.button`
   }
 `;
 
-const BasicButton = ({ value }) => (
-  <BasicStyledButton>{value}</BasicStyledButton>
+const BasicButton = ({ value, onClick }) => (
+  <BasicStyledButton onClick={onClick}>{value}</BasicStyledButton>
 );
+
+BasicButton.defaultProps = {
+  onClick: null
+};
 
 export default BasicButton;

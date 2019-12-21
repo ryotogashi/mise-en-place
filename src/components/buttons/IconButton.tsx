@@ -7,10 +7,14 @@ const IconStyledButton = styled.a({
   height: "24px"
 });
 
-const IconButton = ({ img, src }) => (
-  <IconStyledButton href={src}>
+const IconButton = ({ img, src, onClick }) => (
+  <IconStyledButton href={src} onClick={onClick}>
     <img src={img} alt="icon" />
   </IconStyledButton>
 );
+
+IconButton.defaultProps = {
+  onClick: null
+};
 
 export default IconButton;

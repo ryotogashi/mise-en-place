@@ -15,8 +15,12 @@ const MaterialStyledButton = styled.button`
   }
 `;
 
-const MaterialButton = ({ value }) => (
-  <MaterialStyledButton>{value}</MaterialStyledButton>
+const MaterialButton = ({ value, onClick }) => (
+  <MaterialStyledButton onClick={onClick}>{value}</MaterialStyledButton>
 );
+
+MaterialButton.defaultProps = {
+  onClick: null
+};
 
 export default MaterialButton;

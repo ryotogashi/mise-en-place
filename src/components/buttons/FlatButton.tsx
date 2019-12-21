@@ -10,6 +10,12 @@ const FlatStyledButton = styled.button({
   margin: "16px"
 });
 
-const FlatButton = ({ value }) => <FlatStyledButton>{value}</FlatStyledButton>;
+const FlatButton = ({ value, onClick }) => (
+  <FlatStyledButton onClick={onClick}>{value}</FlatStyledButton>
+);
+
+FlatButton.defaultProps = {
+  onClick: null
+};
 
 export default FlatButton;
