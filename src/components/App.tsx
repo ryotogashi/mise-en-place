@@ -1,13 +1,13 @@
 import * as React from "react";
-import Buttons from "./buttons/Buttons";
-import Inputs from "./inputs/Inputs";
-import Cards from "./cards/Cards";
+import Button from "./button/Button";
+import Input from "./input/Input";
+import Card from "./card/Card";
 
 const App = () => (
   <>
-    <Buttons />
-    <Inputs />
-    <Cards />
+    <Button />
+    <Input />
+    <Card />
   </>
 );
 
