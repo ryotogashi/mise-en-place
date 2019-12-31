@@ -7,7 +7,12 @@ const StyledInput = styled.input`
   margin: 16px;
   padding: 4px;
   border: none;
-  border-bottom: 1px solid #d1d5db;
+  border-bottom: 1px solid #dddddd;
+  color: #dddddd;
+
+  &::placeholder {
+    color: #dddddd;
+  }
 `;
 
 const UnderlineTextInput = ({ placeholder }) => (

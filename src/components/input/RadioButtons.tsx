@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 const StyledLabel = styled.label`
   display: block;
   margin: 16px;
+  color: gray;
 
   input {
     margin-right: 8px;

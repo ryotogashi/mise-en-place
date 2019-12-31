@@ -5,6 +5,7 @@ const BasicStyledButton = styled.button`
   background-color: white;
   border-radius: 5px;
   border: none;
+  color: gray;
   height: 30px;
   width: 150px;
   cursor: pointer;
