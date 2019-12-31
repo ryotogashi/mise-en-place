@@ -15,12 +15,12 @@ const Cards = () => (
     <SectionTitle>Card</SectionTitle>
     <CardDiv>
       <SimpleCard
-        title="Should we start"
-        detail="Should we start class now, or should we wait for everyone to get here? She did her best to help him. Rock music approaches at high velocity."
+        title="Lorem ipsum dolor"
+        detail="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi porta lorem mollis aliquam."
       />
       <PictureCard
-        title="Should we start"
-        subtitle="Should we start class now, or should we wait for everyone to get here? She did her best to help him. Rock music approaches at high velocity."
+        title="Lorem ipsum dolor"
+        subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi porta lorem mollis aliquam."
         imgSrc="/public/assets/img-for-card.jpg"
       />
     </CardDiv>
