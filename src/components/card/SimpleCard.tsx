@@ -8,7 +8,12 @@ const StyledCard = styled.div`
   text-align: center;
   box-shadow: 2px 2px 8px black;
   margin: 16px;
-  padding: 8px 16px;
+  cursor: pointer;
+
+  h2,
+  p {
+    padding: 8px 16px;
+  }
 `;
 
 interface Props {

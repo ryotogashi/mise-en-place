@@ -8,6 +8,7 @@ const StyledPictureCard = styled.div`
   box-shadow: 2px 2px 8px black;
   margin: 16px;
   position: relative;
+  cursor: pointer;
 `;
 
 const StyledImg = styled.img`
@@ -24,8 +25,9 @@ const CaptionDiv = styled.div`
   text-align: center;
   color: white;
 
-  * {
-    padding: 0 16px;
+  h2,
+  p {
+    padding: 8px 16px;
   }
 `;
 
