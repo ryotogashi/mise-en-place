@@ -2,7 +2,8 @@ import * as React from "react";
 
 import SectionTitle from "../SectionTitle";
 import { SectionDiv } from "../constants";
-import SimpleList from "./SimpleList";
+import BasicList from "./BasicList";
+import CardList from "./CardList";
 
 const names = [
   "Ana Laura",
@@ -25,7 +26,8 @@ const names = [
 const List = () => (
   <SectionDiv>
     <SectionTitle>List</SectionTitle>
-    <SimpleList list={names} />
+    <BasicList list={names} />
+    <CardList list={names} />
   </SectionDiv>
 );
 

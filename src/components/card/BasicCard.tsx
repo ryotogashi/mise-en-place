@@ -4,15 +4,18 @@ import * as React from "react";
 const StyledCard = styled.div`
   display: inline-block;
   width: 28%;
-  height: 230px;
   text-align: center;
-  box-shadow: 2px 2px 8px black;
+  box-shadow: 1px 1px 4px black;
   margin: 16px;
   cursor: pointer;
 
   h2,
   p {
     padding: 8px 16px;
+  }
+
+  &: hover {
+    box-shadow: 2px 2px 8px black;
   }
 `;
 
@@ -21,11 +24,11 @@ interface Props {
   detail: string;
 }
 
-const SimpleCard = ({ title, detail }: Props) => (
+const BasicCard = ({ title, detail }: Props) => (
   <StyledCard>
     <h2>{title}</h2>
-    <p>{detail}</p>
+    {detail !== "" ? <p>{detail}</p> : null}
   </StyledCard>
 );
 
-export default SimpleCard;
+export default BasicCard;

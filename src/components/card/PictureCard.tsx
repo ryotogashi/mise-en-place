@@ -4,17 +4,20 @@ import * as React from "react";
 const StyledPictureCard = styled.div`
   display: inline-block;
   width: 28%;
-  height: 230px;
-  box-shadow: 2px 2px 8px black;
+  box-shadow: 1px 1px 4px black;
   margin: 16px;
   position: relative;
   cursor: pointer;
-`;
 
-const StyledImg = styled.img`
-  position: absolute;
-  height: 100%;
-  width: 100%;
+  &: hover {
+    box-shadow: 2px 2px 8px black;
+  }
+
+  img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
 `;
 
 const CaptionDiv = styled.div`
@@ -39,7 +42,7 @@ interface Props {
 
 const PictureCard = ({ title, subtitle, imgSrc }: Props) => (
   <StyledPictureCard>
-    <StyledImg src={imgSrc} alt="card picture" />
+    <img src={imgSrc} alt="card picture" />
     <CaptionDiv>
       <h2>{title}</h2>
       <p>{subtitle}</p>

@@ -3,7 +3,7 @@ import * as React from "react";
 
 import SectionTitle from "../SectionTitle";
 import { SectionDiv } from "../constants";
-import SimpleCard from "./SimpleCard";
+import SimpleCard from "./BasicCard";
 import PictureCard from "./PictureCard";
 
 const CardDiv = styled.div`

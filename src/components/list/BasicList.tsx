@@ -6,6 +6,7 @@ const StyledListDiv = styled.div`
   height: 300px;
   width: 60%;
   overflow: scroll;
+  color: gray;
 
   ul {
     padding: 0;
@@ -24,7 +25,7 @@ const StyledListDiv = styled.div`
   }
 `;
 
-const SimpleList = ({ list }) => (
+const BasicList = ({ list }) => (
   <StyledListDiv>
     <ul>
       {list.map((item, index) => (
@@ -34,4 +35,4 @@ const SimpleList = ({ list }) => (
   </StyledListDiv>
 );
 
-export default SimpleList;
+export default BasicList;
