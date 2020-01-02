@@ -28,7 +28,7 @@ const StyledListDiv = styled.div`
 const BasicList = ({ list }) => (
   <StyledListDiv>
     <ul>
-      {list.map((item, index) => (
+      {list.map((item: string, index: number) => (
         <li key={index}>{item}</li>
       ))}
     </ul>
