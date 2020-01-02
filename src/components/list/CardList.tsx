@@ -12,8 +12,10 @@ const StyledListDiv = styled.div`
 
 const CardList = ({ list }) => (
   <StyledListDiv>
-    {list.map((item, index) => (
-      <SimpleCard key={index} title={item} detail="" />
+    {list.map((item: string, index: number) => (
+      <SimpleCard key={index}>
+        <h2>{item}</h2>
+      </SimpleCard>
     ))}
   </StyledListDiv>
 );

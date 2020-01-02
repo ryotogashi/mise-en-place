@@ -9,8 +9,7 @@ const StyledCard = styled.div`
   margin: 16px;
   cursor: pointer;
 
-  h2,
-  p {
+  * {
     padding: 8px 16px;
   }
 
@@ -19,16 +18,6 @@ const StyledCard = styled.div`
   }
 `;
 
-interface Props {
-  title: string;
-  detail: string;
-}
-
-const BasicCard = ({ title, detail }: Props) => (
-  <StyledCard>
-    <h2>{title}</h2>
-    {detail !== "" ? <p>{detail}</p> : null}
-  </StyledCard>
-);
+const BasicCard = ({ children }) => <StyledCard>{children}</StyledCard>;
 
 export default BasicCard;

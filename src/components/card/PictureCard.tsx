@@ -28,25 +28,15 @@ const CaptionDiv = styled.div`
   text-align: center;
   color: white;
 
-  h2,
-  p {
+  * {
     padding: 8px 16px;
   }
 `;
 
-interface Props {
-  title: string;
-  subtitle: string;
-  imgSrc: string;
-}
-
-const PictureCard = ({ title, subtitle, imgSrc }: Props) => (
+const PictureCard = ({ imgSrc, children }) => (
   <StyledPictureCard>
     <img src={imgSrc} alt="card picture" />
-    <CaptionDiv>
-      <h2>{title}</h2>
-      <p>{subtitle}</p>
-    </CaptionDiv>
+    <CaptionDiv>{children}</CaptionDiv>
   </StyledPictureCard>
 );
 

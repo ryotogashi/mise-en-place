@@ -14,15 +14,22 @@ const Cards = () => (
   <SectionDiv>
     <SectionTitle>Card</SectionTitle>
     <CardDiv>
-      <SimpleCard
-        title="Lorem ipsum dolor"
-        detail="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi porta lorem mollis aliquam."
-      />
-      <PictureCard
-        title="Lorem ipsum dolor"
-        subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi porta lorem mollis aliquam."
-        imgSrc="/public/assets/img-for-card.jpg"
-      />
+      <SimpleCard>
+        <h2>Lorem ipsum dolor</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi porta
+          lorem mollis aliquam.
+        </p>
+      </SimpleCard>
+      <PictureCard imgSrc="/public/assets/img-for-card.jpg">
+        <h2>Lorem ipsum dolor</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi porta
+          lorem mollis aliquam.
+        </p>
+      </PictureCard>
     </CardDiv>
   </SectionDiv>
 );
