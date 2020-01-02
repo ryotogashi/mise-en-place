@@ -15,8 +15,17 @@ const StyledInput = styled.input`
   }
 `;
 
-const UnderlineTextInput = ({ placeholder }) => (
-  <StyledInput type="text" placeholder={placeholder} />
+interface Props {
+  placeholder: string;
+  onChange: Function | null;
+}
+
+const UnderlineTextInput = ({ placeholder, onChange }: Props) => (
+  <StyledInput
+    type="text"
+    placeholder={placeholder}
+    onChange={event => (onChange ? onChange(event) : null)}
+  />
 );
 
 export default UnderlineTextInput;

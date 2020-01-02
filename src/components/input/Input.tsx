@@ -21,7 +21,7 @@ const Inputs = () => {
       <BasicTextInput placeholder="placeholder" />
       <DateTextInput />
       <PasswordTextInput placeholder="password" />
-      <UnderlineTextInput placeholder="placeholder" />
+      <UnderlineTextInput placeholder="placeholder" onChange={null} />
       <RadioButtons data={radioData} handleRadio={null} />
     </SectionDiv>
   );
