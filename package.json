@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev:start": "webpack-dev-server --open --mode development",
-    "start": "node src/main.tsx"
+    "start": "open dist/index.html"
   },
   "repository": {
     "type": "git",
