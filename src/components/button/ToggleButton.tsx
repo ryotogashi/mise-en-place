@@ -5,7 +5,7 @@ const ToggleButtonDiv = styled.div`
   background-color: white;
   display: inline-block;
   border-radius: 5px;
-  border: solid 0.5px;
+  border: solid 0.5px rgba(221, 221, 221, 0.7);
   color: gray;
   cursor: pointer;
   margin: 16px;
@@ -13,7 +13,7 @@ const ToggleButtonDiv = styled.div`
   div {
     display: inline-block;
     padding: 10px 12px;
-    border-right: solid 0.5px gray;
+    border-right: solid 0.5px rgba(221, 221, 221, 0.7);
 
     &:last-child {
       border-style: none;

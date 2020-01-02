@@ -15,7 +15,10 @@ const Buttons = () => (
     <FlatButton value="button" />
     <IconButton img={`/public/assets/sample-icon.svg`} src="#" />
     <MaterialButton value="button" />
-    <ToggleButton values={["ryo", "rei", "riku"]} onClick={null} />
+    <ToggleButton
+      values={["item 1", "item 2", "item 3", "item 4"]}
+      onClick={null}
+    />
   </SectionDiv>
 );
 
