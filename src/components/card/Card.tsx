@@ -5,6 +5,7 @@ import SectionTitle from "../SectionTitle";
 import { SectionDiv } from "../constants";
 import SimpleCard from "./BasicCard";
 import PictureCard from "./PictureCard";
+import { cardData } from "../constants";
 
 const CardDiv = styled.div`
   display: flex;
@@ -15,20 +16,12 @@ const Cards = () => (
     <SectionTitle>Card</SectionTitle>
     <CardDiv>
       <SimpleCard>
-        <h2>Lorem ipsum dolor</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi porta
-          lorem mollis aliquam.
-        </p>
+        <h2>{cardData.title}</h2>
+        <p>{cardData.content}</p>
       </SimpleCard>
-      <PictureCard imgSrc="/public/assets/img-for-card.jpg">
-        <h2>Lorem ipsum dolor</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi porta
-          lorem mollis aliquam.
-        </p>
+      <PictureCard imgSrc={cardData.cardImg}>
+        <h2>{cardData.title}</h2>
+        <p>{cardData.content}</p>
       </PictureCard>
     </CardDiv>
   </SectionDiv>
