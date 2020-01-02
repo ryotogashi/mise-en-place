@@ -11,7 +11,7 @@ const BasicStyledButton = styled.button`
   cursor: pointer;
   margin: 16px;
   &:hover {
-    background-color: gray;
+    background-color: rgba(221, 221, 221, 0.5);
   }
 `;
 

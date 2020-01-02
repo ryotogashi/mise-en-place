@@ -17,11 +17,11 @@ const Inputs = () => {
 
   return (
     <SectionDiv>
-      <SectionTitle>Inupts</SectionTitle>
-      <BasicTextInput placeholder="text me" />
+      <SectionTitle>Inputs</SectionTitle>
+      <BasicTextInput placeholder="placeholder" />
       <DateTextInput />
       <PasswordTextInput placeholder="password" />
-      <UnderlineTextInput placeholder="test me" />
+      <UnderlineTextInput placeholder="placeholder" onChange={null} />
       <RadioButtons data={radioData} handleRadio={null} />
     </SectionDiv>
   );
