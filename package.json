@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "dev:start": "webpack-dev-server --open --mode development",
-    "start": "node dist/main.js",
-    "heroku-postbuild": "webpack -p"
+    "dev:start": "webpack-dev-server --open --mode development"
   },
   "repository": {
     "type": "git",
@@ -40,8 +38,6 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "dotenv-webpack": "^1.7.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router": "^5.1.2",
