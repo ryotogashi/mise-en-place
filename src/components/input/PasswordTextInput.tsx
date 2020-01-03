@@ -1,6 +1,9 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
+import HideIcon from "../../assets/hide.svg";
+import ShowIcon from "../../assets/show.svg";
+
 const PasswordDiv = styled.div`
   display: inline-block;
   width: 30.5%;
@@ -41,7 +44,7 @@ const PasswordTextInput = ({ placeholder }) => {
   return (
     <PasswordDiv>
       <PasswordLabel htmlFor="password-input" onClick={handleClick}>
-        <PasswordImage src={`/public/assets/${imageName}.svg`} />
+        <PasswordImage src={imageName === "hide" ? HideIcon : ShowIcon} />
       </PasswordLabel>
       <StyledInput
         name="password-input"
