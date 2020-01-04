@@ -17,7 +17,10 @@ const StyledCard = styled.div`
     box-shadow: 2px 2px 8px black;
   }
 `;
+interface Props {
+  children: React.ReactNode;
+}
 
-const BasicCard = ({ children }) => <StyledCard>{children}</StyledCard>;
+const BasicCard = ({ children }: Props) => <StyledCard>{children}</StyledCard>;
 
 export default BasicCard;

@@ -33,7 +33,12 @@ const CaptionDiv = styled.div`
   }
 `;
 
-const PictureCard = ({ imgSrc, children }) => (
+interface Props {
+  imgSrc: string;
+  children: React.ReactNode;
+}
+
+const PictureCard = ({ imgSrc, children }: Props) => (
   <StyledPictureCard>
     <img src={imgSrc} alt="card picture" />
     <CaptionDiv>{children}</CaptionDiv>
