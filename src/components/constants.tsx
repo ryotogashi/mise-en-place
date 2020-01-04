@@ -1,11 +1,4 @@
-import styled from "@emotion/styled";
-
 import CardImage from "../assets/img-for-card.jpg";
-
-export const SectionDiv = styled.div`
-  width: 85%;
-  margin: 0 auto 100px auto;
-`;
 
 // Sample Data
 
