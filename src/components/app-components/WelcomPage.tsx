@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
-import BasicCard from "./card/BasicCard";
+import BasicCard from "../card/BasicCard";
 
 const StyledDiv = styled.div`
   width: 85%;

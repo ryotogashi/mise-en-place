@@ -4,7 +4,7 @@ import BasicTextInput from "./BasicTextInput";
 import DateTextInput from "./DateTextInput";
 import PasswordTextInput from "./PasswordTextInput";
 import UnderlineTextInput from "./UnderlineTextInput";
-import Section from "../Section";
+import Section from "../app-components/Section";
 import RadioButtons from "./RadioButtons";
 
 const Inputs = () => {

@@ -1,10 +1,10 @@
 import * as React from "react";
 
-import Section from "../Section";
+import Section from "../app-components/Section";
 import BasicList from "./BasicList";
 import CardList from "./CardList";
 import SearchList from "./SearchList";
-import { names } from "../constants";
+import { names } from "../app-components/constants";
 
 const List = () => (
   <Section title="List">

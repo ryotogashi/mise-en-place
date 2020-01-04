@@ -2,7 +2,7 @@ import * as React from "react";
 
 import UnderlineTextInput from "../input/UnderlineTextInput";
 import BasicList from "./BasicList";
-import { names } from "../constants";
+import { names } from "../app-components/constants";
 
 interface Props {
   isCaseIntensive: boolean;

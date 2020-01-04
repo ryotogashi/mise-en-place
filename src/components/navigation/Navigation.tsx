@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import Section from "../Section";
+import Section from "../app-components/Section";
 import SideNavigation from "./SideNavigation";
 import TopNavigation from "./TopNavigation";
 

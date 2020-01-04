@@ -5,7 +5,7 @@ import FlatButton from "./FlatButton";
 import IconButton from "./IconButton";
 import MaterialButton from "./MaterialButton";
 import ToggleButton from "./ToggleButton";
-import Section from "../Section";
+import Section from "../app-components/Section";
 import sampeIcon from "../../assets/sample-icon.svg";
 
 const Buttons = () => (

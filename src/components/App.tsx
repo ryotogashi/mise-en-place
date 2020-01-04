@@ -2,7 +2,7 @@ import { Global, css } from "@emotion/core";
 import styled from "@emotion/styled";
 import * as React from "react";
 
-import WelcomPage from "./WelcomPage";
+import WelcomPage from "./app-components/WelcomPage";
 import Button from "./button/Button";
 import Input from "./input/Input";
 import Card from "./card/Card";
