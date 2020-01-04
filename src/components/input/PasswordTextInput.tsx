@@ -32,7 +32,11 @@ const PasswordImage = styled.img`
   wieght: 12px;
 `;
 
-const PasswordTextInput = ({ placeholder }) => {
+interface Props {
+  placeholder: string;
+}
+
+const PasswordTextInput = ({ placeholder }: Props) => {
   const [imageName, setImageName] = React.useState("show");
   const [inputType, setInputType] = React.useState("password");
 
@@ -53,6 +57,10 @@ const PasswordTextInput = ({ placeholder }) => {
       />
     </PasswordDiv>
   );
+};
+
+PasswordTextInput.defaultProps = {
+  placeholder: "password"
 };
 
 export default PasswordTextInput;

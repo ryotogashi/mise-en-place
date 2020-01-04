@@ -37,4 +37,8 @@ const RadioButtons = ({ data, handleRadio = null }: Props) => (
   </>
 );
 
+RadioButtons.defaultProps = {
+  handleRadio: null
+};
+
 export default RadioButtons;

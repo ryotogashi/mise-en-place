@@ -21,6 +21,16 @@ const StyledInput = styled.input`
   }
 `;
 
-const DateTextInput = () => <StyledInput type="date" />;
+interface Props {
+  onChange: () => {} | null;
+}
+
+const DateTextInput = ({ onChange }: Props) => (
+  <StyledInput type="date" onChange={onChange} />
+);
+
+DateTextInput.defaultProps = {
+  onChange: null
+};
 
 export default DateTextInput;

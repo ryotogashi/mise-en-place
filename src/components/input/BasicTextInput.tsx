@@ -11,8 +11,18 @@ const StyledInput = styled.input`
   border-radius: 4px;
 `;
 
-const BasicTextInput = ({ placeholder }) => (
-  <StyledInput type="text" placeholder={placeholder} />
+interface Props {
+  placeholder: string;
+  onChange: () => {} | null;
+}
+
+const BasicTextInput = ({ placeholder, onChange }: Props) => (
+  <StyledInput type="text" placeholder={placeholder} onChange={onChange} />
 );
+
+BasicTextInput.defaultProps = {
+  placeholder: "placeholder",
+  onChange: null
+};
 
 export default BasicTextInput;

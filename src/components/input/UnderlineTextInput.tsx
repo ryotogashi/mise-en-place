@@ -28,4 +28,9 @@ const UnderlineTextInput = ({ placeholder, onChange }: Props) => (
   />
 );
 
+UnderlineTextInput.defaultProps = {
+  placeholder: "placeholder",
+  onChange: null
+};
+
 export default UnderlineTextInput;

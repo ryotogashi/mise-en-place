@@ -4,7 +4,11 @@ import UnderlineTextInput from "../input/UnderlineTextInput";
 import BasicList from "./BasicList";
 import { names } from "../constants";
 
-const SearchList = ({ isCaseIntensive }) => {
+interface Props {
+  isCaseIntensive: boolean;
+}
+
+const SearchList = ({ isCaseIntensive }: Props) => {
   const [nameList, setNameList] = React.useState(names);
 
   const handleChange = event => {

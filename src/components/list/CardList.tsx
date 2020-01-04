@@ -16,7 +16,11 @@ const StyledListDiv = styled.div`
   }
 `;
 
-const CardList = ({ list }) => (
+interface Props {
+  list: string[];
+}
+
+const CardList = ({ list }: Props) => (
   <StyledListDiv>
     {list.map((item: string, index: number) => (
       <SimpleCard key={index}>

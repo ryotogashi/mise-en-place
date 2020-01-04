@@ -16,11 +16,11 @@ const Inputs = () => {
 
   return (
     <Section title="Input">
-      <BasicTextInput placeholder="placeholder" />
+      <BasicTextInput />
       <DateTextInput />
-      <PasswordTextInput placeholder="password" />
-      <UnderlineTextInput placeholder="placeholder" onChange={null} />
-      <RadioButtons data={radioData} handleRadio={null} />
+      <PasswordTextInput />
+      <UnderlineTextInput />
+      <RadioButtons data={radioData} />
     </Section>
   );
 };

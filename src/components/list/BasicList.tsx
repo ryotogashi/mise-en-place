@@ -25,7 +25,11 @@ const StyledListDiv = styled.div`
   }
 `;
 
-const BasicList = ({ list }) => (
+interface Props {
+  list: string[];
+}
+
+const BasicList = ({ list }: Props) => (
   <StyledListDiv>
     <ul>
       {list.map((item: string, index: number) => (
