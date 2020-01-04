@@ -30,8 +30,8 @@ const App = () => (
     <Global styles={globalStyle} />
     <StyledDiv>
       <SideNavigation
-        logo="home"
-        items={["button", "input", "card", "list", "navigation"]}
+        logo="Home"
+        items={["Button", "Input", "Card", "List", "Navigation"]}
       />
       <main>
         <Button />
