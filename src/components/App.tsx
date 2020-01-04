@@ -1,15 +1,46 @@
+import { Global, css } from "@emotion/core";
+import styled from "@emotion/styled";
 import * as React from "react";
 import Button from "./button/Button";
 import Input from "./input/Input";
 import Card from "./card/Card";
 import List from "./list/List";
+import Navigation from "./navigation/Navigation";
+import SideNavigation from "./navigation/SideNavigation";
+
+const globalStyle = css`
+  body {
+    margin: 0;
+  }
+`;
+
+const StyledDiv = styled.div`
+  display: flex;
+
+  main {
+    height: 100vh;
+    width: 100%;
+    overflow: scroll;
+    float: right;
+  }
+`;
 
 const App = () => (
   <>
-    <Button />
-    <Input />
-    <Card />
-    <List />
+    <Global styles={globalStyle} />
+    <StyledDiv>
+      <SideNavigation
+        logo="home"
+        items={["button", "input", "card", "list", "navigation"]}
+      />
+      <main>
+        <Button />
+        <Input />
+        <Card />
+        <List />
+        <Navigation />
+      </main>
+    </StyledDiv>
   </>
 );
 
