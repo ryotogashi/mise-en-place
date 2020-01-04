@@ -1,11 +1,10 @@
 import * as React from "react";
 
-import SectionTitle from "../SectionTitle";
 import BasicTextInput from "./BasicTextInput";
 import DateTextInput from "./DateTextInput";
 import PasswordTextInput from "./PasswordTextInput";
 import UnderlineTextInput from "./UnderlineTextInput";
-import { SectionDiv } from "../constants";
+import Section from "../Section";
 import RadioButtons from "./RadioButtons";
 
 const Inputs = () => {
@@ -16,14 +15,13 @@ const Inputs = () => {
   ];
 
   return (
-    <SectionDiv>
-      <SectionTitle>Inputs</SectionTitle>
+    <Section title="Input">
       <BasicTextInput placeholder="placeholder" />
       <DateTextInput />
       <PasswordTextInput placeholder="password" />
       <UnderlineTextInput placeholder="placeholder" onChange={null} />
       <RadioButtons data={radioData} handleRadio={null} />
-    </SectionDiv>
+    </Section>
   );
 };
 

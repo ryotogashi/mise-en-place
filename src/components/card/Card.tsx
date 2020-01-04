@@ -1,8 +1,7 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
-import SectionTitle from "../SectionTitle";
-import { SectionDiv } from "../constants";
+import Section from "../Section";
 import SimpleCard from "./BasicCard";
 import PictureCard from "./PictureCard";
 import { cardData } from "../constants";
@@ -12,8 +11,7 @@ const CardDiv = styled.div`
 `;
 
 const Cards = () => (
-  <SectionDiv>
-    <SectionTitle>Card</SectionTitle>
+  <Section title="Card">
     <CardDiv>
       <SimpleCard>
         <h2>{cardData.title}</h2>
@@ -24,7 +22,7 @@ const Cards = () => (
         <p>{cardData.content}</p>
       </PictureCard>
     </CardDiv>
-  </SectionDiv>
+  </Section>
 );
 
 export default Cards;
