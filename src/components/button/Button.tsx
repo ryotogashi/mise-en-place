@@ -12,7 +12,7 @@ const Buttons = () => (
   <Section title="Button">
     <BasicButton value="button" />
     <FlatButton value="button" />
-    <IconButton img={sampeIcon} src="#" />
+    <IconButton img={sampeIcon} />
     <MaterialButton value="button" />
     <ToggleButton
       values={["item 1", "item 2", "item 3", "item 4"]}

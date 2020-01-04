@@ -16,7 +16,12 @@ const MaterialStyledButton = styled.button`
   }
 `;
 
-const MaterialButton = ({ value, onClick }) => (
+interface Props {
+  value: string;
+  onClick: () => {} | null;
+}
+
+const MaterialButton = ({ value, onClick }: Props) => (
   <MaterialStyledButton onClick={onClick}>{value}</MaterialStyledButton>
 );
 

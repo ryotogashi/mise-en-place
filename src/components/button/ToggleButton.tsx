@@ -27,18 +27,13 @@ const ToggleButtonDiv = styled.div`
 
 interface Props {
   values: string[];
-  onClick: Function | null;
+  onClick: () => {} | null;
 }
 
 const ToggleButton = ({ values, onClick }: Props) => (
   <ToggleButtonDiv>
     {values.map((item, index) => (
-      <div
-        key={index}
-        onClick={() => {
-          onClick(index);
-        }}
-      >
+      <div key={index} onClick={onClick}>
         {item}
       </div>
     ))}

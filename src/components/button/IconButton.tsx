@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 
-const IconStyledButton = styled.a`
+const IconStyledButton = styled.div`
   display: inline-block;
   margin: 16px;
   height: 24px;
@@ -12,8 +12,13 @@ const IconStyledButton = styled.a`
   }
 `;
 
-const IconButton = ({ img, src, onClick }) => (
-  <IconStyledButton href={src} onClick={onClick}>
+interface Props {
+  img: string;
+  onClick: () => {} | null;
+}
+
+const IconButton = ({ img, onClick }: Props) => (
+  <IconStyledButton onClick={onClick}>
     <img src={img} alt="icon" />
   </IconStyledButton>
 );

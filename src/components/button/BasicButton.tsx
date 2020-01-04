@@ -15,7 +15,12 @@ const BasicStyledButton = styled.button`
   }
 `;
 
-const BasicButton = ({ value, onClick }) => (
+interface Props {
+  value: string;
+  onClick: () => {} | null;
+}
+
+const BasicButton = ({ value, onClick }: Props) => (
   <BasicStyledButton onClick={onClick}>{value}</BasicStyledButton>
 );
 

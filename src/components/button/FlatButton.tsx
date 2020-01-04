@@ -11,7 +11,12 @@ const FlatStyledButton = styled.button`
   margin: 16px;
 `;
 
-const FlatButton = ({ value, onClick }) => (
+interface Props {
+  value: string;
+  onClick: () => {} | null;
+}
+
+const FlatButton = ({ value, onClick }: Props) => (
   <FlatStyledButton onClick={onClick}>{value}</FlatStyledButton>
 );
 
