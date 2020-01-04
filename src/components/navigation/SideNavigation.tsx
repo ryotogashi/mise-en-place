@@ -16,9 +16,14 @@ const StyledNav = styled.nav`
   .logo {
     padding: 24px 0 24px 16px;
     font-size: 24px;
+
+    &:hover {
+      color: #ffffff;
+      box-shadow: 1px 1px 4px black;
+    }
   }
 
-  div {
+  .nav-item {
     padding: 16px 0 16px 24px;
 
     &:hover {
@@ -26,11 +31,24 @@ const StyledNav = styled.nav`
       box-shadow: 1px 1px 4px black;
     }
   }
+
+  .nav-item-child {
+    padding: 16px 0 16px 32px;
+
+    &:hover {
+      color: #ffffff;
+      box-shadow: 1px 1px 4px black;
+    }
+  }
+
+  .nav-item-child-inactive {
+    display: none;
+  }
 `;
 
 interface Props {
   logo: string;
-  items: string[];
+  items: [string, string[] | null][];
 }
 
 const SideNavigation = ({ logo, items }: Props) => {
@@ -39,11 +57,27 @@ const SideNavigation = ({ logo, items }: Props) => {
       <a href="">
         <div className="logo">{logo}</div>
       </a>
-      {items.map((item, index) => (
-        <a key={index} href={`#${item.toLowerCase()}`}>
-          <div>{item}</div>
-        </a>
-      ))}
+      {items.map(([item, children], index) => {
+        return (
+          <div key={index}>
+            <a key={index} href={`#${item.toLowerCase()}`}>
+              <div className="nav-item">{item}</div>
+            </a>
+            {children === null
+              ? null
+              : children.map((child, childIndex) => (
+                  <a
+                    key={index * 100 + childIndex}
+                    href={`#${child.toLowerCase()}`}
+                  >
+                    <div className="nav-item-child nav-item-child-inactive">
+                      {child}
+                    </div>
+                  </a>
+                ))}
+          </div>
+        );
+      })}
     </StyledNav>
   );
 };

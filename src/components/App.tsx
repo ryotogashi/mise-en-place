@@ -32,7 +32,13 @@ const App = () => (
     <StyledDiv>
       <SideNavigation
         logo="Mise en place"
-        items={["Button", "Input", "Card", "List", "Navigation"]}
+        items={[
+          ["Button", null],
+          ["Input", null],
+          ["Card", null],
+          ["List", null],
+          ["Navigation", null]
+        ]}
       />
       <main>
         <WelcomPage />
