@@ -4,7 +4,7 @@ import * as React from "react";
 import Section from "../app-components/Section";
 import SimpleCard from "./BasicCard";
 import PictureCard from "./PictureCard";
-import { cardData } from "../app-components/constants";
+import { cardData } from "../constants";
 
 const CardDiv = styled.div`
   display: flex;

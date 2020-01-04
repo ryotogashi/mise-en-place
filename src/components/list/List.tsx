@@ -4,7 +4,7 @@ import Section from "../app-components/Section";
 import BasicList from "./BasicList";
 import CardList from "./CardList";
 import SearchList from "./SearchList";
-import { names } from "../app-components/constants";
+import { names } from "../constants";
 
 const List = () => (
   <Section title="List">
