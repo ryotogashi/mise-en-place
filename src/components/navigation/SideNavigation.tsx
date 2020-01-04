@@ -1,26 +1,6 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
-interface Props {
-  logo: string;
-  items: string[];
-}
-
-const SideNavigation = ({ logo, items }: Props) => {
-  return (
-    <StyledNav>
-      <a href="">
-        <div className="logo">{logo}</div>
-      </a>
-      {items.map((item, index) => (
-        <a key={index} href={`#${item.toLowerCase()}`}>
-          <div>{item}</div>
-        </a>
-      ))}
-    </StyledNav>
-  );
-};
-
 const StyledNav = styled.nav`
   height: 100vh;
   width: 20%;
@@ -47,5 +27,25 @@ const StyledNav = styled.nav`
     }
   }
 `;
+
+interface Props {
+  logo: string;
+  items: string[];
+}
+
+const SideNavigation = ({ logo, items }: Props) => {
+  return (
+    <StyledNav>
+      <a href="">
+        <div className="logo">{logo}</div>
+      </a>
+      {items.map((item, index) => (
+        <a key={index} href={`#${item.toLowerCase()}`}>
+          <div>{item}</div>
+        </a>
+      ))}
+    </StyledNav>
+  );
+};
 
 export default SideNavigation;
