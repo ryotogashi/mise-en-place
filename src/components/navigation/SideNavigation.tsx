@@ -13,8 +13,8 @@ const SideNavigation = ({ logo, items }: Props) => {
         <div className="logo">{logo}</div>
       </a>
       {items.map((item, index) => (
-        <a href={`#${item}`}>
-          <div key={index}>{item}</div>
+        <a key={index} href={`#${item.toLowerCase()}`}>
+          <div>{item}</div>
         </a>
       ))}
     </StyledNav>
