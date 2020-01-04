@@ -8,6 +8,12 @@ const StyledListDiv = styled.div`
   height: 400px;
   overflow: scroll;
   width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+
+  div {
+    width: 25%;
+  }
 `;
 
 const CardList = ({ list }) => (

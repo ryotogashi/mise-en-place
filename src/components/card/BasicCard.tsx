@@ -3,7 +3,7 @@ import * as React from "react";
 
 const StyledCard = styled.div`
   display: inline-block;
-  width: 28%;
+  width: 95%;
   text-align: center;
   box-shadow: 1px 1px 4px black;
   margin: 16px;

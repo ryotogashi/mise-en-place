@@ -3,7 +3,7 @@ import * as React from "react";
 
 const StyledPictureCard = styled.div`
   display: inline-block;
-  width: 28%;
+  width: 95%;
   box-shadow: 1px 1px 4px black;
   margin: 16px;
   position: relative;
