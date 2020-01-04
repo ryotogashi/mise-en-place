@@ -1,6 +1,8 @@
 import { Global, css } from "@emotion/core";
 import styled from "@emotion/styled";
 import * as React from "react";
+
+import WelcomPage from "./WelcomPage";
 import Button from "./button/Button";
 import Input from "./input/Input";
 import Card from "./card/Card";
@@ -24,16 +26,16 @@ const StyledDiv = styled.div`
     float: right;
   }
 `;
-
 const App = () => (
   <>
     <Global styles={globalStyle} />
     <StyledDiv>
       <SideNavigation
-        logo="Home"
+        logo="Mise en place"
         items={["Button", "Input", "Card", "List", "Navigation"]}
       />
       <main>
+        <WelcomPage />
         <Button />
         <Input />
         <Card />
