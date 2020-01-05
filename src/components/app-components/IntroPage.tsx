@@ -19,7 +19,7 @@ const StyledDiv = styled.div`
     .left-pane,
     .right-pane {
       display: inline-block;
-      width: 40%;
+      width: 50%;
       margin: 0 auto;
     }
   }
