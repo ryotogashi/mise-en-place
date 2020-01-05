@@ -16,7 +16,7 @@ const Inputs = () => {
   ];
 
   return (
-    <Section title="Input">
+    <Section title="Inputs">
       <IntroPage title="Basic Text Input" description="Normal text input">
         <BasicTextInput />
       </IntroPage>

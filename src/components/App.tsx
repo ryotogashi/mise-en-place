@@ -29,11 +29,11 @@ const App = () => (
       <SideNavigation
         logo="Mise en place"
         items={[
-          ["Button", null],
-          ["Input", null],
-          ["Card", null],
-          ["List", null],
-          ["Navigation", null]
+          ["Buttons", null],
+          ["Inputs", null],
+          ["Cards", null],
+          ["Lists", null],
+          ["Navigations", null]
         ]}
       />
       <main>

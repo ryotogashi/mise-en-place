@@ -6,7 +6,7 @@ import SideNavigation from "./SideNavigation";
 import TopNavigation from "./TopNavigation";
 
 const List = () => (
-  <Section title="Navigation">
+  <Section title="Navigations">
     <IntroPage title="Basic Text Input" description="Normal text input">
       <SideNavigation
         logo={"logo item"}

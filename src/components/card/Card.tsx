@@ -7,7 +7,7 @@ import PictureCard from "./PictureCard";
 import { cardData } from "../constants";
 
 const Cards = () => (
-  <Section title="Card">
+  <Section title="Cards">
     <IntroPage title="Basic Card" description="Normal card">
       <SimpleCard>
         <h2>{cardData.title}</h2>

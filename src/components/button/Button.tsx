@@ -10,7 +10,7 @@ import Section from "../app-components/Section";
 import sampeIcon from "../../assets/sample-icon.svg";
 
 const Buttons = () => (
-  <Section title="Button">
+  <Section title="Buttons">
     <IntroPage
       title="Basic Button"
       description="Normal button use for causing action."

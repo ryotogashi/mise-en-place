@@ -8,7 +8,7 @@ import SearchList from "./SearchList";
 import { names } from "../constants";
 
 const List = () => (
-  <Section title="List">
+  <Section title="Lists">
     <IntroPage title="Basic Text Input" description="Normal text input">
       <BasicList list={names} />
     </IntroPage>
