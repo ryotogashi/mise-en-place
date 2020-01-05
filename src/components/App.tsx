@@ -14,6 +14,24 @@ const globalStyle = css`
   body {
     margin: 0;
   }
+
+  a {
+    text-decoration: none;
+  }
+
+  hr {
+    width: 10%;
+    margin: 56px auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #323439;
+  }
 `;
 
 const StyledDiv = styled.div`
