@@ -7,12 +7,13 @@ const StyledListDiv = styled.div`
   margin: 16px;
   height: 400px;
   overflow: scroll;
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-around;
 
   div {
-    width: 25%;
+    width: 43%;
   }
 `;
 

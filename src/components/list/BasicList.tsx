@@ -4,7 +4,7 @@ import * as React from "react";
 const StyledListDiv = styled.div`
   margin: 16px;
   height: 300px;
-  width: 60%;
+  width: 90%;
   overflow: scroll;
   color: gray;
 
