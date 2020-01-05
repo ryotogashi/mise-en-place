@@ -4,16 +4,18 @@ import * as React from "react";
 interface Props {
   logo: string;
   navHeight: string;
+  navWidth: string;
   items: [string, string[] | null][];
 }
 
-const SideNavigation = ({ logo, navHeight, items }: Props) => {
+const SideNavigation = ({ logo, navHeight, navWidth, items }: Props) => {
   const StyledNav = styled.nav`
     height: ${navHeight};
-    width: 20%;
+    width: ${navWidth};
     background-color: #323439;
     color: #e5e5e5;
     overflow: scroll;
+    text-align: left;
 
     .nav {
       &:hover {
@@ -71,7 +73,8 @@ const SideNavigation = ({ logo, navHeight, items }: Props) => {
 };
 
 SideNavigation.defaultProps = {
-  navHeight: "100vh"
+  navHeight: "100vh",
+  navWidth: "20%"
 };
 
 export default SideNavigation;
