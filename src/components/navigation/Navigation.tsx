@@ -7,7 +7,7 @@ import TopNavigation from "./TopNavigation";
 
 const List = () => (
   <Section title="Navigations">
-    <IntroPage title="Basic Text Input" description="Normal text input">
+    <IntroPage title="Side Navigation" description="Side navigation">
       <SideNavigation
         logo={"logo item"}
         navHeight="100%"
@@ -21,7 +21,7 @@ const List = () => (
       />
     </IntroPage>
 
-    <IntroPage title="Basic Text Input" description="Normal text input">
+    <IntroPage title="Top Navigation" description="Top navigation">
       <TopNavigation
         logo={"logo item"}
         items={["item 1", "item 2", "item 3", "item 4"]}

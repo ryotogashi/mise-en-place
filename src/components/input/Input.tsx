@@ -21,19 +21,25 @@ const Inputs = () => {
         <BasicTextInput />
       </IntroPage>
 
-      <IntroPage title="Basic Text Input" description="Normal text input">
+      <IntroPage title="Date Text Input" description="Date type input">
         <DateTextInput />
       </IntroPage>
 
-      <IntroPage title="Basic Text Input" description="Normal text input">
+      <IntroPage
+        title="Password Text Input"
+        description="Password type input which is able to see the password by clicking icon."
+      >
         <PasswordTextInput />
       </IntroPage>
 
-      <IntroPage title="Basic Text Input" description="Normal text input">
+      <IntroPage
+        title="Underline Text Input"
+        description="Underline text input"
+      >
         <UnderlineTextInput />
       </IntroPage>
 
-      <IntroPage title="Basic Text Input" description="Normal text input">
+      <IntroPage title="Radio Buttons" description="Normal radio button group">
         <RadioButtons data={radioData} />
       </IntroPage>
     </Section>

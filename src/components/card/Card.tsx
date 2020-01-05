@@ -14,7 +14,7 @@ const Cards = () => (
         <p>{cardData.content}</p>
       </SimpleCard>
     </IntroPage>
-    <IntroPage title="Basic Card" description="Normal card">
+    <IntroPage title="Picture Covered Card" description="Picture covered card">
       <PictureCard imgSrc={cardData.cardImg}>
         <h2>{cardData.title}</h2>
         <p>{cardData.content}</p>

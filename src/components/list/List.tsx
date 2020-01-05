@@ -9,15 +9,18 @@ import { names } from "../constants";
 
 const List = () => (
   <Section title="Lists">
-    <IntroPage title="Basic Text Input" description="Normal text input">
+    <IntroPage title="Normal List" description="Normal list">
       <BasicList list={names} />
     </IntroPage>
 
-    <IntroPage title="Basic Text Input" description="Normal text input">
+    <IntroPage title="Card List" description="Card list">
       <CardList list={names} />
     </IntroPage>
 
-    <IntroPage title="Basic Text Input" description="Normal text input">
+    <IntroPage
+      title="Example list usage"
+      description="List with search input. Choosable weather case-intensive or case-sensitive."
+    >
       <SearchList isCaseIntensive={true} />
     </IntroPage>
   </Section>
