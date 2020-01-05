@@ -21,7 +21,8 @@ const globalStyle = css`
 
   hr {
     width: 10%;
-    margin: 56px auto;
+    margin: 56px auto 32px auto;
+    opacity: 0.3;
   }
 
   h1,
