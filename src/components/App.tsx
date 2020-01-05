@@ -17,6 +17,7 @@ const globalStyle = css`
 
   a {
     text-decoration: none;
+    color: #e5e5e5;
   }
 
   hr {

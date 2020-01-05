@@ -11,19 +11,16 @@ const StyledNav = styled.nav`
   flex-wrap: nowrap;
   justify-content: space-between;
 
-  a {
-    text-decoration: none;
-    color: #e5e5e5;
+  .nav {
+    &:hover {
+      color: #ffffff;
+      box-shadow: 1px 1px 4px black;
+    }
   }
 
   .logo {
     padding: 14px 24px 14px 24px;
     font-size: 24px;
-
-    &:hover {
-      color: #ffffff;
-      box-shadow: 1px 1px 4px black;
-    }
   }
 
   .options {
@@ -32,11 +29,6 @@ const StyledNav = styled.nav`
 
   .option {
     padding: 19px;
-
-    &:hover {
-      color: #ffffff;
-      box-shadow: 1px 1px 4px black;
-    }
   }
 `;
 
@@ -48,12 +40,12 @@ interface Props {
 const TopNavigation = ({ logo, items }: Props) => (
   <StyledNav>
     <a href="">
-      <div className="logo">{logo}</div>
+      <div className="nav logo">{logo}</div>
     </a>
     <div className="options">
       {items.map((item, index) => (
         <a key={index} href={item.toLowerCase()}>
-          <div className="option">{item}</div>
+          <div className="nav option">{item}</div>
         </a>
       ))}
     </div>

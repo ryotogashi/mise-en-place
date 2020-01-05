@@ -8,37 +8,24 @@ const StyledNav = styled.nav`
   color: #e5e5e5;
   overflow: scroll;
 
-  a {
-    text-decoration: none;
-    color: #e5e5e5;
+  .nav {
+    &:hover {
+      color: #ffffff;
+      box-shadow: 1px 1px 4px black;
+    }
   }
 
   .logo {
     padding: 24px 0 24px 16px;
     font-size: 24px;
-
-    &:hover {
-      color: #ffffff;
-      box-shadow: 1px 1px 4px black;
-    }
   }
 
   .nav-item {
     padding: 16px 0 16px 24px;
-
-    &:hover {
-      color: #ffffff;
-      box-shadow: 1px 1px 4px black;
-    }
   }
 
   .nav-item-child {
     padding: 16px 0 16px 32px;
-
-    &:hover {
-      color: #ffffff;
-      box-shadow: 1px 1px 4px black;
-    }
   }
 
   .nav-item-child-inactive {
@@ -55,13 +42,13 @@ const SideNavigation = ({ logo, items }: Props) => {
   return (
     <StyledNav>
       <a href="">
-        <div className="logo">{logo}</div>
+        <div className="nav logo">{logo}</div>
       </a>
       {items.map(([item, children], index) => {
         return (
           <div key={index}>
             <a key={index} href={`#${item.toLowerCase()}`}>
-              <div className="nav-item">{item}</div>
+              <div className="nav nav-item">{item}</div>
             </a>
             {children === null
               ? null
@@ -70,7 +57,7 @@ const SideNavigation = ({ logo, items }: Props) => {
                     key={index * 100 + childIndex}
                     href={`#${child.toLowerCase()}`}
                   >
-                    <div className="nav-item-child nav-item-child-inactive">
+                    <div className="nav nav-item-child nav-item-child-inactive">
                       {child}
                     </div>
                   </a>
