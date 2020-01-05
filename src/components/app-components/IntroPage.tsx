@@ -3,21 +3,37 @@ import * as React from "react";
 
 interface Props {
   title: string;
-  discription: string;
+  description: string;
   children: React.ReactNode;
   imgSrcs: [string, string][] | null;
 }
 
 const StyledDiv = styled.div`
   width: 100%;
+  text-align: center;
+
+  .pane {
+    display: flex;
+    flex-flow: row nowrap;
+
+    .left-pane,
+    .right-pane {
+      display: inline-block;
+      width: 40%;
+      margin: 0 auto;
+    }
+  }
 `;
 
-const IntroPage = ({ title, discription, children, imgSrcs }: Props) => (
+const IntroPage = ({ title, description, children, imgSrcs }: Props) => (
   <StyledDiv>
-    <h2>{title}</h2>
-    <h5>Usage</h5>
-    <p>{discription}</p>
-    <div>{children}</div>
+    <div className="pane">
+      <div className="left-pane">
+        <h2>{title}</h2>
+        <p>{description}</p>
+      </div>
+      <div className="right-pane">{children}</div>
+    </div>
     <>
       {imgSrcs.map(([imgSrc, imgTag], index) => (
         <div key={index}>
@@ -25,12 +41,13 @@ const IntroPage = ({ title, discription, children, imgSrcs }: Props) => (
           <p>{imgTag}</p>
         </div>
       ))}
+      <hr />
     </>
   </StyledDiv>
 );
 
 IntroPage.defaultProps = {
-  imgSrcs: null
+  imgSrcs: []
 };
 
 export default IntroPage;
