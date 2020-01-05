@@ -8,6 +8,7 @@ const List = () => (
   <Section title="Navigation">
     <SideNavigation
       logo={"logo item"}
+      navHeight="100%"
       items={[
         ["item 1", null],
         ["item 2", ["item 2 child 1", "item 2 child 2", "item 2 child 3"]],
