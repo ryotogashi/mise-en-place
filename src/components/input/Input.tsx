@@ -1,5 +1,6 @@
 import * as React from "react";
 
+import IntroPage from "../app-components/IntroPage";
 import BasicTextInput from "./BasicTextInput";
 import DateTextInput from "./DateTextInput";
 import PasswordTextInput from "./PasswordTextInput";
@@ -16,11 +17,25 @@ const Inputs = () => {
 
   return (
     <Section title="Input">
-      <BasicTextInput />
-      <DateTextInput />
-      <PasswordTextInput />
-      <UnderlineTextInput />
-      <RadioButtons data={radioData} />
+      <IntroPage title="Basic Text Input" description="Normal text input">
+        <BasicTextInput />
+      </IntroPage>
+
+      <IntroPage title="Basic Text Input" description="Normal text input">
+        <DateTextInput />
+      </IntroPage>
+
+      <IntroPage title="Basic Text Input" description="Normal text input">
+        <PasswordTextInput />
+      </IntroPage>
+
+      <IntroPage title="Basic Text Input" description="Normal text input">
+        <UnderlineTextInput />
+      </IntroPage>
+
+      <IntroPage title="Basic Text Input" description="Normal text input">
+        <RadioButtons data={radioData} />
+      </IntroPage>
     </Section>
   );
 };

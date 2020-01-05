@@ -13,7 +13,7 @@ const Buttons = () => (
   <Section title="Button">
     <IntroPage
       title="Basic Button"
-      description="Nomal button use for causing action."
+      description="Normal button use for causing action."
     >
       <BasicButton />
     </IntroPage>
