@@ -7,7 +7,6 @@ const StyledCard = styled.div`
   text-align: center;
   box-shadow: 1px 1px 4px black;
   margin: 16px;
-  cursor: pointer;
 
   * {
     padding: 8px 16px;
