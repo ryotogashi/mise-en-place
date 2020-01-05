@@ -21,6 +21,7 @@ const FlatButton = ({ value, onClick }: Props) => (
 );
 
 FlatButton.defaultProps = {
+  value: "button",
   onClick: null
 };
 

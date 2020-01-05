@@ -25,6 +25,7 @@ const BasicButton = ({ value, onClick }: Props) => (
 );
 
 BasicButton.defaultProps = {
+  value: "button",
   onClick: null
 };
 

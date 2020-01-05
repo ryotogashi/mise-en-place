@@ -26,6 +26,7 @@ const MaterialButton = ({ value, onClick }: Props) => (
 );
 
 MaterialButton.defaultProps = {
+  value: "button",
   onClick: null
 };
 

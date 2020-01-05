@@ -10,14 +10,11 @@ import sampeIcon from "../../assets/sample-icon.svg";
 
 const Buttons = () => (
   <Section title="Button">
-    <BasicButton value="button" />
-    <FlatButton value="button" />
+    <BasicButton />
+    <FlatButton />
     <IconButton img={sampeIcon} />
-    <MaterialButton value="button" />
-    <ToggleButton
-      values={["item 1", "item 2", "item 3", "item 4"]}
-      onClick={null}
-    />
+    <MaterialButton />
+    <ToggleButton />
   </Section>
 );
 
