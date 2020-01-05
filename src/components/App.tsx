@@ -1,7 +1,8 @@
-import { Global, css } from "@emotion/core";
+import { Global } from "@emotion/core";
 import styled from "@emotion/styled";
 import * as React from "react";
 
+import { GlobalStyle } from "./constants";
 import WelcomPage from "./app-components/WelcomPage";
 import Button from "./button/Button";
 import Input from "./input/Input";
@@ -9,32 +10,6 @@ import Card from "./card/Card";
 import List from "./list/List";
 import Navigation from "./navigation/Navigation";
 import SideNavigation from "./navigation/SideNavigation";
-
-const globalStyle = css`
-  body {
-    margin: 0;
-  }
-
-  a {
-    text-decoration: none;
-    color: #e5e5e5;
-  }
-
-  hr {
-    width: 10%;
-    margin: 56px auto 32px auto;
-    opacity: 0.3;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: #323439;
-  }
-`;
 
 const StyledDiv = styled.div`
   display: flex;
@@ -46,9 +21,10 @@ const StyledDiv = styled.div`
     float: right;
   }
 `;
+
 const App = () => (
   <>
-    <Global styles={globalStyle} />
+    <Global styles={GlobalStyle} />
     <StyledDiv>
       <SideNavigation
         logo="Mise en place"
