@@ -40,4 +40,9 @@ const ToggleButton = ({ values, onClick }: Props) => (
   </ToggleButtonDiv>
 );
 
+ToggleButton.defaultProps = {
+  values: ["item 1", "item 2", "item 3", "item 4"],
+  onClick: null
+};
+
 export default ToggleButton;

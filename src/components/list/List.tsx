@@ -1,16 +1,28 @@
 import * as React from "react";
 
-import Section from "../Section";
+import Section from "../app-components/Section";
+import IntroPage from "../app-components/IntroPage";
 import BasicList from "./BasicList";
 import CardList from "./CardList";
 import SearchList from "./SearchList";
 import { names } from "../constants";
 
 const List = () => (
-  <Section title="List">
-    <BasicList list={names} />
-    <CardList list={names} />
-    <SearchList isCaseIntensive={true} />
+  <Section title="Lists">
+    <IntroPage title="Normal List" description="Normal list">
+      <BasicList list={names} />
+    </IntroPage>
+
+    <IntroPage title="Card List" description="Card list">
+      <CardList list={names} />
+    </IntroPage>
+
+    <IntroPage
+      title="Example list usage"
+      description="List with search input. Choosable weather case-intensive or case-sensitive."
+    >
+      <SearchList isCaseIntensive={true} />
+    </IntroPage>
   </Section>
 );
 

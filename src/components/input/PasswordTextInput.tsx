@@ -6,7 +6,7 @@ import ShowIcon from "../../assets/show.svg";
 
 const PasswordDiv = styled.div`
   display: inline-block;
-  width: 30.5%;
+  width: 70.5%;
   margin: 16px;
   padding-right: 5px;
 `;

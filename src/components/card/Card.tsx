@@ -1,27 +1,25 @@
-import styled from "@emotion/styled";
 import * as React from "react";
 
-import Section from "../Section";
+import Section from "../app-components/Section";
+import IntroPage from "../app-components/IntroPage";
 import SimpleCard from "./BasicCard";
 import PictureCard from "./PictureCard";
 import { cardData } from "../constants";
 
-const CardDiv = styled.div`
-  display: flex;
-`;
-
 const Cards = () => (
-  <Section title="Card">
-    <CardDiv>
+  <Section title="Cards">
+    <IntroPage title="Basic Card" description="Normal card">
       <SimpleCard>
         <h2>{cardData.title}</h2>
         <p>{cardData.content}</p>
       </SimpleCard>
+    </IntroPage>
+    <IntroPage title="Picture Covered Card" description="Picture covered card">
       <PictureCard imgSrc={cardData.cardImg}>
         <h2>{cardData.title}</h2>
         <p>{cardData.content}</p>
       </PictureCard>
-    </CardDiv>
+    </IntroPage>
   </Section>
 );
 

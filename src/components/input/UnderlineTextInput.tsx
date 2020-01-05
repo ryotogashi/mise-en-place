@@ -3,7 +3,7 @@ import * as React from "react";
 
 const StyledInput = styled.input`
   height: 24px;
-  width: 30%;
+  width: 70%;
   margin: 16px;
   padding: 4px;
   border: none;

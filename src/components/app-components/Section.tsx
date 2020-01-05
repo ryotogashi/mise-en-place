@@ -8,7 +8,6 @@ export const StyledSection = styled.section`
   h1 {
     padding-top: 5%;
     margin: -5% 0 5% 0;
-    color: #323439;
   }
 `;
 
