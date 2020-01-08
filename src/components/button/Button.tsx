@@ -1,12 +1,13 @@
 import * as React from "react";
 
+import Section from "../app-components/Section";
 import IntroPage from "../app-components/IntroPage";
 import BasicButton from "./BasicButton";
 import FlatButton from "./FlatButton";
 import IconButton from "./IconButton";
 import MaterialButton from "./MaterialButton";
+import SquareIconButton from "./SquareIconButton";
 import ToggleButton from "./ToggleButton";
-import Section from "../app-components/Section";
 import sampeIcon from "../../assets/sample-icon.svg";
 
 const Buttons = () => (
@@ -17,24 +18,35 @@ const Buttons = () => (
     >
       <BasicButton />
     </IntroPage>
+
     <IntroPage
       title="Flat Button"
       description="Flut button use for causing action."
     >
       <FlatButton />
     </IntroPage>
+
     <IntroPage
       title="Icon Button"
       description="Icon button use for causing action."
     >
       <IconButton img={sampeIcon} />
     </IntroPage>
+
+    <IntroPage
+      title="Icon Button"
+      description="Icon button use for causing action."
+    >
+      <SquareIconButton></SquareIconButton>
+    </IntroPage>
+
     <IntroPage
       title="Material Button"
       description="Material button use for causing action."
     >
       <MaterialButton />
     </IntroPage>
+
     <IntroPage
       title="Toggle Button"
       description="Toggle button use for causing action."
