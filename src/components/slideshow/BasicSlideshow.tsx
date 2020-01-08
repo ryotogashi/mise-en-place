@@ -2,6 +2,8 @@ import styled from "@emotion/styled";
 import * as React from "react";
 
 import CustomRadioButton from "../input/CustomRadioButton";
+import SquareIconButton from "../button/SquareIconButton";
+import { LeftArrow, RightArrow } from "./Arrow";
 
 interface Props {
   width: string;
@@ -38,28 +40,9 @@ const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
       position: absolute;
       top: 50%;
       width: 100%;
-
-      button {
-        height: 45px;
-        width: 45px;
-        background-color: rgba(225, 225, 225, 0.3);
-        border: none;
-        border-radius: 0;
-        padding: 7.5px;
-
-        &:hover {
-          background-color: rgba(225, 225, 225, 0.9);
-          transition: all 0.5s ease-out;
-        }
-      }
-
-      .left-slideshow-button {
-        float: left;
-      }
-
-      .right-slideshow-button {
-        float: right;
-      }
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
     }
 
     .radio-group {
@@ -98,52 +81,12 @@ const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
         ))}
       </div>
       <div className="button-group">
-        <button
-          value="left"
-          className="left-slideshow-button"
-          onClick={event => {
-            handleClick(event);
-          }}
-        >
-          <svg
-            width="30px"
-            height="30px"
-            viewBox="0 0 50 80"
-            xmlSpace="preserve"
-          >
-            <polyline
-              fill="none"
-              stroke="#FFFFFF"
-              strokeWidth="1"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              points="45.63,75.8 0.375,38.087 45.63,0.375"
-            />
-          </svg>
-        </button>
-        <button
-          value="right"
-          className="right-slideshow-button"
-          onClick={event => {
-            handleClick(event);
-          }}
-        >
-          <svg
-            width="30px"
-            height="30px"
-            viewBox="0 0 50 80"
-            xmlSpace="preserve"
-          >
-            <polyline
-              fill="none"
-              stroke="#FFFFFF"
-              strokeWidth="1"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              points="0.375,0.375 45.63,38.087 0.375,75.8"
-            />
-          </svg>
-        </button>
+        <SquareIconButton onClick={handleClick} value="left">
+          <LeftArrow />
+        </SquareIconButton>
+        <SquareIconButton onClick={handleClick} value="right">
+          <RightArrow />
+        </SquareIconButton>
       </div>
       <div className="radio-group">
         <CustomRadioButton
