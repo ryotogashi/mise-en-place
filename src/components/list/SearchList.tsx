@@ -11,8 +11,8 @@ interface Props {
 const SearchList = ({ isCaseIntensive }: Props) => {
   const [nameList, setNameList] = React.useState(names);
 
-  const handleChange = event => {
-    const searchWord = event.target.value;
+  const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
+    const searchWord = event.currentTarget.value;
     setNameList(
       names.filter(item =>
         isCaseIntensive
