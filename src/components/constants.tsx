@@ -54,3 +54,9 @@ export const cardData = {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi porta lorem mollis aliquam.",
   cardImg: CardImage
 };
+
+export const slideshowData = [
+  "https://picsum.photos/1200/1200/?image=804",
+  "https://picsum.photos/1200/1200/?image=1005",
+  "https://picsum.photos/1200/1200/?image=838"
+];

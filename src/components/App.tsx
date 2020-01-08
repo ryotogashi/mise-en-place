@@ -9,6 +9,7 @@ import Input from "./input/Input";
 import Card from "./card/Card";
 import List from "./list/List";
 import Navigation from "./navigation/Navigation";
+import Slideshow from "./slideshow/Slideshow";
 import SideNavigation from "./navigation/SideNavigation";
 
 const StyledDiv = styled.div`
@@ -33,7 +34,8 @@ const App = () => (
           ["Inputs", null],
           ["Cards", null],
           ["Lists", null],
-          ["Navigations", null]
+          ["Navigations", null],
+          ["Slideshows", null]
         ]}
       />
       <main>
@@ -43,6 +45,7 @@ const App = () => (
         <Card />
         <List />
         <Navigation />
+        <Slideshow />
       </main>
     </StyledDiv>
   </>
