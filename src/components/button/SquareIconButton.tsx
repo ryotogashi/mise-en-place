@@ -4,11 +4,18 @@ import * as React from "react";
 interface Props {
   height: string;
   width: string;
+  value: string;
   children: React.ReactNode;
   onClick: Function | null;
 }
 
-const SquareIconButton = ({ height, width, children, onClick }: Props) => {
+const SquareIconButton = ({
+  height,
+  width,
+  value,
+  children,
+  onClick
+}: Props) => {
   const StyledButton = styled.button`
     height: ${height};
     width: ${width};
@@ -25,7 +32,7 @@ const SquareIconButton = ({ height, width, children, onClick }: Props) => {
 
   return (
     <StyledButton
-      value="right"
+      value={value}
       className="right-slideshow-button"
       onClick={event => {
         onClick !== null ? onClick(event) : null;
@@ -39,6 +46,7 @@ const SquareIconButton = ({ height, width, children, onClick }: Props) => {
 SquareIconButton.defaultProps = {
   height: "45px",
   width: "45px",
+  value: "squareIconButton",
   children: null,
   onClick: null
 };
