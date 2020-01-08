@@ -60,3 +60,5 @@ export const slideshowData = [
   "https://picsum.photos/1200/1200/?image=1005",
   "https://picsum.photos/1200/1200/?image=838"
 ];
+
+export const radioData = ["radioData1", "radioData2", "radioData3"];
