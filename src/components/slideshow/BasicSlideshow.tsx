@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
+import CustomRadioButton from "../input/CustomRadioButton";
+
 interface Props {
   width: string;
   height: string;
@@ -64,55 +66,6 @@ const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
       position: absolute;
       bottom: 5%;
       width: 100%;
-
-      input[type="radio"] {
-        display: none;
-      }
-
-      .radio-label {
-        position: relative;
-        padding: 0 0 0 42px;
-      }
-
-      .radio-label::after,
-      .radio-label::before {
-        position: absolute;
-        content: "";
-        display: block;
-        top: 50%;
-      }
-
-      .radio-label::after {
-        left: 15px;
-        margin-top: -10px;
-        width: 16px;
-        height: 16px;
-        border: 2px solid rgba(225, 225, 225, 0.3);
-        border-radius: 50%;
-      }
-
-      .radio-label::before {
-        left: 20px;
-        margin-top: -5px;
-        width: 10px;
-        height: 10px;
-        background: rgba(225, 225, 225, 0);
-        border-radius: 50%;
-      }
-
-      .radio-label-checked::before {
-        background: rgba(225, 225, 225, 0.7);
-      }
-
-      .radio-label:hover::after {
-        border: 2px solid rgba(225, 225, 225, 0.9);
-        transition: all 0.5s ease-out;
-      }
-
-      .radio-label:hover::before {
-        background: rgba(225, 225, 225, 0.9);
-        transition: all 0.5s ease-out;
-      }
     }
   `;
 
@@ -130,11 +83,6 @@ const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
         prevValue === imgSrcs.length - 1 ? prevValue : prevValue + 1
       );
     }
-  };
-
-  const handleRadioClick = (event: React.MouseEvent<HTMLInputElement>) => {
-    const value = event.currentTarget.value;
-    setCheckedValue(Number(value));
   };
 
   return (
@@ -169,8 +117,7 @@ const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
               strokeWidth="1"
               strokeLinecap="round"
               strokeLinejoin="round"
-              points="
-      45.63,75.8 0.375,38.087 45.63,0.375 "
+              points="45.63,75.8 0.375,38.087 45.63,0.375"
             />
           </svg>
         </button>
@@ -193,31 +140,17 @@ const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
               strokeWidth="1"
               strokeLinecap="round"
               strokeLinejoin="round"
-              points="
-      0.375,0.375 45.63,38.087 0.375,75.8 "
+              points="0.375,0.375 45.63,38.087 0.375,75.8"
             />
           </svg>
         </button>
       </div>
       <div className="radio-group">
-        {imgSrcs.map((_, index) => (
-          <label
-            key={index}
-            className={`radio-label ${
-              index === checkedValue ? "radio-label-checked" : ""
-            }`}
-          >
-            <input
-              type="radio"
-              name="photo"
-              value={index}
-              onClick={event => {
-                handleRadioClick(event);
-              }}
-              defaultChecked={index === checkedValue ? true : false}
-            />
-          </label>
-        ))}
+        <CustomRadioButton
+          name="slideshow"
+          labels={imgSrcs.map(_ => "")}
+          onClick={setCheckedValue}
+        />
       </div>
     </SlideshowDiv>
   );
