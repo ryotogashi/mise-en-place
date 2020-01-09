@@ -27,7 +27,7 @@ const StyledDiv = styled.div`
 
 const IntroPage = ({ title, description, children, imgSrcs }: Props) => (
   <StyledDiv>
-    <div className="pane">
+    <div className="pane" id={title.toLowerCase()}>
       <div className="left-pane">
         <h2>{title}</h2>
         <p>{description}</p>
