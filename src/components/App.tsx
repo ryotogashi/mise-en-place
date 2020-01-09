@@ -30,12 +30,32 @@ const App = () => (
       <SideNavigation
         logo="Mise en place"
         items={[
-          ["Buttons", null],
-          ["Inputs", null],
-          ["Cards", null],
-          ["Lists", null],
-          ["Navigations", null],
-          ["Slideshows", null]
+          [
+            "Buttons",
+            [
+              "Basic Button",
+              "Flat Button",
+              "Icon Button",
+              "Square Icon Button",
+              "Material Button",
+              "Toggle Button"
+            ]
+          ],
+          [
+            "Inputs",
+            [
+              "Basic Text Input",
+              "Date Text Input",
+              "Password Text Input",
+              "Underline Text Input",
+              "Radio Buttons",
+              "Custom Radio Buttons"
+            ]
+          ],
+          ["Cards", ["Basic Card", "Picture Covered Card"]],
+          ["Lists", ["Normal List", "Card List", "Example list usage"]],
+          ["Navigations", ["Side Navigation", "Top Navigation"]],
+          ["Slideshows", ["Normal Slideshow"]]
         ]}
       />
       <main>

@@ -62,3 +62,12 @@ export const slideshowData = [
 ];
 
 export const radioData = ["radioData1", "radioData2", "radioData3"];
+
+export const navigationItems: [string, string[] | null][] = [
+  ["item 1", null],
+  ["item 2", ["item 2 child 1", "item 2 child 2", "item 2 child 3"]],
+  ["item 3", null],
+  ["item 4", ["item 4 child 1", "item 4 child 2", "item 4 child 3"]]
+];
+
+export const navigationItems2 = ["item 1", "item 2", "item 3", "item 4"];

@@ -34,10 +34,10 @@ const Buttons = () => (
     </IntroPage>
 
     <IntroPage
-      title="Icon Button"
-      description="Icon button use for causing action."
+      title="Square Icon Button"
+      description="Square Icon button use for causing action."
     >
-      <SquareIconButton></SquareIconButton>
+      <SquareIconButton />
     </IntroPage>
 
     <IntroPage
