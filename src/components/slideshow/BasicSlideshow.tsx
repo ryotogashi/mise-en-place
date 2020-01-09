@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import * as React from "react";
 
 import CustomRadioButton from "../input/CustomRadioButton";
+import SlideshowImages from "./SlideshowImages";
 import SquareIconButton from "../button/SquareIconButton";
 import { LeftArrow, RightArrow } from "./Arrow";
 
@@ -18,23 +19,6 @@ const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
     width: ${width};
     height: ${height};
     margin: 0 auto;
-
-    .img-group {
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-
-      .img-inactive {
-        display: none;
-      }
-    }
 
     .button-group {
       position: absolute;
@@ -68,23 +52,27 @@ const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
     }
   };
 
+  const handleRadioClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const value = event.currentTarget.value;
+    setCheckedValue(Number(value));
+  };
+
   return (
     <SlideshowDiv>
-      <div className="img-group">
-        {imgSrcs.map((imgSrc, index) => (
-          <img
-            key={index}
-            src={imgSrc}
-            alt={`img-${index}`}
-            className={`img ${index === checkedValue ? "" : "img-inactive"}`}
-          />
-        ))}
-      </div>
+      <SlideshowImages imgSrcs={imgSrcs} activeNumber={checkedValue} />
       <div className="button-group">
-        <SquareIconButton onClick={handleClick} value="left">
+        <SquareIconButton
+          onClick={handleClick}
+          value="left"
+          disabled={0 === checkedValue ? true : false}
+        >
           <LeftArrow />
         </SquareIconButton>
-        <SquareIconButton onClick={handleClick} value="right">
+        <SquareIconButton
+          onClick={handleClick}
+          value="right"
+          disabled={checkedValue === imgSrcs.length - 1 ? true : false}
+        >
           <RightArrow />
         </SquareIconButton>
       </div>
@@ -92,7 +80,8 @@ const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
         <CustomRadioButton
           name="slideshow"
           labels={imgSrcs.map(_ => "")}
-          onClick={setCheckedValue}
+          onClick={handleRadioClick}
+          checkedNumber={checkedValue}
         />
       </div>
     </SlideshowDiv>
