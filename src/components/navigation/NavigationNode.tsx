@@ -13,6 +13,7 @@ const NavigationNode = ({ item, childItems, nodeLevel, display }: Props) => {
 
   const NavigationNodeDiv = styled.div`
     padding: 16px 0 16px ${16 + nodeLevel * 8}px;
+    ${1 < nodeLevel ? "color: #858585;" : ""}
     ${display ? "" : "display: none;"}
   `;
   return (
