@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
+import Logo from "./NavigationLogo";
+
 interface Props {
   logo: string;
   navHeight: string;
@@ -17,16 +19,9 @@ const SideNavigation = ({ logo, navHeight, navWidth, items }: Props) => {
     overflow: scroll;
     text-align: left;
 
-    .nav {
-      &:hover {
-        color: #ffffff;
-        box-shadow: 1px 1px 4px black;
-      }
-    }
-
-    .logo {
-      padding: 24px 0 24px 16px;
-      font-size: 24px;
+    div:hover {
+      color: #ffffff;
+      box-shadow: 1px 1px 4px black;
     }
 
     .nav-item {
@@ -44,14 +39,12 @@ const SideNavigation = ({ logo, navHeight, navWidth, items }: Props) => {
 
   return (
     <StyledNav>
-      <a href="">
-        <div className="nav logo">{logo}</div>
-      </a>
+      <Logo logo={logo} />
       {items.map(([item, children], index) => {
         return (
           <div key={index}>
             <a key={index} href={`#${item.toLowerCase()}`}>
-              <div className="nav nav-item">{item}</div>
+              <div className="nav-item">{item}</div>
             </a>
             {children === null
               ? null
@@ -60,7 +53,7 @@ const SideNavigation = ({ logo, navHeight, navWidth, items }: Props) => {
                     key={index * 100 + childIndex}
                     href={`#${child.toLowerCase()}`}
                   >
-                    <div className="nav nav-item-child nav-item-child-inactive">
+                    <div className="nav-item-child nav-item-child-inactive">
                       {child}
                     </div>
                   </a>
