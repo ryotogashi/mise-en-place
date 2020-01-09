@@ -11,6 +11,13 @@ import Section from "../app-components/Section";
 import RadioButtons from "./RadioButtons";
 
 const Inputs = () => {
+  const [customRadioCheckNumber, setCustomRadioCheckNumber] = React.useState(0);
+
+  const handleRadioClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const value = event.currentTarget.value;
+    setCustomRadioCheckNumber(Number(value));
+  };
+
   return (
     <Section title="Inputs">
       <IntroPage title="Basic Text Input" description="Normal text input">
@@ -43,7 +50,11 @@ const Inputs = () => {
         title="Custom Radio Buttons"
         description="Custom radio button group"
       >
-        <CustomRadioButtons labels={radioData} />
+        <CustomRadioButtons
+          labels={radioData}
+          checkedNumber={customRadioCheckNumber}
+          onClick={handleRadioClick}
+        />
       </IntroPage>
     </Section>
   );

@@ -3,6 +3,7 @@ import * as React from "react";
 
 const RadioGroupDiv = styled.div`
   label {
+    display: inline-block;
     color: #858585;
   }
 
@@ -63,39 +64,27 @@ interface Props {
   onClick: Function | null;
 }
 
-const CustomRadioButton = ({ name, labels, checkedNumber, onClick }: Props) => {
-  const [checkedValue, setCheckedValue] = React.useState(checkedNumber);
-  const handleRadioClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    const value = event.currentTarget.value;
-    setCheckedValue(Number(value));
-
-    if (onClick) onClick(Number(value));
-  };
-
-  return (
-    <RadioGroupDiv className="radio-group">
-      {labels.map((value, index) => (
-        <label
-          key={index}
-          className={`radio-label ${
-            index === checkedValue ? "radio-label-checked" : ""
-          }`}
-        >
-          <input
-            type="radio"
-            name={name}
-            value={index}
-            onClick={event => {
-              handleRadioClick(event);
-            }}
-            defaultChecked={index === checkedValue ? true : false}
-          />
-          {value}
-        </label>
-      ))}
-    </RadioGroupDiv>
-  );
-};
+const CustomRadioButton = ({ name, labels, checkedNumber, onClick }: Props) => (
+  <RadioGroupDiv className="radio-group">
+    {labels.map((value, index) => (
+      <label
+        key={index}
+        className={`radio-label ${
+          index === checkedNumber ? "radio-label-checked" : ""
+        }`}
+      >
+        <input
+          type="radio"
+          name={name}
+          value={index}
+          onClick={event => (onClick ? onClick(event) : null)}
+          defaultChecked={index === checkedNumber ? true : false}
+        />
+        {value}
+      </label>
+    ))}
+  </RadioGroupDiv>
+);
 
 CustomRadioButton.defaultProps = {
   name: "custom-radio-button",
