@@ -20,6 +20,7 @@ interface Props {
 
 const RadioButtons = ({ name, labels, checkedNumber, onClick }: Props) => {
   const [checkedValue, setCheckedValue] = React.useState(checkedNumber);
+
   const handleRadioClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const value = event.currentTarget.value;
     setCheckedValue(Number(value));
