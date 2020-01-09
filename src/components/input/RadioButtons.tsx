@@ -12,33 +12,47 @@ const StyledLabel = styled.label`
 `;
 
 interface Props {
-  data: {
-    id: number;
-    name: string;
-  }[];
-  handleRadio: Function | null;
+  name: string;
+  labels: string[];
+  checkedNumber: number;
+  onClick: Function | null;
 }
 
-const RadioButtons = ({ data, handleRadio = null }: Props) => (
-  <>
-    {data.map(dataElement => {
-      return (
-        <StyledLabel key={dataElement.id}>
-          <input
-            type="radio"
-            name="sample-radio"
-            key={dataElement.id}
-            onChange={event => handleRadio(event.target)}
-          />
-          {dataElement.name}
-        </StyledLabel>
-      );
-    })}
-  </>
-);
+const RadioButtons = ({ name, labels, checkedNumber, onClick }: Props) => {
+  const [checkedValue, setCheckedValue] = React.useState(checkedNumber);
+
+  const handleRadioClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const value = event.currentTarget.value;
+    setCheckedValue(Number(value));
+
+    if (onClick) onClick(Number(value));
+  };
+  return (
+    <>
+      {labels.map((label, index) => {
+        return (
+          <StyledLabel key={index}>
+            <input
+              type="radio"
+              name={name}
+              key={index}
+              onClick={event => {
+                handleRadioClick(event);
+              }}
+              defaultChecked={index === checkedValue ? true : false}
+            />
+            {label}
+          </StyledLabel>
+        );
+      })}
+    </>
+  );
+};
 
 RadioButtons.defaultProps = {
-  handleRadio: null
+  name: "radio-button-group",
+  checkedNumber: 0,
+  onClick: null
 };
 
 export default RadioButtons;

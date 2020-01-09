@@ -1,7 +1,9 @@
 import * as React from "react";
 
+import { radioData } from "../constants";
 import IntroPage from "../app-components/IntroPage";
 import BasicTextInput from "./BasicTextInput";
+import CustomRadioButtons from "./CustomRadioButton";
 import DateTextInput from "./DateTextInput";
 import PasswordTextInput from "./PasswordTextInput";
 import UnderlineTextInput from "./UnderlineTextInput";
@@ -9,11 +11,12 @@ import Section from "../app-components/Section";
 import RadioButtons from "./RadioButtons";
 
 const Inputs = () => {
-  const radioData = [
-    { id: 1, name: "radioData1" },
-    { id: 2, name: "radioData2" },
-    { id: 3, name: "radioData3" }
-  ];
+  const [customRadioCheckNumber, setCustomRadioCheckNumber] = React.useState(0);
+
+  const handleRadioClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const value = event.currentTarget.value;
+    setCustomRadioCheckNumber(Number(value));
+  };
 
   return (
     <Section title="Inputs">
@@ -40,7 +43,18 @@ const Inputs = () => {
       </IntroPage>
 
       <IntroPage title="Radio Buttons" description="Normal radio button group">
-        <RadioButtons data={radioData} />
+        <RadioButtons labels={radioData} />
+      </IntroPage>
+
+      <IntroPage
+        title="Custom Radio Buttons"
+        description="Custom radio button group"
+      >
+        <CustomRadioButtons
+          labels={radioData}
+          checkedNumber={customRadioCheckNumber}
+          onClick={handleRadioClick}
+        />
       </IntroPage>
     </Section>
   );
