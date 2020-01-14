@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import UnderlineTextInput from "../input/UnderlineTextInput";
-import BasicList from "./BasicList";
+import BasicList from "../list/BasicList";
 
 interface Props {
   list: string[];
