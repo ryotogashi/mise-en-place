@@ -4,7 +4,7 @@ import Section from "../app-components/Section";
 import IntroPage from "../app-components/IntroPage";
 import SideNavigation from "./SideNavigation";
 import TopNavigation from "./TopNavigation";
-import { navigationItems, navigationItems2 } from "../constants";
+import { navigationItems, navigationItems2 } from "../../constants";
 
 const List = () => (
   <Section title="Navigations">
