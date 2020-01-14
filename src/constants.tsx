@@ -1,6 +1,6 @@
 import { css } from "@emotion/core";
 
-import CardImage from "../assets/img-for-card.jpg";
+import CardImage from "./assets/img-for-card.jpg";
 
 export const GlobalStyle = css`
   body {
@@ -27,6 +27,36 @@ export const GlobalStyle = css`
     color: #323439;
   }
 `;
+
+export const siteNavData: [string, string[]][] = [
+  [
+    "Buttons",
+    [
+      "Basic Button",
+      "Flat Button",
+      "Icon Button",
+      "Square Icon Button",
+      "Material Button",
+      "Toggle Button"
+    ]
+  ],
+  [
+    "Inputs",
+    [
+      "Basic Text Input",
+      "Date Text Input",
+      "Password Text Input",
+      "Underline Text Input",
+      "Radio Buttons",
+      "Custom Radio Buttons"
+    ]
+  ],
+  ["Cards", ["Basic Card", "Picture Covered Card"]],
+  ["Lists", ["Normal List", "Card List"]],
+  ["Navigations", ["Side Navigation", "Top Navigation"]],
+  ["Slideshows", ["Normal Slideshow"]],
+  ["Samples", ["Example list usage", "Signin form"]]
+];
 
 // Sample Data
 
