@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { slideshowData } from "../constants";
+import { slideshowData } from "../../constants";
 import Section from "../app-components/Section";
 import IntroPage from "../app-components/IntroPage";
 import BasicSlideshow from "./BasicSlideshow";

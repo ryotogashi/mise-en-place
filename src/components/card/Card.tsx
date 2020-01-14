@@ -4,7 +4,7 @@ import Section from "../app-components/Section";
 import IntroPage from "../app-components/IntroPage";
 import SimpleCard from "./BasicCard";
 import PictureCard from "./PictureCard";
-import { cardData } from "../constants";
+import { cardData } from "../../constants";
 
 const Cards = () => (
   <Section title="Cards">
