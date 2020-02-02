@@ -8,8 +8,8 @@ import SearchList from "./SearchList";
 const CompositeComponent = () => (
   <Section title="Composite Component">
     <IntroPage
-      title="Example list usage"
-      description="List with search input. Choosable weather case-intensive or case-sensitive."
+      title="Searchiable List"
+      description="Searchiable list. Choosable weather case-intensive or case-sensitive."
     >
       <SearchList isCaseIntensive={true} />
     </IntroPage>
