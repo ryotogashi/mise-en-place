@@ -60,24 +60,6 @@ export const siteNavData: [string, string[]][] = [
 
 // Sample Data
 
-export const names = [
-  "Ana Laura",
-  "Anahi",
-  "Andrea",
-  "Ayumi",
-  "Caro",
-  "Cedric Balm",
-  "Celeste",
-  "Chad Demmer",
-  "Elif Kurtcu",
-  "Ellyn Hay",
-  "Enuki Kvintradze",
-  "Erika Kin",
-  "Ryo Togashi",
-  "Rei Togashi",
-  "Riku Togashi"
-];
-
 export const cardData = {
   title: "Lorem ipsum dolor",
   content:
