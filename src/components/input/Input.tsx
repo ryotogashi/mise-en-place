@@ -30,9 +30,9 @@ const Inputs = () => {
 
       <IntroPage
         title="Password Text Input"
-        description="Password type input which is able to see the password by clicking icon."
+        description="Password type input which is able to see the password by clicking icon. The icon is optional."
       >
-        <PasswordTextInput />
+        <PasswordTextInput showHideIcon={true} />
       </IntroPage>
 
       <IntroPage
