@@ -1,93 +1,100 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
-const RadioGroupDiv = styled.div`
-  label {
-    display: inline-block;
-    color: #858585;
-  }
-
-  input[type="radio"] {
-    display: none;
-  }
-
-  .radio-label {
-    position: relative;
-    padding: 0 0 0 42px;
-  }
-
-  .radio-label::after,
-  .radio-label::before {
-    position: absolute;
-    content: "";
-    display: block;
-    top: 50%;
-  }
-
-  .radio-label::after {
-    left: 15px;
-    margin-top: -10px;
-    width: 16px;
-    height: 16px;
-    border: 2px solid rgba(225, 225, 225, 0.3);
-    border-radius: 50%;
-  }
-
-  .radio-label::before {
-    left: 20px;
-    margin-top: -5px;
-    width: 10px;
-    height: 10px;
-    background: rgba(225, 225, 225, 0);
-    border-radius: 50%;
-  }
-
-  .radio-label-checked::before {
-    background: rgba(225, 225, 225, 0.7);
-  }
-
-  .radio-label:hover::after {
-    border: 2px solid rgba(225, 225, 225, 0.9);
-    transition: all 0.5s ease-out;
-  }
-
-  .radio-label:hover::before {
-    background: rgba(225, 225, 225, 0.9);
-    transition: all 0.5s ease-out;
-  }
-`;
-
 interface Props {
   name: string;
   labels: string[];
+  display: string;
   checkedNumber: number;
   onClick: Function | null;
 }
 
-const CustomRadioButton = ({ name, labels, checkedNumber, onClick }: Props) => (
-  <RadioGroupDiv className="radio-group">
-    {labels.map((value, index) => (
-      <label
-        key={index}
-        className={`radio-label ${
-          index === checkedNumber ? "radio-label-checked" : ""
-        }`}
-      >
-        <input
-          type="radio"
-          name={name}
-          value={index}
-          onClick={event => (onClick ? onClick(event) : null)}
-          defaultChecked={index === checkedNumber ? true : false}
-        />
-        {value}
-      </label>
-    ))}
-  </RadioGroupDiv>
-);
+const CustomRadioButton = ({
+  name,
+  labels,
+  display,
+  checkedNumber,
+  onClick
+}: Props) => {
+  const RadioGroupDiv = styled.div`
+    & input[type="radio"] {
+      display: none;
+    }
+
+    & > div {
+      display: ${display};
+      margin: 16px 0;
+    }
+
+    & label {
+      color: #858585;
+      position: relative;
+      padding: 0 0 0 44px;
+    }
+
+    & label::after,
+    & label::before {
+      position: absolute;
+      content: "";
+      display: block;
+      top: 50%;
+    }
+
+    & label::after {
+      left: 15px;
+      margin-top: -10px;
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(225, 225, 225, 0.3);
+      border-radius: 50%;
+    }
+
+    & label::before {
+      left: 20px;
+      margin-top: -5px;
+      width: 10px;
+      height: 10px;
+      background: rgba(225, 225, 225, 0);
+      border-radius: 50%;
+    }
+
+    & label:hover::after {
+      border: 2px solid rgba(225, 225, 225, 0.9);
+      transition: all 0.5s ease-out;
+    }
+
+    & label:hover::before {
+      background: rgba(225, 225, 225, 0.9);
+      transition: all 0.5s ease-out;
+    }
+
+    & .checked::before {
+      background: rgba(225, 225, 225, 0.7);
+    }
+  `;
+  return (
+    <RadioGroupDiv className="radio-group">
+      {labels.map((value, index) => (
+        <div key={index}>
+          <label className={`${index === checkedNumber ? "checked" : ""}`}>
+            <input
+              type="radio"
+              name={name}
+              value={index}
+              onClick={event => (onClick ? onClick(event) : null)}
+              defaultChecked={index === checkedNumber ? true : false}
+            />
+            {value}
+          </label>
+        </div>
+      ))}
+    </RadioGroupDiv>
+  );
+};
 
 CustomRadioButton.defaultProps = {
   name: "custom-radio-button",
+  display: "block",
   checkedNumber: 0,
   onClick: null
 };

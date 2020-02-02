@@ -31,7 +31,7 @@ const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
 
     .radio-group {
       position: absolute;
-      bottom: 5%;
+      bottom: 1%;
       width: 100%;
     }
   `;
@@ -80,6 +80,7 @@ const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
         <CustomRadioButton
           name="slideshow"
           labels={imgSrcs.map(_ => "")}
+          display="inline-block"
           onClick={handleRadioClick}
           checkedNumber={checkedValue}
         />
