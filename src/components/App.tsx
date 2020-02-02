@@ -2,7 +2,7 @@ import { Global } from "@emotion/core";
 import styled from "@emotion/styled";
 import * as React from "react";
 
-import { GlobalStyle } from "../constants";
+import { GlobalStyle, siteNavData } from "../constants";
 import WelcomPage from "./app-components/WelcomPage";
 import Button from "./button/Button";
 import Input from "./input/Input";
@@ -11,8 +11,7 @@ import List from "./list/List";
 import Navigation from "./navigation/Navigation";
 import Slideshow from "./slideshow/Slideshow";
 import SideNavigation from "./navigation/SideNavigation";
-import { siteNavData } from "../constants";
-import Samples from "./samples/samples";
+import ComposedComponent from "./composite-component/CompositeComponent";
 
 const StyledDiv = styled.div`
   display: flex;
@@ -38,7 +37,7 @@ const App = () => (
         <List />
         <Navigation />
         <Slideshow />
-        <Samples />
+        <ComposedComponent />
       </main>
     </StyledDiv>
   </>
