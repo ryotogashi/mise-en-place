@@ -4,28 +4,36 @@ import * as React from "react";
 interface Props {
   imgSrc: string;
   children: React.ReactNode;
+  width: string;
+  height: string;
 }
 
-const PictureCard = ({ imgSrc, children }: Props) => {
+const PictureCard = ({ imgSrc, children, width, height }: Props) => {
   const StyledPictureCard = styled.div`
     background-image: url(${imgSrc});
+    background-size: 100% 100%;
     display: inline-block;
-    width: 100%;
+    width: ${width};
+    ${height ? `height: ${height};` : ""}
     box-shadow: 1px 1px 4px black;
     margin: 16px;
     position: relative;
 
-    &: hover {
+    &:hover {
       box-shadow: 2px 2px 8px black;
     }
 
     .cover {
       position: absolute;
       width: inherited;
-      height: inherited;
+      height: ${height ? `${height}` : "inherited"};
       background-color: rgba(0, 0, 0, 0.3);
       top: 0;
       left: 0;
+    }
+
+    &:hover .cover {
+      background-color: rgba(0, 0, 0, 0.7);
     }
 
     h1,
@@ -56,6 +64,11 @@ const PictureCard = ({ imgSrc, children }: Props) => {
       <div className="cover">{children}</div>
     </StyledPictureCard>
   );
+};
+
+PictureCard.defaultProps = {
+  width: "100%",
+  height: null
 };
 
 export default PictureCard;
