@@ -2,19 +2,28 @@ import * as React from "react";
 
 import UnderlineTextInput from "../input/UnderlineTextInput";
 import BasicList from "../list/BasicList";
+import getRandomName from "../../services/getRandomName";
 
 interface Props {
-  list: string[];
   isCaseIntensive: boolean;
 }
 
-const SearchList = ({ list, isCaseIntensive }: Props) => {
-  const [listItem, setListItem] = React.useState(list);
+const SearchList = ({ isCaseIntensive }: Props) => {
+  const [fullNameList, setFullNameList] = React.useState([]);
+  const [showingNameList, setShowingNameList] = React.useState([]);
+
+  React.useEffect(() => {
+    (async () => {
+      const list = await getRandomName();
+      setFullNameList(list);
+      setShowingNameList(list);
+    })();
+  }, []);
 
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
     const searchWord = event.currentTarget.value;
-    setListItem(
-      list.filter(item =>
+    setShowingNameList(
+      fullNameList.filter(item =>
         isCaseIntensive
           ? item.toLowerCase().includes(searchWord.toLowerCase())
           : item.includes(searchWord)
@@ -25,7 +34,7 @@ const SearchList = ({ list, isCaseIntensive }: Props) => {
   return (
     <>
       <UnderlineTextInput placeholder="search" onChange={handleChange} />
-      <BasicList list={listItem} />
+      <BasicList list={showingNameList} />
     </>
   );
 };
