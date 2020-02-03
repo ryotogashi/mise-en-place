@@ -1,27 +1,31 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
-const StyledInput = styled.input`
-  height: 24px;
-  width: 70%;
-  margin: 16px;
-  padding: 4px;
-  border: 1px solid gray;
-  opacity: 0.4;
-  border-radius: 4px;
-`;
-
 interface Props {
   placeholder: string;
-  onChange: () => {} | null;
+  width: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void | null;
 }
 
-const BasicTextInput = ({ placeholder, onChange }: Props) => (
-  <StyledInput type="text" placeholder={placeholder} onChange={onChange} />
-);
+const BasicTextInput = ({ placeholder, width, onChange }: Props) => {
+  const StyledInput = styled.input`
+    height: 24px;
+    width: ${width};
+    margin: 16px;
+    padding: 4px;
+    border: 1px solid gray;
+    opacity: 0.4;
+    border-radius: 4px;
+  `;
+
+  return (
+    <StyledInput type="text" placeholder={placeholder} onChange={onChange} />
+  );
+};
 
 BasicTextInput.defaultProps = {
   placeholder: "placeholder",
+  width: "70%",
   onChange: null
 };
 
