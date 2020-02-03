@@ -7,9 +7,10 @@ import ShowIcon from "../../assets/show.svg";
 interface Props {
   placeholder: string;
   showHideIcon: boolean;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void | null;
 }
 
-const PasswordTextInput = ({ placeholder, showHideIcon }: Props) => {
+const PasswordTextInput = ({ placeholder, showHideIcon, onChange }: Props) => {
   const [imageName, setImageName] = React.useState("show");
   const [inputType, setInputType] = React.useState("password");
 
@@ -22,7 +23,6 @@ const PasswordTextInput = ({ placeholder, showHideIcon }: Props) => {
     display: inline-block;
     width: 70.5%;
     margin: 16px;
-    padding-right: 5px;
 
     & > label {
       display: inline-block;
@@ -32,7 +32,7 @@ const PasswordTextInput = ({ placeholder, showHideIcon }: Props) => {
 
     & > input {
       height: 24px;
-      width: 99%;
+      width: 100%;
       margin: 0;
       padding: 4px;
       border: 1px solid gray;
@@ -41,25 +41,48 @@ const PasswordTextInput = ({ placeholder, showHideIcon }: Props) => {
     }
 
     & img {
-      display: ${showHideIcon ? "inline" : "none"};
+      display: inline;
       height: 12px;
       wieght: 12px;
     }
   `;
 
-  return (
+  const StyledPasswordInput = styled.input`
+    height: 24px;
+    width: 70%;
+    margin: 16px;
+    padding: 4px;
+    border: 1px solid gray;
+    opacity: 0.4;
+    border-radius: 4px;
+  `;
+
+  return showHideIcon ? (
     <PasswordDiv>
       <label htmlFor="password-input" onClick={handleClick}>
         <img src={imageName === "hide" ? HideIcon : ShowIcon} />
       </label>
-      <input name="password-input" type={inputType} placeholder={placeholder} />
+      <input
+        name="password-input"
+        type={inputType}
+        placeholder={placeholder}
+        onChange={onChange}
+      />
     </PasswordDiv>
+  ) : (
+    <StyledPasswordInput
+      name="password-input"
+      type={inputType}
+      placeholder={placeholder}
+      onChange={onChange}
+    />
   );
 };
 
 PasswordTextInput.defaultProps = {
   placeholder: "password",
-  showHideIcon: false
+  showHideIcon: false,
+  onChange: null
 };
 
 export default PasswordTextInput;
