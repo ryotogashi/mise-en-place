@@ -2,7 +2,7 @@ import * as React from "react";
 
 import Section from "../app-components/Section";
 import IntroPage from "../app-components/IntroPage";
-// import SignInForm from "./SignInForm";
+import SignInForm from "./SignInForm";
 import SearchList from "./SearchList";
 
 const CompositeComponent = () => (
@@ -14,9 +14,9 @@ const CompositeComponent = () => (
       <SearchList isCaseIntensive={true} />
     </IntroPage>
 
-    {/* <IntroPage title="Signin Form" description="Basic signin form.">
+    <IntroPage title="SignIn Form" description="Basic signin form.">
       <SignInForm />
-    </IntroPage> */}
+    </IntroPage>
   </Section>
 );
 export default CompositeComponent;
