@@ -25,4 +25,8 @@ const UnderlineTextInput = ({ type, ...rest }: Props) => (
   <StyledInput type="text" {...rest} />
 );
 
+UnderlineTextInput.defaultProps = {
+  type: InputType.TEXT
+};
+
 export default UnderlineTextInput;
