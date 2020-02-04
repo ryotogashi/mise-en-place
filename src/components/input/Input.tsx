@@ -9,6 +9,7 @@ import PasswordTextInput from "./PasswordTextInput";
 import UnderlineTextInput from "./UnderlineTextInput";
 import Section from "../app-components/Section";
 import RadioButtons from "./RadioButtons";
+import InputType from "./input-type";
 
 const Inputs = () => {
   const [customRadioCheckNumber, setCustomRadioCheckNumber] = React.useState(0);
@@ -21,7 +22,7 @@ const Inputs = () => {
   return (
     <Section title="Inputs">
       <IntroPage title="Basic Text Input" description="Normal text input">
-        <BasicTextInput />
+        <BasicTextInput type={InputType.TEXT} placeholder="text" />
       </IntroPage>
 
       <IntroPage title="Date Text Input" description="Date type input">
