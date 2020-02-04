@@ -5,7 +5,7 @@ interface Props {
   name: string;
   labels: string[];
   display: string;
-  checkedNumber: number;
+  defaultChecked: number;
   onClick: Function | null;
 }
 
@@ -13,7 +13,7 @@ const CustomRadioButton = ({
   name,
   labels,
   display,
-  checkedNumber,
+  defaultChecked,
   onClick
 }: Props) => {
   const RadioGroupDiv = styled.div`
@@ -76,13 +76,13 @@ const CustomRadioButton = ({
     <RadioGroupDiv className="radio-group">
       {labels.map((value, index) => (
         <div key={index}>
-          <label className={`${index === checkedNumber ? "checked" : ""}`}>
+          <label className={`${index === defaultChecked ? "checked" : ""}`}>
             <input
               type="radio"
+              defaultChecked={index === defaultChecked ? true : false}
               name={name}
               value={index}
               onClick={event => (onClick ? onClick(event) : null)}
-              defaultChecked={index === checkedNumber ? true : false}
             />
             {value}
           </label>
@@ -95,7 +95,7 @@ const CustomRadioButton = ({
 CustomRadioButton.defaultProps = {
   name: "custom-radio-button",
   display: "block",
-  checkedNumber: 0,
+  defaultChecked: 0,
   onClick: null
 };
 

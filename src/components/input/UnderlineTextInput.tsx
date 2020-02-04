@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
+import InputType from "./input-type";
+
 const StyledInput = styled.input`
   height: 24px;
   width: 70%;
@@ -15,22 +17,16 @@ const StyledInput = styled.input`
   }
 `;
 
-interface Props {
-  placeholder: string;
-  onChange: Function | null;
+interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+  type: InputType;
 }
 
-const UnderlineTextInput = ({ placeholder, onChange }: Props) => (
-  <StyledInput
-    type="text"
-    placeholder={placeholder}
-    onChange={event => (onChange ? onChange(event) : null)}
-  />
+const UnderlineTextInput = ({ type, ...rest }: Props) => (
+  <StyledInput type="text" {...rest} />
 );
 
 UnderlineTextInput.defaultProps = {
-  placeholder: "placeholder",
-  onChange: null
+  type: InputType.TEXT
 };
 
 export default UnderlineTextInput;

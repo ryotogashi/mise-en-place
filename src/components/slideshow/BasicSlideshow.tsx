@@ -82,7 +82,7 @@ const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
           labels={imgSrcs.map(_ => "")}
           display="inline-block"
           onClick={handleRadioClick}
-          checkedNumber={checkedValue}
+          defaultChecked={checkedValue}
         />
       </div>
     </SlideshowDiv>

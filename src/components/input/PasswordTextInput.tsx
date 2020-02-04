@@ -3,31 +3,39 @@ import * as React from "react";
 
 import HideIcon from "../../assets/hide.svg";
 import ShowIcon from "../../assets/show.svg";
+import InputType from "./input-type";
 
-interface Props {
-  placeholder: string;
+interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   showHideIcon: boolean;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void | null;
 }
 
-const PasswordTextInput = ({ placeholder, showHideIcon, onChange }: Props) => {
+const PasswordTextInput = ({ showHideIcon, ...rest }: Props) => {
   const [imageName, setImageName] = React.useState("show");
-  const [inputType, setInputType] = React.useState("password");
+  const [inputType, setInputType] = React.useState(InputType.PASSWORD);
 
   const handleClick = () => {
     setImageName(prevValue => (prevValue === "hide" ? "show" : "hide"));
-    setInputType(prevValue => (prevValue === "password" ? "text" : "password"));
+    setInputType(prevValue =>
+      prevValue === InputType.PASSWORD ? InputType.TEXT : InputType.PASSWORD
+    );
   };
 
   const PasswordDiv = styled.div`
     display: inline-block;
     width: 70.5%;
     margin: 16px;
+    padding-right: 5px;
 
     & > label {
       display: inline-block;
       float: right;
       cursor: pointer;
+    }
+
+    & > label > img {
+      display: ${showHideIcon ? "inline" : "none"};
+      height: 12px;
+      wieght: 12px;
     }
 
     & > input {
@@ -39,50 +47,20 @@ const PasswordTextInput = ({ placeholder, showHideIcon, onChange }: Props) => {
       opacity: 0.4;
       border-radius: 4px;
     }
-
-    & img {
-      display: inline;
-      height: 12px;
-      wieght: 12px;
-    }
   `;
 
-  const StyledPasswordInput = styled.input`
-    height: 24px;
-    width: 70%;
-    margin: 16px;
-    padding: 4px;
-    border: 1px solid gray;
-    opacity: 0.4;
-    border-radius: 4px;
-  `;
-
-  return showHideIcon ? (
+  return (
     <PasswordDiv>
       <label htmlFor="password-input" onClick={handleClick}>
         <img src={imageName === "hide" ? HideIcon : ShowIcon} />
       </label>
-      <input
-        name="password-input"
-        type={inputType}
-        placeholder={placeholder}
-        onChange={onChange}
-      />
+      <input type={inputType} name="password-input" {...rest} />
     </PasswordDiv>
-  ) : (
-    <StyledPasswordInput
-      name="password-input"
-      type={inputType}
-      placeholder={placeholder}
-      onChange={onChange}
-    />
   );
 };
 
 PasswordTextInput.defaultProps = {
-  placeholder: "password",
-  showHideIcon: false,
-  onChange: null
+  showHideIcon: false
 };
 
 export default PasswordTextInput;
