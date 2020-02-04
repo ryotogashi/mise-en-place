@@ -8,13 +8,12 @@ import DateTextInput from "./DateTextInput";
 import PasswordTextInput from "./PasswordTextInput";
 import UnderlineTextInput from "./UnderlineTextInput";
 import Section from "../app-components/Section";
-import RadioButtons from "./RadioButtons";
 import InputType from "./input-type";
 
 const Inputs = () => {
   const [customRadioCheckNumber, setCustomRadioCheckNumber] = React.useState(0);
 
-  const handleRadioClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleRadioClick = (event: React.MouseEvent<HTMLInputElement>) => {
     const value = event.currentTarget.value;
     setCustomRadioCheckNumber(Number(value));
   };
@@ -22,7 +21,14 @@ const Inputs = () => {
   return (
     <Section title="Inputs">
       <IntroPage title="Basic Text Input" description="Normal text input">
-        <BasicTextInput type={InputType.TEXT} placeholder="placeholder" />
+        <BasicTextInput placeholder="placeholder" />
+      </IntroPage>
+
+      <IntroPage
+        title="Underline Text Input"
+        description="Underline text input"
+      >
+        <UnderlineTextInput type={InputType.TEXT} placeholder="placeholder" />
       </IntroPage>
 
       <IntroPage title="Date Text Input" description="Date type input">
@@ -37,23 +43,12 @@ const Inputs = () => {
       </IntroPage>
 
       <IntroPage
-        title="Underline Text Input"
-        description="Underline text input"
-      >
-        <UnderlineTextInput type={InputType.TEXT} placeholder="placeholder" />
-      </IntroPage>
-
-      <IntroPage title="Radio Buttons" description="Normal radio button group">
-        <RadioButtons labels={radioData} />
-      </IntroPage>
-
-      <IntroPage
         title="Custom Radio Buttons"
         description="Custom radio button group"
       >
         <CustomRadioButtons
           labels={radioData}
-          checkedNumber={customRadioCheckNumber}
+          defaultChecked={customRadioCheckNumber}
           onClick={handleRadioClick}
         />
       </IntroPage>
