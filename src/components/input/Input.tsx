@@ -22,7 +22,7 @@ const Inputs = () => {
   return (
     <Section title="Inputs">
       <IntroPage title="Basic Text Input" description="Normal text input">
-        <BasicTextInput type={InputType.TEXT} placeholder="text" />
+        <BasicTextInput type={InputType.TEXT} placeholder="placeholder" />
       </IntroPage>
 
       <IntroPage title="Date Text Input" description="Date type input">
@@ -40,7 +40,7 @@ const Inputs = () => {
         title="Underline Text Input"
         description="Underline text input"
       >
-        <UnderlineTextInput />
+        <UnderlineTextInput type={InputType.TEXT} placeholder="placeholder" />
       </IntroPage>
 
       <IntroPage title="Radio Buttons" description="Normal radio button group">

@@ -13,9 +13,13 @@ const StyledInput = styled.input`
   border-radius: 4px;
 `;
 
-const BasicTextInput = ({ type, ...props }) => (
-  <StyledInput type={type} {...props} />
-);
+interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+  type: InputType;
+}
+
+const BasicTextInput = ({ type, ...rest }: Props) => {
+  return <StyledInput type={type} {...rest} />;
+};
 
 BasicTextInput.defaultProps = {
   type: InputType.TEXT
