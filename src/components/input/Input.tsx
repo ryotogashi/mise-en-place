@@ -20,7 +20,7 @@ const Inputs = () => {
   };
 
   const validations: [RegExp, string][] = [
-    [/[0-9]/, "phone number has to be number"]
+    [/\S+@\S+\.\S+/, "phone number has to be number"]
   ];
 
   return (
@@ -51,7 +51,10 @@ const Inputs = () => {
         title="TextInput With Validation"
         description="TextInput with Validtion."
       >
-        <TextInputWithValidation validations={validations} />
+        <TextInputWithValidation
+          validations={validations}
+          placeholder="email"
+        />
       </IntroPage>
 
       <IntroPage
