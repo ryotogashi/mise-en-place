@@ -6,14 +6,16 @@ import FlatButton from "../button/FlatButton";
 import InputType from "../input/input-type";
 
 const StyledSignInForm = styled.div`
-  border: 1px solid;
   padding: 16px;
 `;
 
 const SignInForm = () => (
   <StyledSignInForm>
-    <BasicTextInput type={InputType.TEXT} placeholder="email" />
-    <PasswordTextInput />
+    <BasicTextInput placeholder="Given Name" />
+    <BasicTextInput placeholder="Last Name" />
+    <BasicTextInput type={InputType.TEL} placeholder="Phone Number" />
+    <BasicTextInput type={InputType.EMAIL} placeholder="Email" />
+    <PasswordTextInput placeholder="Password" />
     <FlatButton value="Sign In" width="70%" />
   </StyledSignInForm>
 );
