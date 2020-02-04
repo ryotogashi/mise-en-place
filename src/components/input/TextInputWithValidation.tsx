@@ -4,7 +4,8 @@ import * as React from "react";
 import BasicTextInput from "./BasicTextInput";
 import InputType from "./input-type";
 
-interface Props {
+interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+  type: InputType;
   validations: [RegExp, string][];
 }
 
@@ -35,7 +36,7 @@ const TextWithValidationMessages = styled.div`
   }
 `;
 
-const TextInputWithValidation = ({ validations }: Props) => {
+const TextInputWithValidation = ({ validations, ...rest }: Props) => {
   const [value, setValue] = React.useState("");
   const [errorMessages, setErrorMessages] = React.useState([] as String[]);
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -62,6 +63,7 @@ const TextInputWithValidation = ({ validations }: Props) => {
             ? "successColor"
             : "errorColor"
         }
+        {...rest}
       />
       <ul>
         {errorMessages.map((errorMesaage, i) => (
@@ -70,6 +72,10 @@ const TextInputWithValidation = ({ validations }: Props) => {
       </ul>
     </TextWithValidationMessages>
   );
+};
+
+TextInputWithValidation.defaultProps = {
+  type: InputType.TEXT
 };
 
 export default TextInputWithValidation;
