@@ -22,9 +22,8 @@ const PasswordTextInput = ({ showHideIcon, ...rest }: Props) => {
 
   const PasswordDiv = styled.div`
     display: inline-block;
-    width: 70.5%;
+    width: 70%;
     margin: 16px;
-    padding-right: 5px;
 
     & > label {
       display: inline-block;
