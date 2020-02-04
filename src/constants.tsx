@@ -59,7 +59,6 @@ export const siteNavData: [string, string[]][] = [
 ];
 
 // Sample Data
-
 export const cardData = {
   title: "Lorem ipsum dolor",
   content:
