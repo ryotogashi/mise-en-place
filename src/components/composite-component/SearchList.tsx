@@ -3,6 +3,7 @@ import * as React from "react";
 import UnderlineTextInput from "../input/UnderlineTextInput";
 import BasicList from "../list/BasicList";
 import getRandomName from "../../services/getRandomName";
+import InputType from "../input/input-type";
 
 interface Props {
   isCaseIntensive: boolean;
@@ -33,7 +34,11 @@ const SearchList = ({ isCaseIntensive }: Props) => {
 
   return (
     <>
-      <UnderlineTextInput placeholder="search" onChange={handleChange} />
+      <UnderlineTextInput
+        type={InputType.SEARCH}
+        placeholder="search"
+        onChange={handleChange}
+      />
       <BasicList list={showingNameList} />
     </>
   );

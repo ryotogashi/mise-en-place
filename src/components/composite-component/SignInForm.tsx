@@ -3,6 +3,7 @@ import * as React from "react";
 import BasicTextInput from "../input/BasicTextInput";
 import PasswordTextInput from "../input/PasswordTextInput";
 import FlatButton from "../button/FlatButton";
+import InputType from "../input/input-type";
 
 const StyledSignInForm = styled.div`
   border: 1px solid;
@@ -11,7 +12,7 @@ const StyledSignInForm = styled.div`
 
 const SignInForm = () => (
   <StyledSignInForm>
-    <BasicTextInput placeholder="email" />
+    <BasicTextInput type={InputType.TEXT} placeholder="email" />
     <PasswordTextInput />
     <FlatButton value="Sign In" width="70%" />
   </StyledSignInForm>

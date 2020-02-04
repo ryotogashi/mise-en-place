@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
+import InputType from "./input-type";
+
 const StyledInput = styled.input`
   height: 24px;
   width: 70%;
@@ -11,18 +13,16 @@ const StyledInput = styled.input`
   border-radius: 4px;
 `;
 
-interface Props {
-  placeholder: string;
-  onChange: () => {} | null;
+interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+  type: InputType;
 }
 
-const BasicTextInput = ({ placeholder, onChange }: Props) => (
-  <StyledInput type="text" placeholder={placeholder} onChange={onChange} />
-);
+const BasicTextInput = ({ type, ...rest }: Props) => {
+  return <StyledInput type={type} {...rest} />;
+};
 
 BasicTextInput.defaultProps = {
-  placeholder: "placeholder",
-  onChange: null
+  type: InputType.TEXT
 };
 
 export default BasicTextInput;
