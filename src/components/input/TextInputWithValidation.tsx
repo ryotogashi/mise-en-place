@@ -10,15 +10,12 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 const TextWithValidationMessages = styled.div`
-  & > input {
+  .errorStyle {
     margin-bottom: 4px;
-  }
-
-  .errorColor {
     border-color: red;
   }
 
-  .successColor {
+  .successStyle {
     border-color: blue;
   }
 
@@ -60,8 +57,8 @@ const TextInputWithValidation = ({ validations, ...rest }: Props) => {
           value.length === 0
             ? ""
             : errorMessages[0] === undefined
-            ? "successColor"
-            : "errorColor"
+            ? "successStyle"
+            : "errorStyle"
         }
         {...rest}
       />
