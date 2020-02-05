@@ -6,7 +6,7 @@ import InputType from "./input-type";
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   type: InputType;
-  validations: [RegExp, string][];
+  validations: [RegExp | Function, string][];
 }
 
 const TextWithValidationMessages = styled.div`
@@ -43,7 +43,11 @@ const TextInputWithValidation = ({ validations, ...rest }: Props) => {
     console.log(val);
     setErrorMessages(
       validations.map(([validation, errorMessage]) => {
-        if (!val.match(validation)) return errorMessage;
+        if (typeof validation === "function") {
+          if (validation(value)) return errorMessage;
+        } else {
+          if (!val.match(validation)) return errorMessage;
+        }
       })
     );
   };
