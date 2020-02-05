@@ -46,7 +46,7 @@ const TextInputWithValidation = ({ validations, ...rest }: Props) => {
     console.log(val);
     setErrorMessages(
       validations.map(([validation, errorMessage]) => {
-        if (val.match(validation)) return errorMessage;
+        if (!val.match(validation)) return errorMessage;
       })
     );
   };

@@ -20,7 +20,7 @@ const Inputs = () => {
   };
 
   const validations: [RegExp, string][] = [
-    [/\S+@\S+\.\S+/, "phone number has to be number"]
+    [/\S+@\S+\.\S+/, "Email address isn't valid."]
   ];
 
   return (
