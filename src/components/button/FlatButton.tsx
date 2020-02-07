@@ -17,6 +17,7 @@ const FlatButton = ({ value, onClick, height, width }: Props) => {
     width: ${width};
     cursor: pointer;
     margin: 16px;
+    padding: 4px;
   `;
 
   return <FlatStyledButton onClick={onClick}>{value}</FlatStyledButton>;
