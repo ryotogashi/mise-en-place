@@ -23,6 +23,12 @@ const StyledDiv = styled.div`
       margin: 0 auto;
     }
 
+    .left-pane {
+      p {
+        line-height: 150%;
+      }
+    }
+
     .right-pane {
       padding-top: 50px;
     }

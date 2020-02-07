@@ -40,15 +40,17 @@ const TextInputWithValidation = ({ validations, ...rest }: Props) => {
     e.preventDefault();
     const val = e.currentTarget.value;
     setValue(val);
-    console.log(val);
+
     setErrorMessages(
-      validations.map(([validation, errorMessage]) => {
-        if (typeof validation === "function") {
-          if (validation(value)) return errorMessage;
-        } else {
-          if (!val.match(validation)) return errorMessage;
-        }
-      })
+      validations
+        .map(([validation, errorMessage]) => {
+          if (typeof validation === "function") {
+            if (validation(val)) return errorMessage;
+          } else {
+            if (val.match(validation)) return errorMessage;
+          }
+        })
+        .filter(item => item !== undefined)
     );
   };
   return (
@@ -57,13 +59,7 @@ const TextInputWithValidation = ({ validations, ...rest }: Props) => {
         type={InputType.TEXT}
         onChange={handleOnChange}
         value={value}
-        className={
-          value.length === 0
-            ? ""
-            : errorMessages[0] === undefined
-            ? "successStyle"
-            : "errorStyle"
-        }
+        className={value.length === 0 ? "" : 0 < errorMessages.length ? "errorStyle" : "successStyle"}
         {...rest}
       />
       <ul>

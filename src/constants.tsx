@@ -29,17 +29,7 @@ export const GlobalStyle = css`
 `;
 
 export const siteNavData: [string, string[]][] = [
-  [
-    "Buttons",
-    [
-      "Basic Button",
-      "Flat Button",
-      "Icon Button",
-      "Square Icon Button",
-      "Material Button",
-      "Toggle Button"
-    ]
-  ],
+  ["Buttons", ["Basic Button", "Flat Button", "Icon Button", "Square Icon Button", "Material Button", "Toggle Button"]],
   [
     "Inputs",
     [
@@ -55,7 +45,7 @@ export const siteNavData: [string, string[]][] = [
   ["Lists", ["Normal List", "Card List"]],
   ["Navigations", ["Side Navigation", "Top Navigation"]],
   ["Slideshows", ["Normal Slideshow"]],
-  ["Composite Component", ["Example list usage", "SignIn Form"]]
+  ["Composite Component", ["Searchiable List", "SignIn Form with Validation"]]
 ];
 
 // Sample Data

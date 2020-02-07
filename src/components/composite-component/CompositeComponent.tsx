@@ -14,7 +14,10 @@ const CompositeComponent = () => (
       <SearchList isCaseIntensive={true} />
     </IntroPage>
 
-    <IntroPage title="SignIn Form" description="Basic signin form.">
+    <IntroPage
+      title="SignIn Form with Validation"
+      description="Basic signin form with validation. Validation is for first, last name, phone number, email, password. These input notice with red color when you put invalid input and blue color when you put valid input"
+    >
       <SignInForm />
     </IntroPage>
   </Section>
