@@ -16,18 +16,8 @@ const MaterialStyledButton = styled.button`
   }
 `;
 
-interface Props {
-  value: string;
-  onClick: () => {} | null;
-}
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
-const MaterialButton = ({ value, onClick }: Props) => (
-  <MaterialStyledButton onClick={onClick}>{value}</MaterialStyledButton>
-);
-
-MaterialButton.defaultProps = {
-  value: "button",
-  onClick: null
-};
+const MaterialButton = ({ ...rest }: Props) => <MaterialStyledButton {...rest}></MaterialStyledButton>;
 
 export default MaterialButton;

@@ -25,15 +25,14 @@ const ToggleButtonDiv = styled.div`
   }
 `;
 
-interface Props {
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
   values: string[];
-  onClick: () => {} | null;
 }
 
-const ToggleButton = ({ values, onClick }: Props) => (
+const ToggleButton = ({ values, ...rest }: Props) => (
   <ToggleButtonDiv>
     {values.map((item, index) => (
-      <div key={index} onClick={onClick}>
+      <div key={index} {...rest}>
         {item}
       </div>
     ))}
@@ -41,8 +40,7 @@ const ToggleButton = ({ values, onClick }: Props) => (
 );
 
 ToggleButton.defaultProps = {
-  values: ["item 1", "item 2", "item 3", "item 4"],
-  onClick: null
+  values: ["item 1", "item 2", "item 3", "item 4"]
 };
 
 export default ToggleButton;

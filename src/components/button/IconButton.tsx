@@ -16,19 +16,14 @@ const IconStyledButton = styled.div`
   }
 `;
 
-interface Props {
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
   img: string;
-  onClick: () => {} | null;
 }
 
-const IconButton = ({ img, onClick }: Props) => (
-  <IconStyledButton onClick={onClick}>
+const IconButton = ({ img, ...rest }: Props) => (
+  <IconStyledButton {...rest}>
     <img src={img} alt="icon" />
   </IconStyledButton>
 );
-
-IconButton.defaultProps = {
-  onClick: null
-};
 
 export default IconButton;
