@@ -1,32 +1,26 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
-interface Props {
-  value: string;
-  onClick: () => {} | null;
-  height: string;
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   width: string;
 }
 
-const FlatButton = ({ value, onClick, height, width }: Props) => {
+const FlatButton = ({ width, ...rest }: Props) => {
   const FlatStyledButton = styled.button`
     background-color: white;
     border-radius: 5px;
     color: gray;
-    height: ${height};
+    height: 30px;
     width: ${width};
     cursor: pointer;
     margin: 16px;
     padding: 4px;
   `;
 
-  return <FlatStyledButton onClick={onClick}>{value}</FlatStyledButton>;
+  return <FlatStyledButton {...rest}></FlatStyledButton>;
 };
 
 FlatButton.defaultProps = {
-  value: "button",
-  onClick: null,
-  height: "30px",
   width: "150px"
 };
 

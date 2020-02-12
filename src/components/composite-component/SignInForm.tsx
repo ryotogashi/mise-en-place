@@ -3,6 +3,7 @@ import * as React from "react";
 import FlatButton from "../button/FlatButton";
 import InputType from "../input/input-type";
 import TextInputWithValidation from "../input/TextInputWithValidation";
+import { css } from "@emotion/core";
 
 const StyledSignInForm = styled.div`
   padding: 16px;
@@ -57,7 +58,7 @@ const SignInForm = () => {
       <TextInputWithValidation validations={phoneNumverValidation} type={InputType.TEL} placeholder="Phone Number" />
       <TextInputWithValidation validations={emailValidations} type={InputType.EMAIL} placeholder="Email" />
       <TextInputWithValidation validations={passwordValidations} type={InputType.PASSWORD} placeholder="Password" />
-      <FlatButton value="Sign In" width="70%" />
+      <FlatButton width={"72%"}>Sign In</FlatButton>
     </StyledSignInForm>
   );
 };

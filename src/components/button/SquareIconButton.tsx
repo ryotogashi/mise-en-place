@@ -1,23 +1,15 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
-interface Props {
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   height: string;
   width: string;
   value: string;
   children: React.ReactNode;
-  onClick: Function | null;
   disabled: boolean;
 }
 
-const SquareIconButton = ({
-  height,
-  width,
-  value,
-  children,
-  onClick,
-  disabled
-}: Props) => {
+const SquareIconButton = ({ height, width, value, children, disabled, ...rest }: Props) => {
   const StyledButton = styled.button`
     height: ${height};
     width: ${width};
@@ -33,11 +25,7 @@ const SquareIconButton = ({
   `;
 
   return (
-    <StyledButton
-      value={value}
-      onClick={event => (onClick !== null ? onClick(event) : null)}
-      disabled={disabled}
-    >
+    <StyledButton value={value} disabled={disabled} {...rest}>
       {children}
     </StyledButton>
   );
@@ -48,7 +36,6 @@ SquareIconButton.defaultProps = {
   width: "45px",
   value: "squareIconButton",
   children: null,
-  onClick: null,
   disabled: false
 };
 
