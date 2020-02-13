@@ -4,7 +4,7 @@
   "description": "## reforence",
   "private": true,
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "webpack --mode production && build-storybook",
     "dev:start": "webpack-dev-server --open --mode development",
     "start": "node server.js",
     "storybook": "start-storybook -p 6006",
