@@ -9,8 +9,10 @@ interface Props {
 }
 
 const StyledDiv = styled.div`
+  min-height: 350px;
   width: 100%;
   text-align: center;
+  position: relative;
 
   .pane {
     display: flex;
@@ -33,6 +35,12 @@ const StyledDiv = styled.div`
       padding-top: 50px;
     }
   }
+
+  & > hr {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+  }
 `;
 
 const IntroPage = ({ title, description, children, imgSrcs }: Props) => (
@@ -51,8 +59,8 @@ const IntroPage = ({ title, description, children, imgSrcs }: Props) => (
           <p>{imgTag}</p>
         </div>
       ))}
-      <hr />
     </>
+    <hr />
   </StyledDiv>
 );
 
