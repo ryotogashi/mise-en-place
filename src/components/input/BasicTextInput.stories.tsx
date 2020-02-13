@@ -8,4 +8,6 @@ export default {
   component: BasicTextInput
 };
 
-export const _BasicTextInput = () => <BasicTextInput onChange={action("changed")}></BasicTextInput>;
+export const _BasicTextInput = () => (
+  <BasicTextInput onChange={action("changed")} placeholder="basic text input"></BasicTextInput>
+);

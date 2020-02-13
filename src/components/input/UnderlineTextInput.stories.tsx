@@ -8,4 +8,6 @@ export default {
   component: UnderlineTextInput
 };
 
-export const _UnderlineTextInput = () => <UnderlineTextInput onChange={action("changed")}></UnderlineTextInput>;
+export const _UnderlineTextInput = () => (
+  <UnderlineTextInput onChange={action("changed")} placeholder="underline text input"></UnderlineTextInput>
+);

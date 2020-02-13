@@ -15,5 +15,8 @@ export default {
 };
 
 export const _TextInputWithValidation = () => (
-  <TextInputWithValidation validations={validations}></TextInputWithValidation>
+  <TextInputWithValidation
+    validations={validations}
+    placeholder="text input with email validation"
+  ></TextInputWithValidation>
 );

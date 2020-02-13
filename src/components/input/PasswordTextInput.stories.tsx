@@ -8,6 +8,10 @@ export default {
   component: PasswordTextInput
 };
 
-export const _PasswordTextInput = () => <PasswordTextInput onChange={action("changed")}></PasswordTextInput>;
+export const _PasswordTextInput = () => (
+  <PasswordTextInput onChange={action("changed")} placeholder="password text input"></PasswordTextInput>
+);
 
-export const _PasswordTextInputWithIcon = () => <PasswordTextInput showHideIcon={true}></PasswordTextInput>;
+export const _PasswordTextInputWithIcon = () => (
+  <PasswordTextInput showHideIcon={true} placeholder="password text input with icon"></PasswordTextInput>
+);

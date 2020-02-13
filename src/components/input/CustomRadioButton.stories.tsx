@@ -1,7 +1,6 @@
 import * as React from "react";
-import { action } from "@storybook/addon-actions";
-import { radioData } from "../../constants";
 
+import { radioData } from "../../constants";
 import CustomRaioButton from "./CustomRadioButton";
 
 export default {
