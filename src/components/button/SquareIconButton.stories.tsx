@@ -4,7 +4,7 @@ import { action } from "@storybook/addon-actions";
 import SquareIconButton from "./SquareIconButton";
 
 export default {
-  title: "Components/Button",
+  title: "Button",
   component: SquareIconButton
 };
 

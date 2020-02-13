@@ -6,7 +6,7 @@ import sampeIcon from "../../assets/sample-icon.svg";
 import IconButton from "./IconButton";
 
 export default {
-  title: "Components/Button",
+  title: "Button",
   component: IconButton
 };
 

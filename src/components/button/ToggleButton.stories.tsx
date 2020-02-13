@@ -4,7 +4,7 @@ import { action } from "@storybook/addon-actions";
 import ToggleButton from "./ToggleButton";
 
 export default {
-  title: "Components/Button",
+  title: "Button",
   component: ToggleButton
 };
 
