@@ -29,12 +29,7 @@ const NavigationNode = ({ item, childItems, nodeLevel, display }: Props) => {
       </a>
       {childItems
         ? childItems.map((child, index) => (
-            <NavigationNode
-              key={index}
-              item={child}
-              nodeLevel={nodeLevel + 1}
-              display={childNodesVisiblity}
-            />
+            <NavigationNode key={index} item={child} nodeLevel={nodeLevel + 1} display={childNodesVisiblity} />
           ))
         : null}
     </>

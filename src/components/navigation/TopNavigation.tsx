@@ -37,7 +37,13 @@ const TopNavigation = ({ logo, navHeight, items }: Props) => {
     .option {
       padding: 19px;
     }
+
+    & a {
+      text-decoration: none;
+      color: white;
+    }
   `;
+
   return (
     <StyledNav>
       <a href="">
