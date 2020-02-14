@@ -24,6 +24,11 @@ const SideNavigation = ({ logo, navHeight, navWidth, items }: Props) => {
       color: #ffffff;
       box-shadow: 1px 1px 4px black;
     }
+
+    & a {
+      text-decoration: none;
+      color: white;
+    }
   `;
 
   return (
