@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SquareIconButton test tests SquareIconButton renders correctly  1`] = `
+<button
+  className="css-1o5go31"
+  disabled={false}
+  value="squareIconButton"
+/>
+`;
