@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconButton test tests IconButton renders correctly  1`] = `
+<div
+  className="css-2ggvbt"
+>
+  <img
+    alt="icon"
+    src="xxx.png"
+  />
+</div>
+`;
