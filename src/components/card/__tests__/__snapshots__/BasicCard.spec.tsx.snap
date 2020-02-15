@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BasicCard test tests BasicCard renders correctly  1`] = `
+<div
+  className="css-1pcjs3q"
+>
+  <h1>
+    test
+  </h1>
+  <p>
+    test test
+  </p>
+</div>
+`;

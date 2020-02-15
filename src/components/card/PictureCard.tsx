@@ -36,24 +36,12 @@ const PictureCard = ({ imgSrc, children, width, height }: Props) => {
       background-color: rgba(0, 0, 0, 0.7);
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
+    & * {
       padding: 8px 16px 8px 16px;
       color: #f6f6f6;
     }
 
-    &:hover h1,
-    &:hover h2,
-    &:hover h3,
-    &:hover h4,
-    &:hover h5,
-    &:hover h6,
-    &:hover p {
+    &:hover * {
       color: white;
     }
   `;
