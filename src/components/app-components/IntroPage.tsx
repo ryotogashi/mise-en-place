@@ -9,9 +9,9 @@ interface Props {
 }
 
 const StyledDiv = styled.div`
-  min-height: 350px;
   width: 100%;
   text-align: center;
+  min-height: 350px;
   position: relative;
 
   .pane {
@@ -37,9 +37,8 @@ const StyledDiv = styled.div`
   }
 
   & > hr {
-    position: absolute;
+    position: relative;
     bottom: 0;
-    left: 45%;
   }
 `;
 
