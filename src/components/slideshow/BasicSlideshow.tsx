@@ -33,6 +33,7 @@ const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
       position: absolute;
       bottom: 1%;
       width: 100%;
+      text-align: center;
     }
   `;
 
@@ -42,13 +43,9 @@ const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
     const value = event.currentTarget.value;
 
     if (value === "left") {
-      setCheckedValue(prevValue =>
-        prevValue === 0 ? prevValue : prevValue - 1
-      );
+      setCheckedValue(prevValue => (prevValue === 0 ? prevValue : prevValue - 1));
     } else {
-      setCheckedValue(prevValue =>
-        prevValue === imgSrcs.length - 1 ? prevValue : prevValue + 1
-      );
+      setCheckedValue(prevValue => (prevValue === imgSrcs.length - 1 ? prevValue : prevValue + 1));
     }
   };
 
@@ -61,11 +58,7 @@ const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
     <SlideshowDiv>
       <SlideshowImages imgSrcs={imgSrcs} activeNumber={checkedValue} />
       <div className="button-group">
-        <SquareIconButton
-          onClick={handleClick}
-          value="left"
-          disabled={0 === checkedValue ? true : false}
-        >
+        <SquareIconButton onClick={handleClick} value="left" disabled={0 === checkedValue ? true : false}>
           <LeftArrow />
         </SquareIconButton>
         <SquareIconButton
