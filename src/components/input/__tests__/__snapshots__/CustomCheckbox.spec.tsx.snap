@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomCheckbox test tests CustomCheckbox renders correctly  1`] = `
+<label
+  className="css-j59zmy"
+>
+  <input
+    type="checkbox"
+  />
+</label>
+`;
