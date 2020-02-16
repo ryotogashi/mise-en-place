@@ -3,7 +3,7 @@ import * as React from "react";
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {}
 
-const CustomRadioButton = ({ ...rest }: Props) => {
+const CustomCheckbox = ({ ...rest }: Props) => {
   const StyledLabel = styled.label`
     color: #858585;
     position: relative;
@@ -23,7 +23,6 @@ const CustomRadioButton = ({ ...rest }: Props) => {
       width: 16px;
       height: 16px;
       border: 2px solid rgba(225, 225, 225, 0.3);
-      border-radius: 50%;
     }
 
     &::before {
@@ -32,7 +31,6 @@ const CustomRadioButton = ({ ...rest }: Props) => {
       width: 10px;
       height: 10px;
       background: rgba(225, 225, 225, 0);
-      border-radius: 50%;
     }
 
     &:hover::after {
@@ -45,15 +43,15 @@ const CustomRadioButton = ({ ...rest }: Props) => {
       transition: all 0.5s ease-out;
     }
 
-    & > input[type="radio"] {
+    & > input[type="checkbox"] {
       display: none;
     }
   `;
   return (
     <StyledLabel>
-      <input type={"radio"} {...rest} />
+      <input type={"checkbox"} {...rest} />
     </StyledLabel>
   );
 };
 
-export default CustomRadioButton;
+export default CustomCheckbox;

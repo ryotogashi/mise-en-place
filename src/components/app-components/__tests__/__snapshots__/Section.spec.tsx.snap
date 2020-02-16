@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Section test tests Section renders correctly  1`] = `
+<section
+  className="css-150x4a8"
+>
+  <h1
+    id="test"
+  >
+    <a
+      href="https://mise-en-place-ui-components.herokuapp.com/story?path=/story/test"
+    >
+      <img
+        alt="story-icon"
+      />
+    </a>
+    test
+  </h1>
+  test
+</section>
+`;

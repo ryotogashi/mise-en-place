@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IntroPage test tests IntroPage renders correctly  1`] = `
+<div
+  className="css-svh4v8"
+>
+  <div
+    className="pane"
+    id="test"
+  >
+    <div
+      className="left-pane"
+    >
+      <h2>
+        test
+      </h2>
+      <p>
+        test
+      </p>
+    </div>
+    <div
+      className="right-pane"
+    >
+      test
+    </div>
+  </div>
+  <hr />
+</div>
+`;
