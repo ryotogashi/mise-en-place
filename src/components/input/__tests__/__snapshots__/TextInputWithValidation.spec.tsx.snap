@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInputWithValidation test tests TextInputWithValidation renders correctly  1`] = `
+<div
+  className="css-vcimaa"
+>
+  <input
+    className=" css-1d84lrf"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <ul />
+</div>
+`;
