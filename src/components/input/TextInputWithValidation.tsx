@@ -72,7 +72,8 @@ const TextInputWithValidation = ({ validations, ...rest }: Props) => {
 };
 
 TextInputWithValidation.defaultProps = {
-  type: InputType.TEXT
+  type: InputType.TEXT,
+  validations: []
 };
 
 export default TextInputWithValidation;
