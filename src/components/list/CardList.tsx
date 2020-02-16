@@ -25,7 +25,7 @@ const CardList = ({ list }: Props) => (
   <StyledListDiv>
     {list.map((item: string, index: number) => (
       <SimpleCard key={index}>
-        <h2>{item}</h2>
+        <h4>{item}</h4>
       </SimpleCard>
     ))}
   </StyledListDiv>
