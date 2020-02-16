@@ -9,13 +9,7 @@ interface Props {
   onClick: Function | null;
 }
 
-const CustomRadioButton = ({
-  name,
-  labels,
-  display,
-  defaultChecked,
-  onClick
-}: Props) => {
+const CustomRadioButtonGroup = ({ name, labels, display, defaultChecked, onClick }: Props) => {
   const RadioGroupDiv = styled.div`
     & input[type="radio"] {
       display: none;
@@ -92,11 +86,11 @@ const CustomRadioButton = ({
   );
 };
 
-CustomRadioButton.defaultProps = {
+CustomRadioButtonGroup.defaultProps = {
   name: "custom-radio-button",
   display: "block",
   defaultChecked: 0,
   onClick: null
 };
 
-export default CustomRadioButton;
+export default CustomRadioButtonGroup;

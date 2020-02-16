@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
-import CustomRadioButton from "../input/CustomRadioButton";
+import CustomRadioButtonGroup from "../input/CustomRadioButtonGroup";
 import SlideshowImages from "./SlideshowImages";
 import SquareIconButton from "../button/SquareIconButton";
 import { LeftArrow, RightArrow } from "./Arrow";
@@ -70,7 +70,7 @@ const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
         </SquareIconButton>
       </div>
       <div className="radio-group">
-        <CustomRadioButton
+        <CustomRadioButtonGroup
           name="slideshow"
           labels={imgSrcs.map(_ => "")}
           display="inline-block"

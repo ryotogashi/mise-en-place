@@ -3,7 +3,7 @@ import * as React from "react";
 import { radioData } from "../../constants";
 import IntroPage from "../app-components/IntroPage";
 import BasicTextInput from "./BasicTextInput";
-import CustomRadioButtons from "./CustomRadioButton";
+import CustomRadioButtonGroup from "./CustomRadioButtonGroup";
 import DateTextInput from "./DateTextInput";
 import PasswordTextInput from "./PasswordTextInput";
 import UnderlineTextInput from "./UnderlineTextInput";
@@ -19,9 +19,7 @@ const Inputs = () => {
     setCustomRadioCheckNumber(Number(value));
   };
 
-  const validations: [RegExp, string][] = [
-    [/\S+@\S+\.\S+/, "Email address isn't valid."]
-  ];
+  const validations: [RegExp, string][] = [[/\S+@\S+\.\S+/, "Email address isn't valid."]];
 
   return (
     <Section title="Inputs">
@@ -29,10 +27,7 @@ const Inputs = () => {
         <BasicTextInput placeholder="placeholder" />
       </IntroPage>
 
-      <IntroPage
-        title="Underline Text Input"
-        description="Underline text input"
-      >
+      <IntroPage title="Underline Text Input" description="Underline text input">
         <UnderlineTextInput type={InputType.TEXT} placeholder="placeholder" />
       </IntroPage>
 
@@ -47,25 +42,12 @@ const Inputs = () => {
         <PasswordTextInput showHideIcon={true} />
       </IntroPage>
 
-      <IntroPage
-        title="TextInput With Validation"
-        description="TextInput with Validtion."
-      >
-        <TextInputWithValidation
-          validations={validations}
-          placeholder="email"
-        />
+      <IntroPage title="TextInput With Validation" description="TextInput with Validtion.">
+        <TextInputWithValidation validations={validations} placeholder="email" />
       </IntroPage>
 
-      <IntroPage
-        title="Custom Radio Buttons"
-        description="Custom radio button group"
-      >
-        <CustomRadioButtons
-          labels={radioData}
-          defaultChecked={customRadioCheckNumber}
-          onClick={handleRadioClick}
-        />
+      <IntroPage title="Custom Radio Buttons" description="Custom radio button group">
+        <CustomRadioButtonGroup labels={radioData} defaultChecked={customRadioCheckNumber} onClick={handleRadioClick} />
       </IntroPage>
     </Section>
   );

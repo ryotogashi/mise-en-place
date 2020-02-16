@@ -1,14 +1,14 @@
 import * as React from "react";
 
 import { radioData } from "../../constants";
-import CustomRaioButton from "./CustomRadioButton";
+import CustomRadioButtonGroup from "./CustomRadioButtonGroup";
 
 export default {
   title: "Input",
-  component: CustomRaioButton
+  component: CustomRadioButtonGroup
 };
 
-export const _CustomRaioButton = () => {
+export const _CustomRadioButtonGroup = () => {
   const [customRadioCheckNumber, setCustomRadioCheckNumber] = React.useState(0);
 
   const handleRadioClick = (event: React.MouseEvent<HTMLInputElement>) => {
@@ -16,10 +16,10 @@ export const _CustomRaioButton = () => {
     setCustomRadioCheckNumber(Number(value));
   };
   return (
-    <CustomRaioButton
+    <CustomRadioButtonGroup
       labels={radioData}
       defaultChecked={customRadioCheckNumber}
       onClick={handleRadioClick}
-    ></CustomRaioButton>
+    ></CustomRadioButtonGroup>
   );
 };
