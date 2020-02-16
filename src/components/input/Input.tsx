@@ -10,6 +10,7 @@ import UnderlineTextInput from "./UnderlineTextInput";
 import Section from "../app-components/Section";
 import InputType from "./input-type";
 import TextInputWithValidation from "./TextInputWithValidation";
+import CustomCheckbox from "./CustomCheckbox";
 
 const Inputs = () => {
   const [customRadioCheckNumber, setCustomRadioCheckNumber] = React.useState(0);
@@ -48,6 +49,10 @@ const Inputs = () => {
 
       <IntroPage title="Custom Radio Buttons" description="Custom radio button group">
         <CustomRadioButtonGroup labels={radioData} defaultChecked={customRadioCheckNumber} onClick={handleRadioClick} />
+      </IntroPage>
+
+      <IntroPage title="Custom Checkbox" description="Custom checkbox">
+        <CustomCheckbox />
       </IntroPage>
     </Section>
   );
