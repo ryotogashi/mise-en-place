@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationNode test tests NavigationNode render correctly 1`] = `
+<a
+  href="#item"
+>
+  <div
+    className="css-72aj2j"
+    onClick={[Function]}
+  >
+    item
+  </div>
+</a>
+`;
