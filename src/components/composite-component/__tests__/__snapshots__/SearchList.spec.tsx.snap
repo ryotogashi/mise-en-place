@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchList test tests SearchList renders correctly  1`] = `
+Array [
+  <input
+    className="css-1ym2sj7"
+    onChange={[Function]}
+    placeholder="search"
+    type="text"
+  />,
+  <div
+    className="css-cm3tjs"
+  >
+    <ul />
+  </div>,
+]
+`;
