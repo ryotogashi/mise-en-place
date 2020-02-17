@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideNavigation test tests SideNavigation render correctly 1`] = `
+<nav
+  className="css-1bk21om"
+>
+  <a
+    href=""
+  >
+    <div
+      className="css-3ihe6y"
+    >
+      test
+    </div>
+  </a>
+  <a
+    href="#test1"
+  >
+    <div
+      className="css-72aj2j"
+      onClick={[Function]}
+    >
+      test1
+    </div>
+  </a>
+  <a
+    href="#test child 1"
+  >
+    <div
+      className="css-wqun73"
+      onClick={[Function]}
+    >
+      test child 1
+    </div>
+  </a>
+  <a
+    href="#test child 2"
+  >
+    <div
+      className="css-wqun73"
+      onClick={[Function]}
+    >
+      test child 2
+    </div>
+  </a>
+  <a
+    href="#test2"
+  >
+    <div
+      className="css-72aj2j"
+      onClick={[Function]}
+    >
+      test2
+    </div>
+  </a>
+  <a
+    href="#test child 1"
+  >
+    <div
+      className="css-wqun73"
+      onClick={[Function]}
+    >
+      test child 1
+    </div>
+  </a>
+  <a
+    href="#test child 2"
+  >
+    <div
+      className="css-wqun73"
+      onClick={[Function]}
+    >
+      test child 2
+    </div>
+  </a>
+</nav>
+`;

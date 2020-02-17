@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopNavigation test tests TopNavigation render correctly 1`] = `
+<nav
+  className="css-y95ww1"
+>
+  <a
+    href=""
+  >
+    <div
+      className="nav logo"
+    >
+      test
+    </div>
+  </a>
+  <div
+    className="options"
+  >
+    <a
+      href="test1"
+    >
+      <div
+        className="nav option"
+      >
+        test1
+      </div>
+    </a>
+    <a
+      href="test2"
+    >
+      <div
+        className="nav option"
+      >
+        test2
+      </div>
+    </a>
+    <a
+      href="test3"
+    >
+      <div
+        className="nav option"
+      >
+        test3
+      </div>
+    </a>
+    <a
+      href="test4"
+    >
+      <div
+        className="nav option"
+      >
+        test4
+      </div>
+    </a>
+  </div>
+</nav>
+`;
