@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationLogo test tests NavigationLogo render correctly 1`] = `
+<a
+  href=""
+>
+  <div
+    className="css-3ihe6y"
+  >
+    test
+  </div>
+</a>
+`;
