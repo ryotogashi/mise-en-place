@@ -9,7 +9,6 @@ const StyledInput = styled.input`
   padding: 4px;
   border: 1px solid ${secondary};
   color: ${secondary};
-  opacity: 0.4;
   border-radius: 4px;
 
   ::-webkit-datetime-edit-fields-wrapper,
