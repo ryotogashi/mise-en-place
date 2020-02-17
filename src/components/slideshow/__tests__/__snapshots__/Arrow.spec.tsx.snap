@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Arrow test tests Arrow render correctly 1`] = `
+<svg
+  height="30px"
+  viewBox="0 0 50 80"
+  width="30px"
+  xmlSpace="preserve"
+>
+  <polyline
+    fill="none"
+    points="45.63,75.8 0.375,38.087 45.63,0.375"
+    stroke="#FFFFFF"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="1"
+  />
+</svg>
+`;
+
+exports[`Arrow test tests Arrow render correctly 2`] = `
+<svg
+  height="30px"
+  viewBox="0 0 50 80"
+  width="30px"
+  xmlSpace="preserve"
+>
+  <polyline
+    fill="none"
+    points="0.375,0.375 45.63,38.087 0.375,75.8"
+    stroke="#FFFFFF"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="1"
+  />
+</svg>
+`;

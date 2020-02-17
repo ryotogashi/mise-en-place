@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Arrow test tests Arrow render correctly 1`] = `
+<div
+  className="css-95n64y"
+>
+  <div
+    className="css-tpx3lo"
+  >
+    <img
+      alt="img-0"
+      className="img "
+      src="test"
+    />
+    <img
+      alt="img-1"
+      className="img img-inactive"
+      src="test"
+    />
+  </div>
+  <div
+    className="button-group"
+  >
+    <button
+      className="css-plbu26"
+      disabled={true}
+      onClick={[Function]}
+      value="left"
+    >
+      <svg
+        height="30px"
+        viewBox="0 0 50 80"
+        width="30px"
+        xmlSpace="preserve"
+      >
+        <polyline
+          fill="none"
+          points="45.63,75.8 0.375,38.087 45.63,0.375"
+          stroke="#FFFFFF"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1"
+        />
+      </svg>
+    </button>
+    <button
+      className="css-1o5go31"
+      disabled={false}
+      onClick={[Function]}
+      value="right"
+    >
+      <svg
+        height="30px"
+        viewBox="0 0 50 80"
+        width="30px"
+        xmlSpace="preserve"
+      >
+        <polyline
+          fill="none"
+          points="0.375,0.375 45.63,38.087 0.375,75.8"
+          stroke="#FFFFFF"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    className="radio-group"
+  >
+    <div
+      className="radio-group css-q1v34d"
+    >
+      <div>
+        <label
+          className="checked"
+        >
+          <input
+            defaultChecked={true}
+            name="slideshow"
+            onClick={[Function]}
+            type="radio"
+            value={0}
+          />
+          
+        </label>
+      </div>
+      <div>
+        <label
+          className=""
+        >
+          <input
+            defaultChecked={false}
+            name="slideshow"
+            onClick={[Function]}
+            type="radio"
+            value={1}
+          />
+          
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
