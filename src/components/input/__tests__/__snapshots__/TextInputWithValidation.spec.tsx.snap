@@ -5,7 +5,7 @@ exports[`TextInputWithValidation test tests TextInputWithValidation renders corr
   className="css-emrd1e"
 >
   <input
-    className=" css-yhflom"
+    className=" css-1puhmno"
     onChange={[Function]}
     type="text"
     value=""

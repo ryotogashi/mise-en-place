@@ -2,7 +2,7 @@
 
 exports[`DateTextInput test tests DateTextInput renders correctly  1`] = `
 <input
-  className="css-1ipjwc6"
+  className="css-19m534t"
   type="date"
 />
 `;
