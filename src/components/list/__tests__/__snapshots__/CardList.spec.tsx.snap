@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardList test tests CardList test render correctly 1`] = `
+<div
+  className="css-1qosea9"
+>
+  <div
+    className="css-1pcjs3q"
+  >
+    <h4>
+      list item1
+    </h4>
+  </div>
+  <div
+    className="css-1pcjs3q"
+  >
+    <h4>
+      list item2
+    </h4>
+  </div>
+  <div
+    className="css-1pcjs3q"
+  >
+    <h4>
+      list item3
+    </h4>
+  </div>
+</div>
+`;
