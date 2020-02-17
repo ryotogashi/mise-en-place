@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignInForm test tests SignInForm renders correctly  1`] = `
+<div
+  className="css-152opwo"
+>
+  <div
+    className="css-emrd1e"
+  >
+    <input
+      className=" css-1puhmno"
+      onChange={[Function]}
+      placeholder="Given Name"
+      type="text"
+      value=""
+    />
+    <ul />
+  </div>
+  <div
+    className="css-emrd1e"
+  >
+    <input
+      className=" css-1puhmno"
+      onChange={[Function]}
+      placeholder="Last Name"
+      type="text"
+      value=""
+    />
+    <ul />
+  </div>
+  <div
+    className="css-emrd1e"
+  >
+    <input
+      className=" css-1puhmno"
+      onChange={[Function]}
+      placeholder="Phone Number"
+      type="tel"
+      value=""
+    />
+    <ul />
+  </div>
+  <div
+    className="css-emrd1e"
+  >
+    <input
+      className=" css-1puhmno"
+      onChange={[Function]}
+      placeholder="Email"
+      type="email"
+      value=""
+    />
+    <ul />
+  </div>
+  <div
+    className="css-emrd1e"
+  >
+    <input
+      className=" css-1puhmno"
+      onChange={[Function]}
+      placeholder="Password"
+      type="password"
+      value=""
+    />
+    <ul />
+  </div>
+  <button
+    className="css-bo9wl2"
+  >
+    Sign In
+  </button>
+</div>
+`;
