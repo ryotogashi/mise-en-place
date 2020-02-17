@@ -4,6 +4,7 @@ import * as React from "react";
 import HideIcon from "../../assets/hide.svg";
 import ShowIcon from "../../assets/show.svg";
 import InputType from "./input-type";
+import { secondary } from "../../constants/colors";
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   showHideIcon: boolean;
@@ -15,9 +16,7 @@ const PasswordTextInput = ({ showHideIcon, ...rest }: Props) => {
 
   const handleClick = () => {
     setImageName(prevValue => (prevValue === "hide" ? "show" : "hide"));
-    setInputType(prevValue =>
-      prevValue === InputType.PASSWORD ? InputType.TEXT : InputType.PASSWORD
-    );
+    setInputType(prevValue => (prevValue === InputType.PASSWORD ? InputType.TEXT : InputType.PASSWORD));
   };
 
   const PasswordDiv = styled.div`
@@ -41,9 +40,14 @@ const PasswordTextInput = ({ showHideIcon, ...rest }: Props) => {
       height: 24px;
       width: 100%;
       padding: 4px;
-      border: 1px solid gray;
+      border: 1px solid ${secondary};
+      color: ${secondary};
       opacity: 0.4;
       border-radius: 4px;
+
+      &::placeholder {
+        color: ${secondary};
+      }
     }
   `;
 

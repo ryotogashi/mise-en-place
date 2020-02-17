@@ -2,7 +2,7 @@
 
 exports[`UnderlineTextInput test tests UnderlineTextInput renders correctly  1`] = `
 <input
-  className="css-d6njo2"
+  className="css-1ym2sj7"
   type="text"
 />
 `;

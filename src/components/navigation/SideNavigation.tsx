@@ -3,6 +3,7 @@ import * as React from "react";
 
 import Logo from "./NavigationLogo";
 import Node from "./NavigationNode";
+import { white } from "../../constants/colors";
 
 interface Props {
   logo: string;
@@ -21,13 +22,13 @@ const SideNavigation = ({ logo, navHeight, navWidth, items }: Props) => {
     text-align: left;
 
     div:hover {
-      color: #ffffff;
+      color: ${white};
       box-shadow: 1px 1px 4px black;
     }
 
     & a {
       text-decoration: none;
-      color: white;
+      color: ${white};
     }
   `;
 

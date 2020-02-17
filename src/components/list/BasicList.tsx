@@ -1,12 +1,14 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
+import { secondary } from "../../constants/colors";
+
 const StyledListDiv = styled.div`
   margin: 16px;
   height: 300px;
   width: 90%;
   overflow: scroll;
-  color: gray;
+  color: ${secondary};
 
   ul {
     padding: 0;

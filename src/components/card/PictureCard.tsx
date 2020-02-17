@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
+import { white } from "../../constants/colors";
+
 interface Props {
   imgSrc: string;
   children: React.ReactNode;
@@ -42,7 +44,7 @@ const PictureCard = ({ imgSrc, children, width, height }: Props) => {
     }
 
     &:hover * {
-      color: white;
+      color: ${white};
     }
   `;
 

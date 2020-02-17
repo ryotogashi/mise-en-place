@@ -2,6 +2,6 @@
 
 exports[`MaterialButton test tests MaterialButton renders correctly  1`] = `
 <button
-  className="css-175o8ho"
+  className="css-1uurvcs"
 />
 `;

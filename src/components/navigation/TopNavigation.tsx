@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
+import { white } from "../../constants/colors";
+
 interface Props {
   logo: string;
   navHeight: string;
@@ -20,7 +22,7 @@ const TopNavigation = ({ logo, navHeight, items }: Props) => {
 
     .nav {
       &:hover {
-        color: #ffffff;
+        color: ${white};
         box-shadow: 1px 1px 4px black;
       }
     }
@@ -40,7 +42,7 @@ const TopNavigation = ({ logo, navHeight, items }: Props) => {
 
     & a {
       text-decoration: none;
-      color: white;
+      color: ${white};
     }
   `;
 

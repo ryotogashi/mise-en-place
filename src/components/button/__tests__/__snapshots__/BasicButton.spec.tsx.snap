@@ -2,6 +2,6 @@
 
 exports[`BasicButton test tests BasicButton renders correctly  1`] = `
 <button
-  className="css-19dsy0"
+  className="css-1qq2dj4"
 />
 `;

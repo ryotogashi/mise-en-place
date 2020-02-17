@@ -3,6 +3,7 @@ import * as React from "react";
 
 import BasicTextInput from "./BasicTextInput";
 import InputType from "./input-type";
+import { primary, secondary, danger } from "../../constants/colors";
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   type: InputType;
@@ -10,13 +11,22 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 const TextWithValidationMessages = styled.div`
-  .errorStyle {
-    margin-bottom: 4px;
-    border-color: red;
+  & > input {
+    border-color: ${secondary};
+    color: ${secondary};
+
+    &::placeholder {
+      color: ${secondary};
+    }
   }
 
-  .successStyle {
-    border-color: blue;
+  & > .errorStyle {
+    margin-bottom: 4px;
+    border-color: ${danger};
+  }
+
+  & > .successStyle {
+    border-color: ${primary};
   }
 
   & > ul {
@@ -29,7 +39,7 @@ const TextWithValidationMessages = styled.div`
     list-style: none;
     text-align: left;
     font-size: 14px;
-    color: red;
+    color: ${danger};
   }
 `;
 
