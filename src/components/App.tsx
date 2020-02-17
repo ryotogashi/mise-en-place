@@ -2,7 +2,8 @@ import { Global } from "@emotion/core";
 import styled from "@emotion/styled";
 import * as React from "react";
 
-import { GlobalStyle, siteNavData } from "../constants";
+import GlobalStyle from "../constants/globalStyle";
+import { siteNavData } from "../constants/sampleData";
 import WelcomPage from "./app-components/WelcomPage";
 import Button from "./button/Button";
 import Input from "./input/Input";

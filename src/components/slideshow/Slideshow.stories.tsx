@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { slideshowData } from "../../constants";
+import { slideshowData } from "../../constants/sampleData";
 import BasicSlideshow from "./BasicSlideshow";
 
 export default {

@@ -2,7 +2,7 @@
 
 exports[`BasicTextInput test tests BasicTextInput renders correctly  1`] = `
 <input
-  className="css-1d84lrf"
+  className="css-yhflom"
   type="text"
 />
 `;

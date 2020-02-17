@@ -2,10 +2,10 @@
 
 exports[`TextInputWithValidation test tests TextInputWithValidation renders correctly  1`] = `
 <div
-  className="css-vcimaa"
+  className="css-emrd1e"
 >
   <input
-    className=" css-1d84lrf"
+    className=" css-yhflom"
     onChange={[Function]}
     type="text"
     value=""

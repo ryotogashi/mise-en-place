@@ -1,19 +1,20 @@
 import styled from "@emotion/styled";
 import * as React from "react";
+import { secondary, white } from "../../constants/colors";
 
 const ToggleButtonDiv = styled.div`
-  background-color: white;
+  background-color: ${white};
   display: inline-block;
   border-radius: 5px;
-  border: solid 0.5px rgba(221, 221, 221, 0.7);
-  color: gray;
+  border: solid 0.5px ${secondary};
+  color: ${secondary};
   cursor: pointer;
   margin: 16px;
 
   div {
     display: inline-block;
     padding: 10px 12px;
-    border-right: solid 0.5px rgba(221, 221, 221, 0.7);
+    border-right: solid 0.3px ${secondary};
 
     &:last-child {
       border-style: none;

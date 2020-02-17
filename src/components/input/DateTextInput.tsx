@@ -1,12 +1,14 @@
 import styled from "@emotion/styled";
 import * as React from "react";
+import { secondary } from "../../constants/colors";
 
 const StyledInput = styled.input`
   height: 24px;
   width: 70%;
   margin: 16px;
   padding: 4px;
-  border: 1px solid gray;
+  border: 1px solid ${secondary};
+  color: ${secondary};
   opacity: 0.4;
   border-radius: 4px;
 
@@ -17,12 +19,14 @@ const StyledInput = styled.input`
   ::-webkit-datetime-edit-day-field,
   ::-webkit-inner-spin-button,
   ::-webkit-calendar-picker-indicator {
-    color: gray;
+    color: ${secondary};
+  }
+
+  &::placeholder {
+    color: ${secondary};
   }
 `;
 
-const DateTextInput = ({ ...rest }: React.HTMLAttributes<HTMLInputElement>) => (
-  <StyledInput type="date" {...rest} />
-);
+const DateTextInput = ({ ...rest }: React.HTMLAttributes<HTMLInputElement>) => <StyledInput type="date" {...rest} />;
 
 export default DateTextInput;

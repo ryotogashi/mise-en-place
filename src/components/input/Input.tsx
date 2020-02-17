@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { radioData } from "../../constants";
+import { radioData } from "../../constants/sampleData";
 import IntroPage from "../app-components/IntroPage";
 import BasicTextInput from "./BasicTextInput";
 import CustomRadioButtonGroup from "./CustomRadioButtonGroup";
