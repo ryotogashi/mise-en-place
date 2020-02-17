@@ -6,11 +6,12 @@ export const siteNavData: [string, string[]][] = [
     "Inputs",
     [
       "Basic Text Input",
+      "Underline Text Input",
       "Date Text Input",
       "Password Text Input",
-      "Underline Text Input",
-      "Radio Buttons",
-      "Custom Radio Buttons"
+      "TextInput With Validation",
+      "Custom Radio Buttons",
+      "Custom Checkbox"
     ]
   ],
   ["Cards", ["Basic Card", "Picture Covered Card"]],
