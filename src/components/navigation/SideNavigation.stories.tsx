@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import SideNavigation from "./SideNavigation";
-import { navigationItems } from "../../constants";
+import { navigationItems } from "../../constants/sampleData";
 
 export default {
   title: "Navigation",

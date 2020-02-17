@@ -1,32 +1,4 @@
-import { css } from "@emotion/core";
-
-import CardImage from "./assets/img-for-card.jpg";
-
-export const GlobalStyle = css`
-  body {
-    margin: 0;
-  }
-
-  a {
-    text-decoration: none;
-    color: #e5e5e5;
-  }
-
-  hr {
-    width: 10%;
-    margin: 56px auto 32px auto;
-    opacity: 0.3;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: #323439;
-  }
-`;
+import CardImage from "../assets/img-for-card.jpg";
 
 export const siteNavData: [string, string[]][] = [
   ["Buttons", ["Basic Button", "Flat Button", "Icon Button", "Square Icon Button", "Material Button", "Toggle Button"]],
@@ -48,7 +20,6 @@ export const siteNavData: [string, string[]][] = [
   ["Composite Component", ["Searchiable List", "SignIn Form with Validation"]]
 ];
 
-// Sample Data
 export const cardData = {
   title: "Lorem ipsum dolor",
   content:

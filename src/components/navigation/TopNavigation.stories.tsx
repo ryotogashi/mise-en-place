@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import TopNavigation from "./TopNavigation";
-import { navigationItems2 } from "../../constants";
+import { navigationItems2 } from "../../constants/sampleData";
 
 export default {
   title: "Navigation",
