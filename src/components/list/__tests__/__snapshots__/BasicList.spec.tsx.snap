@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BasicList test tests BasicList test render correctly 1`] = `
+<div
+  className="css-cm3tjs"
+>
+  <ul>
+    <li>
+      list item1
+    </li>
+    <li>
+      list item2
+    </li>
+    <li>
+      list item3
+    </li>
+  </ul>
+</div>
+`;
