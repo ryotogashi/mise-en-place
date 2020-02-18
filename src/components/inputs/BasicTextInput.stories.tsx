@@ -1,7 +1,7 @@
 import * as React from "react";
 import { action } from "@storybook/addon-actions";
 
-import BasicTextInput from "./BasicTextInput";
+import { BasicTextInput } from "./BasicTextInput";
 
 export default {
   title: "Input",

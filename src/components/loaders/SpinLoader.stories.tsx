@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import SpinLoader from "./SpinLoader";
+import { SpinLoader } from "./SpinLoader";
 
 export default {
   title: "Loader",

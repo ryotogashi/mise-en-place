@@ -6,7 +6,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   width: string;
 }
 
-const FlatButton = ({ width, ...rest }: Props) => {
+export const FlatButton = ({ width, ...rest }: Props) => {
   const FlatStyledButton = styled.button`
     background-color: ${white};
     border: solid 1px ${secondary};
@@ -25,5 +25,3 @@ const FlatButton = ({ width, ...rest }: Props) => {
 FlatButton.defaultProps = {
   width: "150px"
 };
-
-export default FlatButton;

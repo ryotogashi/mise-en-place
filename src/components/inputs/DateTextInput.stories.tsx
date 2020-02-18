@@ -1,7 +1,7 @@
 import * as React from "react";
 import { action } from "@storybook/addon-actions";
 
-import DateTextInput from "./DateTextInput";
+import { DateTextInput } from "./DateTextInput";
 
 export default {
   title: "Input",

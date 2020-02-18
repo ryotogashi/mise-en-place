@@ -19,6 +19,4 @@ const MaterialStyledButton = styled.button`
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
-const MaterialButton = ({ ...rest }: Props) => <MaterialStyledButton {...rest}></MaterialStyledButton>;
-
-export default MaterialButton;
+export const MaterialButton = ({ ...rest }: Props) => <MaterialStyledButton {...rest}></MaterialStyledButton>;

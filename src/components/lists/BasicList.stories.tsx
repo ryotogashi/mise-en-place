@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import BasicList from "./BasicList";
+import { BasicList } from "./BasicList";
 
 export default {
   title: "List",

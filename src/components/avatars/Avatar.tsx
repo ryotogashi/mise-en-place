@@ -6,7 +6,8 @@ interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
   height: string;
   width: string;
 }
-const Avatar = ({ src, height, width, ...rest }: Props) => {
+
+export const Avatar = ({ src, height, width, ...rest }: Props) => {
   const StyledImg = styled.img`
     vertical=align: middle;
     height: ${height};
@@ -20,5 +21,3 @@ Avatar.defaultProps = {
   height: "50px",
   width: "50px"
 };
-
-export default Avatar;

@@ -20,10 +20,8 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   img: string;
 }
 
-const IconButton = ({ img, ...rest }: Props) => (
+export const IconButton = ({ img, ...rest }: Props) => (
   <IconStyledButton {...rest}>
     <img src={img} alt="icon" />
   </IconStyledButton>
 );
-
-export default IconButton;

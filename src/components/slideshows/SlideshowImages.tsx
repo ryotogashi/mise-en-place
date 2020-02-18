@@ -23,7 +23,7 @@ const ImgGroupDiv = styled.div`
   }
 `;
 
-const SlideshowImages = ({ imgSrcs, activeNumber }: Props) => (
+export const SlideshowImages = ({ imgSrcs, activeNumber }: Props) => (
   <ImgGroupDiv>
     {imgSrcs.map((imgSrc, index) => (
       <img
@@ -39,5 +39,3 @@ const SlideshowImages = ({ imgSrcs, activeNumber }: Props) => (
 SlideshowImages.defaultProps = {
   activeNumber: 0
 };
-
-export default SlideshowImages;

@@ -1,15 +1,15 @@
 import * as React from "react";
 
-import UnderlineTextInput from "../inputs/UnderlineTextInput";
-import BasicList from "../lists/BasicList";
-import getRandomName from "../../services/getRandomName";
+import { UnderlineTextInput } from "../inputs/UnderlineTextInput";
+import { BasicList } from "../lists/BasicList";
+import { getRandomName } from "../../services/getRandomName";
 import InputType from "../inputs/input-type";
 
 interface Props {
   isCaseIntensive: boolean;
 }
 
-const SearchList = ({ isCaseIntensive }: Props) => {
+export const SearchList = ({ isCaseIntensive }: Props) => {
   const [fullNameList, setFullNameList] = React.useState([]);
   const [showingNameList, setShowingNameList] = React.useState([]);
 
@@ -41,5 +41,3 @@ const SearchList = ({ isCaseIntensive }: Props) => {
 SearchList.defaultProps = {
   isCaseIntensive: true
 };
-
-export default SearchList;

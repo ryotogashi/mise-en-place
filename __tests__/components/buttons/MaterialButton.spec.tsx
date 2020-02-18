@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
-import MaterialButton from "../../../src/components/buttons/MaterialButton";
+import { MaterialButton } from "../../../src/components/buttons/MaterialButton";
 
 describe("MaterialButton test", () => {
   it("tests MaterialButton renders correctly ", () => {

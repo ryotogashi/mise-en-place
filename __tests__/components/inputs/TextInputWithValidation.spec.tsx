@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
-import TextInputWithValidation from "../../../src/components/inputs/TextInputWithValidation";
+import { TextInputWithValidation } from "../../../src/components/inputs/TextInputWithValidation";
 
 describe("TextInputWithValidation test", () => {
   it("tests TextInputWithValidation renders correctly ", () => {

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { action } from "@storybook/addon-actions";
 
-import FlatButton from "./FlatButton";
+import { FlatButton } from "./FlatButton";
 
 export default {
   title: "Button",

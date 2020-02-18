@@ -31,7 +31,7 @@ interface Props {
   list: string[];
 }
 
-const BasicList = ({ list }: Props) => (
+export const BasicList = ({ list }: Props) => (
   <StyledListDiv>
     <ul>
       {list.map((item: string, index: number) => (
@@ -40,5 +40,3 @@ const BasicList = ({ list }: Props) => (
     </ul>
   </StyledListDiv>
 );
-
-export default BasicList;

@@ -22,12 +22,10 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   type: InputType;
 }
 
-const BasicTextInput = ({ type, ...rest }: Props) => {
+export const BasicTextInput = ({ type, ...rest }: Props) => {
   return <StyledInput type={type} {...rest} />;
 };
 
 BasicTextInput.defaultProps = {
   type: InputType.TEXT
 };
-
-export default BasicTextInput;

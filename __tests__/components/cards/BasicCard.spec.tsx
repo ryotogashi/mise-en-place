@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
-import BasicCard from "../../../src/components/cards/BasicCard";
+import { BasicCard } from "../../../src/components/cards/BasicCard";
 
 describe("BasicCard test", () => {
   it("tests BasicCard renders correctly ", () => {

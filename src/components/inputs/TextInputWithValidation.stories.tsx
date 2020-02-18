@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import TextInputWithValidation from "./TextInputWithValidation";
+import { TextInputWithValidation } from "./TextInputWithValidation";
 
 const validations: [RegExp | Function, string][] = [
   [

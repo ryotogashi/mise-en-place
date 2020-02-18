@@ -1,4 +1,4 @@
-import getRandomName from "../../src/services/getRandomName";
+import { getRandomName } from "../../src/services/getRandomName";
 
 describe("getRandomName service test", () => {
   const fetchMock = jest

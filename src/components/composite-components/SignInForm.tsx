@@ -1,15 +1,14 @@
 import styled from "@emotion/styled";
 import * as React from "react";
-import FlatButton from "../buttons/FlatButton";
+import { FlatButton } from "../buttons/FlatButton";
 import InputType from "../inputs/input-type";
-import TextInputWithValidation from "../inputs/TextInputWithValidation";
-import { css } from "@emotion/core";
+import { TextInputWithValidation } from "../inputs/TextInputWithValidation";
 
 const StyledSignInForm = styled.div`
   padding: 16px;
 `;
 
-const SignInForm = () => {
+export const SignInForm = () => {
   const givenNameValidation: [RegExp | Function, string][] = [
     [(val: string): boolean => 0 !== val.length && !val.match(/^[a-z]+(\s?[a-z]?)*$/), "The given name isn't valid."]
   ];
@@ -62,5 +61,3 @@ const SignInForm = () => {
     </StyledSignInForm>
   );
 };
-
-export default SignInForm;

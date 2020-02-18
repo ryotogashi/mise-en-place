@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
-import SlideshowImages from "../../../src/components/slideshows/SlideshowImages";
+import { SlideshowImages } from "../../../src/components/slideshows/SlideshowImages";
 
 describe("Arrow test", () => {
   it("tests Arrow render correctly", () => {

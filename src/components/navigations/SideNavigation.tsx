@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
-import Logo from "./NavigationLogo";
-import Node from "./NavigationNode";
+import { NavigationLogo } from "./NavigationLogo";
+import { NavigationNode } from "./NavigationNode";
 import { white } from "../../constants/colors";
 
 interface Props {
@@ -12,7 +12,7 @@ interface Props {
   items: [string, string[] | null][];
 }
 
-const SideNavigation = ({ logo, navHeight, navWidth, items }: Props) => {
+export const SideNavigation = ({ logo, navHeight, navWidth, items }: Props) => {
   const StyledNav = styled.nav`
     height: ${navHeight};
     width: ${navWidth};
@@ -34,9 +34,9 @@ const SideNavigation = ({ logo, navHeight, navWidth, items }: Props) => {
 
   return (
     <StyledNav>
-      <Logo logo={logo} />
+      <NavigationLogo logo={logo} />
       {items.map(([item, children], index) => {
-        return <Node key={index} item={item} childItems={children} />;
+        return <NavigationNode key={index} item={item} childItems={children} />;
       })}
     </StyledNav>
   );
@@ -46,5 +46,3 @@ SideNavigation.defaultProps = {
   navHeight: "100vh",
   navWidth: "20%"
 };
-
-export default SideNavigation;

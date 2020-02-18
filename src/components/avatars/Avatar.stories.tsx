@@ -1,10 +1,10 @@
 import * as React from "react";
 
-import Avatar from "./Avatar";
+import { Avatar } from "./Avatar";
 import avatar from "../../assets/sample-avatar.jpg";
 
 export default {
-  title: "Button",
+  title: "Avatar",
   component: Avatar
 };
 

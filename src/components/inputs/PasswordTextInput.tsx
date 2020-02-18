@@ -10,7 +10,7 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   showHideIcon: boolean;
 }
 
-const PasswordTextInput = ({ showHideIcon, ...rest }: Props) => {
+export const PasswordTextInput = ({ showHideIcon, ...rest }: Props) => {
   const [imageName, setImageName] = React.useState("show");
   const [inputType, setInputType] = React.useState(InputType.PASSWORD);
 
@@ -63,5 +63,3 @@ const PasswordTextInput = ({ showHideIcon, ...rest }: Props) => {
 PasswordTextInput.defaultProps = {
   showHideIcon: false
 };
-
-export default PasswordTextInput;

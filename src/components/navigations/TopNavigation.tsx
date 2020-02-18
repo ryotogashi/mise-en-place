@@ -9,7 +9,7 @@ interface Props {
   items: string[];
 }
 
-const TopNavigation = ({ logo, navHeight, items }: Props) => {
+export const TopNavigation = ({ logo, navHeight, items }: Props) => {
   const StyledNav = styled.nav`
     width: 100%;
     height: ${navHeight};
@@ -65,5 +65,3 @@ const TopNavigation = ({ logo, navHeight, items }: Props) => {
 TopNavigation.defaultProps = {
   navHeight: "56px"
 };
-
-export default TopNavigation;

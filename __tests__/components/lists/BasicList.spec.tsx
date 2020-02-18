@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
-import BasicList from "../../../src/components/lists/BasicList";
+import { BasicList } from "../../../src/components/lists/BasicList";
 
 describe("BasicList test", () => {
   it("tests BasicList test render correctly", () => {

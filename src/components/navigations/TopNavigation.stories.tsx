@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import TopNavigation from "./TopNavigation";
+import { TopNavigation } from "./TopNavigation";
 import { navigationItems2 } from "../../constants/sampleData";
 
 export default {

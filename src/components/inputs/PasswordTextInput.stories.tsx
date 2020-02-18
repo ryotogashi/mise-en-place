@@ -1,7 +1,7 @@
 import * as React from "react";
 import { action } from "@storybook/addon-actions";
 
-import PasswordTextInput from "./PasswordTextInput";
+import { PasswordTextInput } from "./PasswordTextInput";
 
 export default {
   title: "Input",

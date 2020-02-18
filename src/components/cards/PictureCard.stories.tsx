@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import PictureCard from "./PictureCard";
+import { PictureCard } from "./PictureCard";
 import { cardData } from "../../constants/sampleData";
 
 export default {

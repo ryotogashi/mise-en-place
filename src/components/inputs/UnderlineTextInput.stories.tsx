@@ -1,7 +1,7 @@
 import * as React from "react";
 import { action } from "@storybook/addon-actions";
 
-import UnderlineTextInput from "./UnderlineTextInput";
+import { UnderlineTextInput } from "./UnderlineTextInput";
 
 export default {
   title: "Input",

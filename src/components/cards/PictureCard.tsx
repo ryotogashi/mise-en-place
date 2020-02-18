@@ -10,7 +10,7 @@ interface Props {
   height: string;
 }
 
-const PictureCard = ({ imgSrc, children, width, height }: Props) => {
+export const PictureCard = ({ imgSrc, children, width, height }: Props) => {
   const StyledPictureCard = styled.div`
     background-image: url(${imgSrc});
     background-size: 100% 100%;
@@ -60,5 +60,3 @@ PictureCard.defaultProps = {
   width: "100%",
   height: null
 };
-
-export default PictureCard;

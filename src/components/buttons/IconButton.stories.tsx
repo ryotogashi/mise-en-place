@@ -3,7 +3,7 @@ import { action } from "@storybook/addon-actions";
 
 import sampeIcon from "../../assets/sample-icon.svg";
 
-import IconButton from "./IconButton";
+import { IconButton } from "./IconButton";
 
 export default {
   title: "Button",

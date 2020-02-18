@@ -19,6 +19,4 @@ const BasicStyledButton = styled.button`
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
-const BasicButton = ({ ...rest }: Props) => <BasicStyledButton {...rest}></BasicStyledButton>;
-
-export default BasicButton;
+export const BasicButton = ({ ...rest }: Props) => <BasicStyledButton {...rest}></BasicStyledButton>;

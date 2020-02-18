@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import CardList from "./CardList";
+import { CardList } from "./CardList";
 
 export default {
   title: "List",

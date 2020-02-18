@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomRadioButton test tests CustomRadioButton renders correctly  1`] = `
+<label
+  className="css-q3hjqi"
+>
+  <input
+    type="radio"
+  />
+</label>
+`;

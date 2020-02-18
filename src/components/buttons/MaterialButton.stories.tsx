@@ -1,7 +1,7 @@
 import * as React from "react";
 import { action } from "@storybook/addon-actions";
 
-import MaterialButton from "./MaterialButton";
+import { MaterialButton } from "./MaterialButton";
 
 export default {
   title: "Button",

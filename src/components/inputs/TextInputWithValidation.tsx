@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
-import BasicTextInput from "./BasicTextInput";
+import { BasicTextInput } from "./BasicTextInput";
 import InputType from "./input-type";
 import { primary, secondary, danger } from "../../constants/colors";
 
@@ -43,7 +43,7 @@ const TextWithValidationMessages = styled.div`
   }
 `;
 
-const TextInputWithValidation = ({ validations, ...rest }: Props) => {
+export const TextInputWithValidation = ({ validations, ...rest }: Props) => {
   const [value, setValue] = React.useState("");
   const [errorMessages, setErrorMessages] = React.useState([] as String[]);
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -85,5 +85,3 @@ TextInputWithValidation.defaultProps = {
   type: InputType.TEXT,
   validations: []
 };
-
-export default TextInputWithValidation;

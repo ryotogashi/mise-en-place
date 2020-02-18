@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import CustomCheckbox from "./CustomCheckbox";
+import { CustomCheckbox } from "./CustomCheckbox";
 
 export default {
   title: "Input",

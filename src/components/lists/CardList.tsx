@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
-import SimpleCard from "../cards/BasicCard";
+import { BasicCard } from "../cards/BasicCard";
 
 const StyledListDiv = styled.div`
   margin: 16px;
@@ -21,14 +21,12 @@ interface Props {
   list: string[];
 }
 
-const CardList = ({ list }: Props) => (
+export const CardList = ({ list }: Props) => (
   <StyledListDiv>
     {list.map((item: string, index: number) => (
-      <SimpleCard key={index}>
+      <BasicCard key={index}>
         <h4>{item}</h4>
-      </SimpleCard>
+      </BasicCard>
     ))}
   </StyledListDiv>
 );
-
-export default CardList;

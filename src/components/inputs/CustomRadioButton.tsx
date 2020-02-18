@@ -3,7 +3,7 @@ import * as React from "react";
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {}
 
-const CustomRadioButton = ({ ...rest }: Props) => {
+export const CustomRadioButton = ({ ...rest }: Props) => {
   const StyledLabel = styled.label`
     color: #858585;
     position: relative;
@@ -55,5 +55,3 @@ const CustomRadioButton = ({ ...rest }: Props) => {
     </StyledLabel>
   );
 };
-
-export default CustomRadioButton;

@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
-import SearchList from "../../../src/components/composite-components/SearchList";
+import { SearchList } from "../../../src/components/composite-components/SearchList";
 
 describe("SearchList test", () => {
   it("tests SearchList renders correctly ", () => {

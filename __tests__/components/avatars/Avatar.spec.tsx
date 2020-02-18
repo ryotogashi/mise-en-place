@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
-import Avatar from "../../../src/components/avatars/Avatar";
+import { Avatar } from "../../../src/components/avatars/Avatar";
 
 describe("Avatar test", () => {
   it("tests Avatar renders correctly ", () => {

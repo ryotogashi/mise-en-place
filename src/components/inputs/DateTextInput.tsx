@@ -26,6 +26,6 @@ const StyledInput = styled.input`
   }
 `;
 
-const DateTextInput = ({ ...rest }: React.HTMLAttributes<HTMLInputElement>) => <StyledInput type="date" {...rest} />;
-
-export default DateTextInput;
+export const DateTextInput = ({ ...rest }: React.HTMLAttributes<HTMLInputElement>) => (
+  <StyledInput type="date" {...rest} />
+);

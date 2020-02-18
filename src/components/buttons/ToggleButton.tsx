@@ -30,7 +30,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   values: string[];
 }
 
-const ToggleButton = ({ values, ...rest }: Props) => (
+export const ToggleButton = ({ values, ...rest }: Props) => (
   <ToggleButtonDiv>
     {values.map((item, index) => (
       <div key={index} {...rest}>
@@ -43,5 +43,3 @@ const ToggleButton = ({ values, ...rest }: Props) => (
 ToggleButton.defaultProps = {
   values: ["item 1", "item 2", "item 3", "item 4"]
 };
-
-export default ToggleButton;

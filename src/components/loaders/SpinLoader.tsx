@@ -8,7 +8,7 @@ interface Props {
   coverColor: string;
 }
 
-const SpinLoader = ({ size, color, coverColor }: Props) => {
+export const SpinLoader = ({ size, color, coverColor }: Props) => {
   const Spinner = styled.div`
     border: 16px solid ${coverColor};
     border-top: 16px solid ${color};
@@ -34,5 +34,3 @@ SpinLoader.defaultProps = {
   color: secondary,
   coverColor: white
 };
-
-export default SpinLoader;

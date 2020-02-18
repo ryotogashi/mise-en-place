@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
-import IconButton from "../../../src/components/buttons/IconButton";
+import { IconButton } from "../../../src/components/buttons/IconButton";
 
 describe("IconButton test", () => {
   it("tests IconButton renders correctly ", () => {

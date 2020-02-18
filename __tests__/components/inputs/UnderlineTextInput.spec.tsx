@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
-import UnderlineTextInput from "../../../src/components/inputs/UnderlineTextInput";
+import { UnderlineTextInput } from "../../../src/components/inputs/UnderlineTextInput";
 
 describe("UnderlineTextInput test", () => {
   it("tests UnderlineTextInput renders correctly ", () => {

@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
-import BasicTextInput from "../../../src/components/inputs/BasicTextInput";
+import { BasicTextInput } from "../../../src/components/inputs/BasicTextInput";
 
 describe("BasicTextInput test", () => {
   it("tests BasicTextInput renders correctly ", () => {

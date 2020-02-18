@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
-import SquareIconButton from "../../../src/components/buttons/SquareIconButton";
+import { SquareIconButton } from "../../../src/components/buttons/SquareIconButton";
 
 describe("SquareIconButton test", () => {
   it("tests SquareIconButton renders correctly ", () => {

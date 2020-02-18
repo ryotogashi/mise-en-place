@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
-import CardList from "../../../src/components/lists/CardList";
+import { CardList } from "../../../src/components/lists/CardList";
 
 describe("CardList test", () => {
   it("tests CardList test render correctly", () => {

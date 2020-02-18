@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
-import NavigationNode from "../../../src/components/navigations/NavigationNode";
+import { NavigationNode } from "../../../src/components/navigations/NavigationNode";
 
 describe("NavigationNode test", () => {
   it("tests NavigationNode render correctly", () => {

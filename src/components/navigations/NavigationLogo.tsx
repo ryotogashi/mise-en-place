@@ -10,10 +10,8 @@ const LogoDiv = styled.div`
   font-size: 24px;
 `;
 
-const NavigationLogo = ({ logo }: Props) => (
+export const NavigationLogo = ({ logo }: Props) => (
   <a href="">
     <LogoDiv>{logo}</LogoDiv>
   </a>
 );
-
-export default NavigationLogo;

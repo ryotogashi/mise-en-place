@@ -3,7 +3,7 @@ import * as React from "react";
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {}
 
-const CustomCheckbox = ({ ...rest }: Props) => {
+export const CustomCheckbox = ({ ...rest }: Props) => {
   const StyledLabel = styled.label`
     color: #858585;
     position: relative;
@@ -53,5 +53,3 @@ const CustomCheckbox = ({ ...rest }: Props) => {
     </StyledLabel>
   );
 };
-
-export default CustomCheckbox;

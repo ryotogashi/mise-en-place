@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { slideshowData } from "../../constants/sampleData";
-import BasicSlideshow from "./BasicSlideshow";
+import { BasicSlideshow } from "./BasicSlideshow";
 
 export default {
   title: "Slideshow",

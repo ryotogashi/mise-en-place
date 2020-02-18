@@ -9,7 +9,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   disabled: boolean;
 }
 
-const SquareIconButton = ({ height, width, value, children, disabled, ...rest }: Props) => {
+export const SquareIconButton = ({ height, width, value, children, disabled, ...rest }: Props) => {
   const StyledButton = styled.button`
     height: ${height};
     width: ${width};
@@ -38,5 +38,3 @@ SquareIconButton.defaultProps = {
   children: null,
   disabled: false
 };
-
-export default SquareIconButton;

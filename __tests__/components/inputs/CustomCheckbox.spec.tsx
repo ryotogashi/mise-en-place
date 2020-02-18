@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
-import CustomCheckbox from "../../../src/components/inputs/CustomCheckbox";
+import { CustomCheckbox } from "../../../src/components/inputs/CustomCheckbox";
 
 describe("CustomCheckbox test", () => {
   it("tests CustomCheckbox renders correctly ", () => {

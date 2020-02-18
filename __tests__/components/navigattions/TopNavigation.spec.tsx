@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
-import TopNavigation from "../../../src/components/navigations/TopNavigation";
+import { TopNavigation } from "../../../src/components/navigations/TopNavigation";
 
 describe("TopNavigation test", () => {
   it("tests TopNavigation render correctly", () => {

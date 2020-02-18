@@ -8,7 +8,7 @@ interface Props {
   display: boolean;
 }
 
-const NavigationNode = ({ item, childItems, nodeLevel, display }: Props) => {
+export const NavigationNode = ({ item, childItems, nodeLevel, display }: Props) => {
   const [childNodesVisiblity, setChildNodesVisiblity] = React.useState(false);
 
   const NavigationNodeDiv = styled.div`
@@ -41,5 +41,3 @@ NavigationNode.defaultProps = {
   nodeLevel: 1,
   display: true
 };
-
-export default NavigationNode;

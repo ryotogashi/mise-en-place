@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
-import SideNavigation from "../../../src/components/navigations/SideNavigation";
+import { SideNavigation } from "../../../src/components/navigations/SideNavigation";
 
 describe("SideNavigation test", () => {
   it("tests SideNavigation render correctly", () => {

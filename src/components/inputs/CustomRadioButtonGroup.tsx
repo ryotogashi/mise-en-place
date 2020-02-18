@@ -9,7 +9,7 @@ interface Props {
   onClick: Function | null;
 }
 
-const CustomRadioButtonGroup = ({ name, labels, display, defaultChecked, onClick }: Props) => {
+export const CustomRadioButtonGroup = ({ name, labels, display, defaultChecked, onClick }: Props) => {
   const RadioGroupDiv = styled.div`
     & input[type="radio"] {
       display: none;
@@ -92,5 +92,3 @@ CustomRadioButtonGroup.defaultProps = {
   defaultChecked: 0,
   onClick: null
 };
-
-export default CustomRadioButtonGroup;

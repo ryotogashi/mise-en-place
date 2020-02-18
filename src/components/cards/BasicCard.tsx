@@ -7,7 +7,7 @@ interface Props {
   height: string;
 }
 
-const BasicCard = ({ children, width, height }: Props) => {
+export const BasicCard = ({ children, width, height }: Props) => {
   const StyledCard = styled.div`
     display: inline-block;
     width: ${width};
@@ -32,5 +32,3 @@ BasicCard.defaultProps = {
   width: "100%",
   height: null
 };
-
-export default BasicCard;

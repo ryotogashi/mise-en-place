@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
-import CustomRadioButtonGroup from "../inputs/CustomRadioButtonGroup";
-import SlideshowImages from "./SlideshowImages";
-import SquareIconButton from "../buttons/SquareIconButton";
+import { CustomRadioButtonGroup } from "../inputs/CustomRadioButtonGroup";
+import { SlideshowImages } from "./SlideshowImages";
+import { SquareIconButton } from "../buttons/SquareIconButton";
 import { LeftArrow, RightArrow } from "./Arrow";
 
 interface Props {
@@ -12,7 +12,7 @@ interface Props {
   imgSrcs: string[];
 }
 
-const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
+export const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
   const SlideshowDiv = styled.div`
     display: block;
     position: relative;
@@ -86,5 +86,3 @@ BasicSlideshow.defaultProps = {
   width: "90%",
   height: "90%"
 };
-
-export default BasicSlideshow;
