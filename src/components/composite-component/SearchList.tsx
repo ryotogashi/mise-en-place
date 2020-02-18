@@ -25,23 +25,21 @@ const SearchList = ({ isCaseIntensive }: Props) => {
     const searchWord = event.currentTarget.value;
     setShowingNameList(
       fullNameList.filter(item =>
-        isCaseIntensive
-          ? item.toLowerCase().includes(searchWord.toLowerCase())
-          : item.includes(searchWord)
+        isCaseIntensive ? item.toLowerCase().includes(searchWord.toLowerCase()) : item.includes(searchWord)
       )
     );
   };
 
   return (
     <>
-      <UnderlineTextInput
-        type={InputType.SEARCH}
-        placeholder="search"
-        onChange={handleChange}
-      />
+      <UnderlineTextInput type={InputType.SEARCH} placeholder="search" onChange={handleChange} />
       <BasicList list={showingNameList} />
     </>
   );
+};
+
+SearchList.defaultProps = {
+  isCaseIntensive: true
 };
 
 export default SearchList;

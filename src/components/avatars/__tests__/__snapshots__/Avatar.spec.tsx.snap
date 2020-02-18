@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar test tests Avatar renders correctly  1`] = `
+<img
+  alt="avatar"
+  className="css-u2jqka"
+  src="img"
+/>
+`;
