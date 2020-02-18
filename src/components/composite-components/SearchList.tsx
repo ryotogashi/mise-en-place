@@ -1,9 +1,9 @@
 import * as React from "react";
 
-import UnderlineTextInput from "../input/UnderlineTextInput";
-import BasicList from "../list/BasicList";
+import UnderlineTextInput from "../inputs/UnderlineTextInput";
+import BasicList from "../lists/BasicList";
 import getRandomName from "../../services/getRandomName";
-import InputType from "../input/input-type";
+import InputType from "../inputs/input-type";
 
 interface Props {
   isCaseIntensive: boolean;

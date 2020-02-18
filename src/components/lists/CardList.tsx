@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
-import SimpleCard from "../card/BasicCard";
+import SimpleCard from "../cards/BasicCard";
 
 const StyledListDiv = styled.div`
   margin: 16px;
