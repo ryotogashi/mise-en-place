@@ -1,8 +1,7 @@
 {
   "name": "mise-en-place",
   "version": "1.0.0",
-  "description": "## reforence",
-  "private": true,
+  "description": "Mise en Place ui components built with React.",
   "scripts": {
     "build": "webpack --mode production",
     "story": "start-storybook -p 6006",
@@ -22,8 +21,8 @@
     "javascript",
     "design-systems"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Ryo Togashi",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ryotogashi/mise-en-place/issues"
   },
