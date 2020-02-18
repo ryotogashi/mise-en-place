@@ -14,6 +14,7 @@ import Slideshow from "./slideshows";
 import SideNavigation from "./navigations/SideNavigation";
 import ComposedComponent from "./composite-components";
 import Avatars from "./avatars";
+import Loaders from "./loaders";
 
 const StyledDiv = styled.div`
   display: flex;
@@ -38,6 +39,7 @@ const App = () => (
         <Card />
         <List />
         <Avatars />
+        <Loaders />
         <Navigation />
         <Slideshow />
         <ComposedComponent />
