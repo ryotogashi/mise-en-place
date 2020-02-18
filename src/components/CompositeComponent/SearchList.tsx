@@ -10,8 +10,8 @@ interface Props {
 }
 
 export const SearchList = ({ isCaseIntensive }: Props) => {
-  const [fullNameList, setFullNameList] = React.useState([]);
-  const [showingNameList, setShowingNameList] = React.useState([]);
+  const [fullNameList, setFullNameList] = React.useState<string[]>([]);
+  const [showingNameList, setShowingNameList] = React.useState<string[]>([]);
 
   React.useEffect(() => {
     (async () => {

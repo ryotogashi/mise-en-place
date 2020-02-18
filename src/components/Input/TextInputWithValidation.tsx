@@ -45,7 +45,7 @@ const TextWithValidationMessages = styled.div`
 
 export const TextInputWithValidation = ({ validations, ...rest }: Props) => {
   const [value, setValue] = React.useState("");
-  const [errorMessages, setErrorMessages] = React.useState([] as String[]);
+  const [errorMessages, setErrorMessages] = React.useState<string[]>([]);
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     const val = e.currentTarget.value;
