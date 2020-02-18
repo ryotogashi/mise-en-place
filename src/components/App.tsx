@@ -13,6 +13,7 @@ import Navigation from "./navigation/Navigation";
 import Slideshow from "./slideshow/Slideshow";
 import SideNavigation from "./navigation/SideNavigation";
 import ComposedComponent from "./composite-component/CompositeComponent";
+import Avatars from "./avatars";
 
 const StyledDiv = styled.div`
   display: flex;
@@ -36,6 +37,7 @@ const App = () => (
         <Input />
         <Card />
         <List />
+        <Avatars />
         <Navigation />
         <Slideshow />
         <ComposedComponent />

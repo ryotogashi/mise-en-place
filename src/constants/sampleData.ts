@@ -16,6 +16,7 @@ export const siteNavData: [string, string[]][] = [
   ],
   ["Cards", ["Basic Card", "Picture Covered Card"]],
   ["Lists", ["Normal List", "Card List"]],
+  ["Avatars", ["Avatar"]],
   ["Navigations", ["Side Navigation", "Top Navigation"]],
   ["Slideshows", ["Normal Slideshow"]],
   ["Composite Component", ["Searchiable List", "SignIn Form with Validation"]]
