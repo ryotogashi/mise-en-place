@@ -5,14 +5,14 @@ import * as React from "react";
 import GlobalStyle from "../constants/globalStyle";
 import { siteNavData } from "../constants/sampleData";
 import WelcomPage from "./app-components/WelcomPage";
-import Button from "./button/Button";
-import Input from "./input/Input";
-import Card from "./card/Card";
-import List from "./list/List";
-import Navigation from "./navigation/Navigation";
-import Slideshow from "./slideshow/Slideshow";
-import SideNavigation from "./navigation/SideNavigation";
-import ComposedComponent from "./composite-component/CompositeComponent";
+import Button from "./buttons";
+import Input from "./inputs";
+import Card from "./cards";
+import List from "./lists";
+import Navigation from "./navigations";
+import Slideshow from "./slideshows";
+import SideNavigation from "./navigations/SideNavigation";
+import ComposedComponent from "./composite-components";
 import Avatars from "./avatars";
 
 const StyledDiv = styled.div`

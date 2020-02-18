@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
-import CustomRadioButtonGroup from "../input/CustomRadioButtonGroup";
+import CustomRadioButtonGroup from "../inputs/CustomRadioButtonGroup";
 import SlideshowImages from "./SlideshowImages";
-import SquareIconButton from "../button/SquareIconButton";
+import SquareIconButton from "../buttons/SquareIconButton";
 import { LeftArrow, RightArrow } from "./Arrow";
 
 interface Props {
