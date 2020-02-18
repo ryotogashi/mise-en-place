@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "declaration": true,
     "jsx": "react",
     // "strict": true,
     "lib": ["es2019", "dom"],
