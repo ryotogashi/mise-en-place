@@ -1,28 +1,5 @@
 import CardImage from "../assets/img-for-card.jpg";
 
-export const siteNavData: [string, string[]][] = [
-  ["Buttons", ["Basic Button", "Flat Button", "Icon Button", "Square Icon Button", "Material Button", "Toggle Button"]],
-  [
-    "Inputs",
-    [
-      "Basic Text Input",
-      "Underline Text Input",
-      "Date Text Input",
-      "Password Text Input",
-      "TextInput With Validation",
-      "Custom Radio Buttons",
-      "Custom Checkbox"
-    ]
-  ],
-  ["Cards", ["Basic Card", "Picture Covered Card"]],
-  ["Lists", ["Normal List", "Card List"]],
-  ["Avatars", ["Avatar"]],
-  ["Loaders", ["SpinLoader"]],
-  ["Navigations", ["Side Navigation", "Top Navigation"]],
-  ["Slideshows", ["Normal Slideshow"]],
-  ["Composite Component", ["Searchiable List", "SignIn Form with Validation"]]
-];
-
 export const cardData = {
   title: "Lorem ipsum dolor",
   content:
