@@ -1,0 +1,8 @@
+stsconfig.json
+tslint.json
+__mocks__/
+__tests__/
+src/
+.storybook/
+
+*.stories.tsx
