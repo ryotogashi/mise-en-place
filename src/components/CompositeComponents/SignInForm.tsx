@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 import { FlatButton } from "../Button/FlatButton";
-import InputType from "../Input/input-type";
-import { TextInputWithValidation } from "../Input/TextInputWithValidation";
+import InputType from "../input/input-type";
+import { TextInputWithValidation } from "../input/TextInputWithValidation";
 
 const StyledSignInForm = styled.div`
   padding: 16px;
