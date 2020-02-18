@@ -14,7 +14,14 @@
     "type": "git",
     "url": "git+https://github.com/ryotogashi/mise-en-place.git"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "react-component",
+    "typescript",
+    "ui-kit",
+    "javascript",
+    "design-systems"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
