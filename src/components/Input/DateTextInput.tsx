@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
-import * as React from "react";
-import { secondary } from "../../constants/colors";
+import styled from '@emotion/styled';
+import * as React from 'react';
+import { secondary } from '../../constants/colors';
 
 const StyledInput = styled.input`
   height: 24px;

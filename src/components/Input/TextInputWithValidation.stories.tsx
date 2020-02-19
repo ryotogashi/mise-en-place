@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { TextInputWithValidation } from "./TextInputWithValidation";
+import { TextInputWithValidation } from './TextInputWithValidation';
 
 const validations: [Function, string][] = [
   [
@@ -10,7 +10,7 @@ const validations: [Function, string][] = [
 ];
 
 export default {
-  title: "Input",
+  title: 'Input',
   component: TextInputWithValidation
 };
 

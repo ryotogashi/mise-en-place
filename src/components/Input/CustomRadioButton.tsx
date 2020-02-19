@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import * as React from "react";
+import styled from '@emotion/styled';
+import * as React from 'react';
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {}
 
@@ -12,7 +12,7 @@ export const CustomRadioButton = ({ ...rest }: Props) => {
     &::after,
     &::before {
       position: absolute;
-      content: "";
+      content: '';
       display: block;
       top: 50%;
     }
@@ -45,13 +45,13 @@ export const CustomRadioButton = ({ ...rest }: Props) => {
       transition: all 0.5s ease-out;
     }
 
-    & > input[type="radio"] {
+    & > input[type='radio'] {
       display: none;
     }
   `;
   return (
     <StyledLabel>
-      <input type={"radio"} {...rest} />
+      <input type={'radio'} {...rest} />
     </StyledLabel>
   );
 };

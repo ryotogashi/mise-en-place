@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
-import * as React from "react";
-import { secondary, white } from "../../constants/colors";
+import styled from '@emotion/styled';
+import * as React from 'react';
+import { secondary, white } from '../../constants/colors';
 
 const ToggleButtonDiv = styled.div`
   background-color: ${white};
@@ -41,5 +41,5 @@ export const ToggleButton = ({ values, ...rest }: Props) => (
 );
 
 ToggleButton.defaultProps = {
-  values: ["item 1", "item 2", "item 3", "item 4"]
+  values: ['item 1', 'item 2', 'item 3', 'item 4']
 };

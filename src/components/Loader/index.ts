@@ -1,1 +1,1 @@
-export { SpinLoader } from "./SpinLoader";
+export { SpinLoader } from './SpinLoader';

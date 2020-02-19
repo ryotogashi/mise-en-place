@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import * as React from "react";
+import styled from '@emotion/styled';
+import * as React from 'react';
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   height: string;
@@ -19,7 +19,7 @@ export const SquareIconButton = ({ height, width, value, children, disabled, ...
     padding: 7.5px;
 
     &:hover {
-      background-color: rgba(225, 225, 225, ${disabled ? "0.3" : "0.9"});
+      background-color: rgba(225, 225, 225, ${disabled ? '0.3' : '0.9'});
       transition: all 0.5s ease-out;
     }
   `;
@@ -32,9 +32,9 @@ export const SquareIconButton = ({ height, width, value, children, disabled, ...
 };
 
 SquareIconButton.defaultProps = {
-  height: "45px",
-  width: "45px",
-  value: "squareIconButton",
+  height: '45px',
+  width: '45px',
+  value: 'squareIconButton',
   children: null,
   disabled: false
 };

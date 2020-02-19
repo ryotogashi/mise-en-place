@@ -1,8 +1,8 @@
-import styled from "@emotion/styled";
-import * as React from "react";
-import { FlatButton } from "../Button/FlatButton";
-import InputType from "../Input/input-type";
-import { TextInputWithValidation } from "../Input/TextInputWithValidation";
+import styled from '@emotion/styled';
+import * as React from 'react';
+import { FlatButton } from '../Button/FlatButton';
+import InputType from '../Input/input-type';
+import { TextInputWithValidation } from '../Input/TextInputWithValidation';
 
 const StyledSignInForm = styled.div`
   padding: 16px;
@@ -32,22 +32,22 @@ export const SignInForm = () => {
     ]
   ];
   const passwordValidations: [Function, string][] = [
-    [(val: string): boolean => 0 !== val.length && val.length < 8, "Password has to be more than 8 letters."],
+    [(val: string): boolean => 0 !== val.length && val.length < 8, 'Password has to be more than 8 letters.'],
     [
       (val: string): boolean => (0 !== val.length && !val.match(/[A-Z]/) ? true : false),
-      "There has to be at least one upper-case letter."
+      'There has to be at least one upper-case letter.'
     ],
     [
       (val: string): boolean => (0 !== val.length && !val.match(/[a-z]/) ? true : false),
-      "There has to be at least one lower-case letter."
+      'There has to be at least one lower-case letter.'
     ],
     [
       (val: string): boolean => (0 !== val.length && !val.match(/\d/) ? true : false),
-      "There has to be at least one number."
+      'There has to be at least one number.'
     ],
     [
       (val: string): boolean => (0 !== val.length && !val.match(/[\@\#\$\%\^\&\*\!\?]/) ? true : false),
-      "There has to be at least one Sign. eg. @#$%^&*!?"
+      'There has to be at least one Sign. eg. @#$%^&*!?'
     ]
   ];
   return (
@@ -57,7 +57,7 @@ export const SignInForm = () => {
       <TextInputWithValidation validations={phoneNumverValidation} type={InputType.TEL} placeholder="Phone Number" />
       <TextInputWithValidation validations={emailValidations} type={InputType.EMAIL} placeholder="Email" />
       <TextInputWithValidation validations={passwordValidations} type={InputType.PASSWORD} placeholder="Password" />
-      <FlatButton width={"72%"}>Sign In</FlatButton>
+      <FlatButton width={'72%'}>Sign In</FlatButton>
     </StyledSignInForm>
   );
 };

@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
-import * as React from "react";
-import { secondary, white } from "../../constants/colors";
+import styled from '@emotion/styled';
+import * as React from 'react';
+import { secondary, white } from '../../constants/colors';
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   width: string;
@@ -23,5 +23,5 @@ export const FlatButton = ({ width, ...rest }: Props) => {
 };
 
 FlatButton.defaultProps = {
-  width: "150px"
+  width: '150px'
 };

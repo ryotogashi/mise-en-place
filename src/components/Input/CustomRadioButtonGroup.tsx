@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import * as React from "react";
+import styled from '@emotion/styled';
+import * as React from 'react';
 
 interface Props {
   name: string;
@@ -11,7 +11,7 @@ interface Props {
 
 export const CustomRadioButtonGroup = ({ name, labels, display, defaultChecked, onClick }: Props) => {
   const RadioGroupDiv = styled.div`
-    & input[type="radio"] {
+    & input[type='radio'] {
       display: none;
     }
 
@@ -29,7 +29,7 @@ export const CustomRadioButtonGroup = ({ name, labels, display, defaultChecked, 
     & label::after,
     & label::before {
       position: absolute;
-      content: "";
+      content: '';
       display: block;
       top: 50%;
     }
@@ -70,7 +70,7 @@ export const CustomRadioButtonGroup = ({ name, labels, display, defaultChecked, 
     <RadioGroupDiv className="radio-group">
       {labels.map((value, index) => (
         <div key={index}>
-          <label className={`${index === defaultChecked ? "checked" : ""}`}>
+          <label className={`${index === defaultChecked ? 'checked' : ''}`}>
             <input
               type="radio"
               defaultChecked={index === defaultChecked ? true : false}
@@ -87,8 +87,8 @@ export const CustomRadioButtonGroup = ({ name, labels, display, defaultChecked, 
 };
 
 CustomRadioButtonGroup.defaultProps = {
-  name: "custom-radio-button",
-  display: "block",
+  name: 'custom-radio-button',
+  display: 'block',
   defaultChecked: 0,
   onClick: null
 };

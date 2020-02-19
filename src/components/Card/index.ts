@@ -1,2 +1,2 @@
-export { BasicCard } from "./BasicCard";
-export { PictureCard } from "./PictureCard";
+export { BasicCard } from './BasicCard';
+export { PictureCard } from './PictureCard';

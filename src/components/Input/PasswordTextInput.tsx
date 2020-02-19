@@ -1,12 +1,12 @@
-import styled from "@emotion/styled";
-import * as React from "react";
+import styled from '@emotion/styled';
+import * as React from 'react';
 
-import { HideIcon } from "./HideIcon";
-import { ShowIcon } from "./ShowIcon";
-import InputType from "./input-type";
-import { BasicTextInput } from "./BasicTextInput";
+import { HideIcon } from './HideIcon';
+import { ShowIcon } from './ShowIcon';
+import InputType from './input-type';
+import { BasicTextInput } from './BasicTextInput';
 
-interface Props extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {
+interface Props extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> {
   showHideIcon: boolean;
 }
 
@@ -26,7 +26,7 @@ const PasswordDiv = styled.div`
 `;
 
 export const PasswordTextInput = ({ showHideIcon, ...rest }: Props) => {
-  const [value, setValue] = React.useState<string>("");
+  const [value, setValue] = React.useState<string>('');
   const [inputType, setInputType] = React.useState<InputType>(InputType.PASSWORD);
 
   const handleClick = () => {

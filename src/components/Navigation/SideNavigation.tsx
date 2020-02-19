@@ -1,9 +1,9 @@
-import styled from "@emotion/styled";
-import * as React from "react";
+import styled from '@emotion/styled';
+import * as React from 'react';
 
-import { NavigationLogo } from "./NavigationLogo";
-import { NavigationNode } from "./NavigationNode";
-import { white } from "../../constants/colors";
+import { NavigationLogo } from './NavigationLogo';
+import { NavigationNode } from './NavigationNode';
+import { white } from '../../constants/colors';
 
 interface Props {
   logo: string;
@@ -43,6 +43,6 @@ export const SideNavigation = ({ logo, navHeight, navWidth, items }: Props) => {
 };
 
 SideNavigation.defaultProps = {
-  navHeight: "100vh",
-  navWidth: "20%"
+  navHeight: '100vh',
+  navWidth: '20%'
 };

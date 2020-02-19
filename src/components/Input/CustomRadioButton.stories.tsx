@@ -1,9 +1,9 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { CustomRadioButton } from "./CustomRadioButton";
+import { CustomRadioButton } from './CustomRadioButton';
 
 export default {
-  title: "Input",
+  title: 'Input',
   component: CustomRadioButton
 };
 

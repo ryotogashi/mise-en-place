@@ -1,7 +1,7 @@
-import styled from "@emotion/styled";
-import * as React from "react";
+import styled from '@emotion/styled';
+import * as React from 'react';
 
-import { secondary, white } from "../../constants/colors";
+import { secondary, white } from '../../constants/colors';
 
 const BasicStyledButton = styled.button`
   background-color: ${white};

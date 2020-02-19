@@ -1,10 +1,10 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { radioData } from "../../constants/sampleData";
-import { CustomRadioButtonGroup } from "./CustomRadioButtonGroup";
+import { radioData } from '../../constants/sampleData';
+import { CustomRadioButtonGroup } from './CustomRadioButtonGroup';
 
 export default {
-  title: "Input",
+  title: 'Input',
   component: CustomRadioButtonGroup
 };
 

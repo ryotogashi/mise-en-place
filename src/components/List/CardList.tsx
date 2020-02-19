@@ -1,7 +1,7 @@
-import styled from "@emotion/styled";
-import * as React from "react";
+import styled from '@emotion/styled';
+import * as React from 'react';
 
-import { BasicCard } from "../Card/BasicCard";
+import { BasicCard } from '../Card/BasicCard';
 
 const StyledListDiv = styled.div`
   margin: 16px;

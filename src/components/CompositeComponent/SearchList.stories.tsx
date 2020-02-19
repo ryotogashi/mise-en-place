@@ -1,9 +1,9 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { SearchList } from "./SearchList";
+import { SearchList } from './SearchList';
 
 export default {
-  title: "Composite Component",
+  title: 'Composite Component',
   component: SearchList
 };
 

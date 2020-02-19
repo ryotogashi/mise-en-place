@@ -1,7 +1,7 @@
-import styled from "@emotion/styled";
-import * as React from "react";
+import styled from '@emotion/styled';
+import * as React from 'react';
 
-import { secondary } from "../../constants/colors";
+import { secondary } from '../../constants/colors';
 
 const StyledListDiv = styled.div`
   margin: 16px;

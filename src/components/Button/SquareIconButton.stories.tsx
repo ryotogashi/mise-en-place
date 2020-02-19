@@ -1,11 +1,11 @@
-import * as React from "react";
-import { action } from "@storybook/addon-actions";
+import * as React from 'react';
+import { action } from '@storybook/addon-actions';
 
-import { SquareIconButton } from "./SquareIconButton";
+import { SquareIconButton } from './SquareIconButton';
 
 export default {
-  title: "Button",
+  title: 'Button',
   component: SquareIconButton
 };
 
-export const _SquareIconButton = () => <SquareIconButton onClick={action("clicked")}></SquareIconButton>;
+export const _SquareIconButton = () => <SquareIconButton onClick={action('clicked')}></SquareIconButton>;

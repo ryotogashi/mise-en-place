@@ -1,11 +1,11 @@
-import * as React from "react";
-import { action } from "@storybook/addon-actions";
+import * as React from 'react';
+import { action } from '@storybook/addon-actions';
 
-import { FlatButton } from "./FlatButton";
+import { FlatButton } from './FlatButton';
 
 export default {
-  title: "Button",
+  title: 'Button',
   component: FlatButton
 };
 
-export const _FlatButton = () => <FlatButton onClick={action("clicked")}>flat button</FlatButton>;
+export const _FlatButton = () => <FlatButton onClick={action('clicked')}>flat button</FlatButton>;

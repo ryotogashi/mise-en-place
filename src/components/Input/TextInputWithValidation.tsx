@@ -1,11 +1,11 @@
-import styled from "@emotion/styled";
-import * as React from "react";
+import styled from '@emotion/styled';
+import * as React from 'react';
 
-import { BasicTextInput } from "./BasicTextInput";
-import InputType from "./input-type";
-import { primary, secondary, danger } from "../../constants/colors";
+import { BasicTextInput } from './BasicTextInput';
+import InputType from './input-type';
+import { primary, secondary, danger } from '../../constants/colors';
 
-interface Props extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {
+interface Props extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> {
   type: InputType;
   validations: [Function, string][];
 }
@@ -44,7 +44,7 @@ const TextWithValidationMessages = styled.div`
 `;
 
 export const TextInputWithValidation = ({ validations, ...rest }: Props) => {
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = React.useState('');
   const [errorMessages, setErrorMessages] = React.useState<string[]>([]);
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -65,7 +65,7 @@ export const TextInputWithValidation = ({ validations, ...rest }: Props) => {
         type={InputType.TEXT}
         onChange={handleOnChange}
         value={value}
-        className={value.length === 0 ? "" : 0 < errorMessages.length ? "errorStyle" : "successStyle"}
+        className={value.length === 0 ? '' : 0 < errorMessages.length ? 'errorStyle' : 'successStyle'}
         {...rest}
       />
       <ul>

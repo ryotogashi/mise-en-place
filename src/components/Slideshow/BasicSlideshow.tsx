@@ -1,10 +1,10 @@
-import styled from "@emotion/styled";
-import * as React from "react";
+import styled from '@emotion/styled';
+import * as React from 'react';
 
-import { CustomRadioButtonGroup } from "../Input/CustomRadioButtonGroup";
-import { SlideshowImages } from "./SlideshowImages";
-import { SquareIconButton } from "../Button/SquareIconButton";
-import { LeftArrow, RightArrow } from "./Arrow";
+import { CustomRadioButtonGroup } from '../Input/CustomRadioButtonGroup';
+import { SlideshowImages } from './SlideshowImages';
+import { SquareIconButton } from '../Button/SquareIconButton';
+import { LeftArrow, RightArrow } from './Arrow';
 
 interface Props {
   width: string;
@@ -42,7 +42,7 @@ export const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const value = event.currentTarget.value;
 
-    if (value === "left") {
+    if (value === 'left') {
       setCheckedValue(prevValue => (prevValue === 0 ? prevValue : prevValue - 1));
     } else {
       setCheckedValue(prevValue => (prevValue === imgSrcs.length - 1 ? prevValue : prevValue + 1));
@@ -72,7 +72,7 @@ export const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
       <div className="radio-group">
         <CustomRadioButtonGroup
           name="slideshow"
-          labels={imgSrcs.map(_ => "")}
+          labels={imgSrcs.map(_ => '')}
           display="inline-block"
           onClick={handleRadioClick}
           defaultChecked={checkedValue}
@@ -83,6 +83,6 @@ export const BasicSlideshow = ({ width, height, imgSrcs }: Props) => {
 };
 
 BasicSlideshow.defaultProps = {
-  width: "90%",
-  height: "90%"
+  width: '90%',
+  height: '90%'
 };

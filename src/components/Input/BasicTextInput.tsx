@@ -1,8 +1,8 @@
-import styled from "@emotion/styled";
-import * as React from "react";
+import styled from '@emotion/styled';
+import * as React from 'react';
 
-import InputType from "./input-type";
-import { secondary } from "../../constants/colors";
+import InputType from './input-type';
+import { secondary } from '../../constants/colors';
 
 const StyledInput = styled.input`
   height: 24px;
@@ -18,7 +18,7 @@ const StyledInput = styled.input`
   }
 `;
 
-interface Props extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {
+interface Props extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> {
   type: InputType;
 }
 

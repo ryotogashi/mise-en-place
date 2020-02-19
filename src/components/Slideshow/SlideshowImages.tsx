@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import * as React from "react";
+import styled from '@emotion/styled';
+import * as React from 'react';
 
 interface Props {
   imgSrcs: string[];
@@ -30,7 +30,7 @@ export const SlideshowImages = ({ imgSrcs, activeNumber }: Props) => (
         key={index}
         src={imgSrc}
         alt={`img-${index}`}
-        className={`img ${index === activeNumber ? "" : "img-inactive"}`}
+        className={`img ${index === activeNumber ? '' : 'img-inactive'}`}
       />
     ))}
   </ImgGroupDiv>

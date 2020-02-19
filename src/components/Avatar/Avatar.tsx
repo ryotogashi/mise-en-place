@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import * as React from "react";
+import styled from '@emotion/styled';
+import * as React from 'react';
 
 interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
@@ -18,6 +18,6 @@ export const Avatar = ({ src, height, width, ...rest }: Props) => {
 };
 
 Avatar.defaultProps = {
-  height: "50px",
-  width: "50px"
+  height: '50px',
+  width: '50px'
 };

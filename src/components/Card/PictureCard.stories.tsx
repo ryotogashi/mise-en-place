@@ -1,10 +1,10 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { PictureCard } from "./PictureCard";
-import { cardData } from "../../constants/sampleData";
+import { PictureCard } from './PictureCard';
+import { cardData } from '../../constants/sampleData';
 
 export default {
-  title: "Card",
+  title: 'Card',
   component: PictureCard
 };
 

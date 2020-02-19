@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
-import * as React from "react";
-import { secondary, white } from "../../constants/colors";
+import styled from '@emotion/styled';
+import * as React from 'react';
+import { secondary, white } from '../../constants/colors';
 
 interface Props {
   size: string;
@@ -30,7 +30,7 @@ export const SpinLoader = ({ size, color, coverColor }: Props) => {
 };
 
 SpinLoader.defaultProps = {
-  size: "70px",
+  size: '70px',
   color: secondary,
   coverColor: white
 };

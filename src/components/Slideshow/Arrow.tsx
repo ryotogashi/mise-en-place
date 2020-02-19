@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 interface Props {
   height: string;
@@ -19,8 +19,8 @@ export const LeftArrow = ({ height, width }: Props) => (
 );
 
 LeftArrow.defaultProps = {
-  height: "30px",
-  width: "30px"
+  height: '30px',
+  width: '30px'
 };
 
 export const RightArrow = ({ height, width }: Props) => (
@@ -37,6 +37,6 @@ export const RightArrow = ({ height, width }: Props) => (
 );
 
 RightArrow.defaultProps = {
-  height: "30px",
-  width: "30px"
+  height: '30px',
+  width: '30px'
 };

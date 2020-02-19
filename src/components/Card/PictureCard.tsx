@@ -1,7 +1,7 @@
-import styled from "@emotion/styled";
-import * as React from "react";
+import styled from '@emotion/styled';
+import * as React from 'react';
 
-import { white } from "../../constants/colors";
+import { white } from '../../constants/colors';
 
 interface Props {
   imgSrc: string;
@@ -16,7 +16,7 @@ export const PictureCard = ({ imgSrc, children, width, height }: Props) => {
     background-size: 100% 100%;
     display: inline-block;
     width: ${width};
-    ${height ? `height: ${height};` : ""}
+    ${height ? `height: ${height};` : ''}
     box-shadow: 1px 1px 4px black;
     margin: 16px;
     position: relative;
@@ -28,7 +28,7 @@ export const PictureCard = ({ imgSrc, children, width, height }: Props) => {
     .cover {
       position: absolute;
       width: inherited;
-      height: ${height ? `${height}` : "inherited"};
+      height: ${height ? `${height}` : 'inherited'};
       background-color: rgba(0, 0, 0, 0.3);
       top: 0;
       left: 0;
@@ -57,6 +57,6 @@ export const PictureCard = ({ imgSrc, children, width, height }: Props) => {
 };
 
 PictureCard.defaultProps = {
-  width: "100%",
+  width: '100%',
   height: null
 };

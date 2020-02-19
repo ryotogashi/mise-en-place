@@ -1,11 +1,11 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { Avatar } from "./Avatar";
-import avatar from "../../assets/sample-avatar.jpg";
+import { Avatar } from './Avatar';
+import avatar from '../../assets/sample-avatar.jpg';
 
 export default {
-  title: "Avatar",
+  title: 'Avatar',
   component: Avatar
 };
 
-export const _Avatar = () => <Avatar src={avatar} height={"70px"} width={"70px"} />;
+export const _Avatar = () => <Avatar src={avatar} height={'70px'} width={'70px'} />;

@@ -1,7 +1,7 @@
-import styled from "@emotion/styled";
-import * as React from "react";
+import styled from '@emotion/styled';
+import * as React from 'react';
 
-import { white } from "../../constants/colors";
+import { white } from '../../constants/colors';
 
 interface Props {
   logo: string;
@@ -63,5 +63,5 @@ export const TopNavigation = ({ logo, navHeight, items }: Props) => {
 };
 
 TopNavigation.defaultProps = {
-  navHeight: "56px"
+  navHeight: '56px'
 };
