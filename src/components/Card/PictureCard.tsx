@@ -1,8 +1,6 @@
 import styled from '@emotion/styled';
 import * as React from 'react';
 
-import { white } from '../../constants/colors';
-
 interface Props {
   imgSrc: string;
   children: React.ReactNode;
@@ -12,46 +10,50 @@ interface Props {
 
 export const PictureCard = ({ imgSrc, children, width, height }: Props) => {
   const StyledPictureCard = styled.div`
-    background-image: url(${imgSrc});
-    background-size: 100% 100%;
-    display: inline-block;
     width: ${width};
-    ${height ? `height: ${height};` : ''}
-    box-shadow: 1px 1px 4px black;
+    height: ${height};
     margin: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 5px black;
+
+
+  & > figure {
     position: relative;
+    margin: 0;
+    height: 100%;
 
-    &:hover {
-      box-shadow: 2px 2px 8px black;
-    }
-
-    .cover {
+    & > img {
       position: absolute;
-      width: inherited;
-      height: ${height ? `${height}` : 'inherited'};
-      background-color: rgba(0, 0, 0, 0.3);
-      top: 0;
-      left: 0;
+      height: 100%;
+      width: 100%;
     }
 
-    &:hover .cover {
-      background-color: rgba(0, 0, 0, 0.7);
+    & > figcaption {
+      position: absolute;
+      background-color: rgba(0,0,0, 0.3);
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
+
+      & > * {
+        color: white;
+        margin: 16px 0 0 16px;
+        text-align: center;
+      }
+
     }
 
-    & * {
-      padding: 8px 16px 8px 16px;
-      color: #f6f6f6;
-    }
-
-    &:hover * {
-      color: ${white};
+    &:hover > figcaption {
+      background-color: rgba(0,0,0, 0.7);
     }
   `;
 
   return (
     <StyledPictureCard>
-      {children}
-      <div className="cover">{children}</div>
+      <figure>
+        <img src={imgSrc} alt={`${imgSrc}`} />
+        <figcaption>{children}</figcaption>
+      </figure>
     </StyledPictureCard>
   );
 };

@@ -1,7 +1,8 @@
 {
-  "name": "mise-en-place",
+  "name": "mise-en-place-ui",
   "version": "1.0.0",
   "description": "Mise en Place ui components built with React.",
+  "main": "./dist/main.js",
   "scripts": {
     "build": "webpack --mode production",
     "story": "start-storybook -p 6006",
