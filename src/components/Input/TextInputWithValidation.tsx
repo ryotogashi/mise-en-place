@@ -51,17 +51,13 @@ export const TextInputWithValidation = ({ validations, ...rest }: Props) => {
     const val = e.currentTarget.value;
     setValue(val);
 
-    setErrorMessages(
-      validations
-        .map(([validation, errorMessage]) => {
-          if (typeof validation === "function") {
-            if (validation(val)) return errorMessage;
-          } else {
-            if (val.match(validation)) return errorMessage;
-          }
-        })
-        .filter(item => item !== undefined)
-    );
+    const errors: string[] = [];
+    for (let i = 0; i < validations.length; i++) {
+      const [validation, errorMessage] = validations[i];
+      if (validation(val)) errors.push(errorMessage);
+    }
+
+    setErrorMessages(errors);
   };
   return (
     <TextWithValidationMessages>
