@@ -1,4 +1,4 @@
-import { css } from "@emotion/core";
+import { css } from '@emotion/core';
 const GlobalStyle = css`
   body {
     margin: 0;

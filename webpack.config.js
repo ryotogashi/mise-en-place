@@ -1,5 +1,3 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-
 module.exports = {
   entry: "./src/main.tsx",
   devtool: "inline-source-map",
@@ -28,6 +26,5 @@ module.exports = {
   },
   node: {
     fs: "empty"
-  },
-  plugins: [new HtmlWebPackPlugin({ template: "./public/index.html" })]
+  }
 };
