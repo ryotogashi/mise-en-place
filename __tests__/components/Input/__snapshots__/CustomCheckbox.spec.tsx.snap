@@ -2,7 +2,7 @@
 
 exports[`CustomCheckbox test tests CustomCheckbox renders correctly  1`] = `
 <label
-  className="css-j59zmy"
+  className="css-peymuo"
 >
   <input
     type="checkbox"

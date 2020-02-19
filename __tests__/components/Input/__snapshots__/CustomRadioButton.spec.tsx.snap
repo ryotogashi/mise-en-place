@@ -2,7 +2,7 @@
 
 exports[`CustomRadioButton test tests CustomRadioButton renders correctly  1`] = `
 <label
-  className="css-q3hjqi"
+  className="css-1n383c3"
 >
   <input
     type="radio"
