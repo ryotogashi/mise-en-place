@@ -5,7 +5,7 @@ import { BasicTextInput } from "./BasicTextInput";
 import InputType from "./input-type";
 import { primary, secondary, danger } from "../../constants/colors";
 
-interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+interface Props extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {
   type: InputType;
   validations: [Function, string][];
 }

@@ -18,7 +18,7 @@ const StyledInput = styled.input`
   }
 `;
 
-interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+interface Props extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {
   type: InputType;
 }
 
