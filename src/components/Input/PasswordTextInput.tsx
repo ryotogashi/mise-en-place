@@ -1,61 +1,53 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 
-import HideIcon from "../../assets/hide.svg";
-import ShowIcon from "../../assets/show.svg";
+import { HideIcon } from "./HideIcon";
+import { ShowIcon } from "./ShowIcon";
 import InputType from "./input-type";
 import { secondary } from "../../constants/colors";
+import { BasicTextInput } from "./BasicTextInput";
 
-interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+interface Props extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {
   showHideIcon: boolean;
 }
 
+const PasswordDiv = styled.div`
+  margin: 16px;
+
+  & > label {
+    text-align: right;
+    width: 70%;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  & > input {
+    margin-top: 4px;
+  }
+`;
+
 export const PasswordTextInput = ({ showHideIcon, ...rest }: Props) => {
-  const [imageName, setImageName] = React.useState("show");
-  const [inputType, setInputType] = React.useState(InputType.PASSWORD);
+  const [value, setValue] = React.useState<string>("");
+  const [inputType, setInputType] = React.useState<InputType>(InputType.PASSWORD);
 
   const handleClick = () => {
-    setImageName(prevValue => (prevValue === "hide" ? "show" : "hide"));
+    setValue(value);
     setInputType(prevValue => (prevValue === InputType.PASSWORD ? InputType.TEXT : InputType.PASSWORD));
   };
 
-  const PasswordDiv = styled.div`
-    display: inline-block;
-    width: 70%;
-    margin: 16px;
-
-    & > label {
-      display: inline-block;
-      float: right;
-      cursor: pointer;
-    }
-
-    & > label > img {
-      display: ${showHideIcon ? "inline" : "none"};
-      height: 12px;
-      wieght: 12px;
-    }
-
-    & > input {
-      height: 24px;
-      width: 100%;
-      padding: 4px;
-      border: 1px solid ${secondary};
-      color: ${secondary};
-      border-radius: 4px;
-
-      &::placeholder {
-        color: ${secondary};
-      }
-    }
-  `;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const val = e.target.value;
+    setValue(val);
+  };
 
   return (
     <PasswordDiv>
-      <label htmlFor="password-input" onClick={handleClick}>
-        <img src={imageName === "hide" ? HideIcon : ShowIcon} />
-      </label>
-      <input type={inputType} name="password-input" {...rest} />
+      {showHideIcon ? (
+        <label htmlFor="password-input" onClick={handleClick}>
+          {inputType === InputType.PASSWORD ? <HideIcon /> : <ShowIcon />}
+        </label>
+      ) : null}
+      <BasicTextInput type={inputType} name="password-input" {...rest} onChange={handleChange} value={value} />
     </PasswordDiv>
   );
 };
