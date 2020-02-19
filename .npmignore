@@ -1,8 +1,11 @@
-stsconfig.json
-tslint.json
 __mocks__/
 __tests__/
-src/
 .storybook/
-
-*.stories.tsx
+src/
+storybook-static/
+.babelrc
+.prettierrc
+jest.config.js
+tsconfig.json
+tslint.json
+webpack.config.js
