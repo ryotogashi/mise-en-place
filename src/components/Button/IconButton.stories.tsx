@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { action } from '@storybook/addon-actions';
 
-import sampeIcon from '../../assets/sample-icon.svg';
+import { SampleIcon } from './SampleIcon';
 
 import { IconButton } from './IconButton';
 
@@ -11,7 +11,7 @@ export default {
 };
 
 export const _IconButton = () => (
-  <IconButton img={sampeIcon} onClick={action('clicked')}>
-    basic button
+  <IconButton onClick={action('clicked')}>
+    <SampleIcon />
   </IconButton>
 );

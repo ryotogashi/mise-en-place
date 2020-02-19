@@ -3,7 +3,7 @@
 exports[`Avatar test tests Avatar renders correctly  1`] = `
 <img
   alt="avatar"
-  className="css-u2jqka"
+  className="css-1kbh1tg"
   src="img"
 />
 `;

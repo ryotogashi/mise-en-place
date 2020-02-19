@@ -1,10 +1,8 @@
-import CardImage from '../assets/img-for-card.jpg';
-
 export const cardData = {
   title: 'Lorem ipsum dolor',
   content:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi porta lorem mollis aliquam.',
-  cardImg: CardImage
+  cardImg: 'https://picsum.photos/1300/500'
 };
 
 export const slideshowData = [
