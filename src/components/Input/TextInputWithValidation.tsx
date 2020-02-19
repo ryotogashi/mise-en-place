@@ -7,7 +7,7 @@ import { primary, secondary, danger } from "../../constants/colors";
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   type: InputType;
-  validations: [RegExp | Function, string][];
+  validations: [Function, string][];
 }
 
 const TextWithValidationMessages = styled.div`

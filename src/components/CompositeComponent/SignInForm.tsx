@@ -9,13 +9,13 @@ const StyledSignInForm = styled.div`
 `;
 
 export const SignInForm = () => {
-  const givenNameValidation: [RegExp | Function, string][] = [
+  const givenNameValidation: [Function, string][] = [
     [(val: string): boolean => 0 !== val.length && !val.match(/^[a-z]+(\s?[a-z]?)*$/), "The given name isn't valid."]
   ];
-  const lastNameValidation: [RegExp | Function, string][] = [
+  const lastNameValidation: [Function, string][] = [
     [(val: string): boolean => 0 !== val.length && !val.match(/^[a-z]+(\s?[a-z]?)*$/), "The last name isn't valid."]
   ];
-  const phoneNumverValidation: [RegExp | Function, string][] = [
+  const phoneNumverValidation: [Function, string][] = [
     [
       (val: string): boolean =>
         0 !== val.length &&
@@ -25,13 +25,13 @@ export const SignInForm = () => {
       "The phone number isn't valid."
     ]
   ];
-  const emailValidations: [RegExp | Function, string][] = [
+  const emailValidations: [Function, string][] = [
     [
       (val: string): boolean => 0 !== val.length && !val.match(/^[0-9a-z_./?-]+@([0-9a-z-]+\.)+[0-9a-z-]+$/),
       "The email address isn't valid."
     ]
   ];
-  const passwordValidations: [RegExp | Function, string][] = [
+  const passwordValidations: [Function, string][] = [
     [(val: string): boolean => 0 !== val.length && val.length < 8, "Password has to be more than 8 letters."],
     [
       (val: string): boolean => (0 !== val.length && !val.match(/[A-Z]/) ? true : false),
