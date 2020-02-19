@@ -7,7 +7,8 @@
     "story": "start-storybook -p 6006",
     "build-story": "build-storybook",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'"
   },
   "repository": {
     "type": "git",
@@ -49,6 +50,9 @@
     "react-test-renderer": "^16.12.0",
     "ts-jest": "^25.2.0",
     "ts-loader": "^6.2.1",
+    "tslint": "^6.0.0",
+    "tslint-config-airbnb": "^5.11.2",
+    "tsutils": "^3.17.1",
     "typescript": "^3.7.2",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
