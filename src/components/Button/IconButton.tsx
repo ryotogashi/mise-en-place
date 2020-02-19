@@ -6,22 +6,11 @@ const IconStyledButton = styled.div`
   margin: 16px;
   height: 24px;
 
-  img {
-    height: 100%;
-    width: 100%;
-  }
-
   &:hover {
     cursor: pointer;
   }
 `;
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  img: string;
-}
+interface Props extends React.HTMLAttributes<HTMLDivElement> {}
 
-export const IconButton = ({ img, ...rest }: Props) => (
-  <IconStyledButton {...rest}>
-    <img src={img} alt="icon" />
-  </IconStyledButton>
-);
+export const IconButton = ({ children, ...rest }: Props) => <IconStyledButton {...rest}>{children}</IconStyledButton>;

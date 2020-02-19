@@ -1,30 +1,26 @@
 module.exports = {
-  entry: "./src/main.tsx",
-  devtool: "inline-source-map",
+  entry: './src/main.tsx',
+  devtool: 'inline-source-map',
   output: {
     path: `${__dirname}/dist`,
-    filename: "main.js"
+    filename: 'main.js'
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: "ts-loader",
+        use: 'ts-loader',
         exclude: /node_modules/
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"]
       }
     ]
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx", ".json"]
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
   },
   devServer: {
     historyApiFallback: true
   },
   node: {
-    fs: "empty"
+    fs: 'empty'
   }
 };
