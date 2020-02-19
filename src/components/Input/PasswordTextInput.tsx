@@ -4,7 +4,6 @@ import * as React from "react";
 import { HideIcon } from "./HideIcon";
 import { ShowIcon } from "./ShowIcon";
 import InputType from "./input-type";
-import { secondary } from "../../constants/colors";
 import { BasicTextInput } from "./BasicTextInput";
 
 interface Props extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {
