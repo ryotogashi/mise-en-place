@@ -9,6 +9,7 @@ export {
 } from './components/Button';
 export { BasicCard, PictureCard } from './components/Card';
 export { SearchList, SignInForm } from './components/CompositeComponent';
+export { BasicDropdown } from './components/Dropdown';
 export {
   BasicTextInput,
   CustomCheckbox,
