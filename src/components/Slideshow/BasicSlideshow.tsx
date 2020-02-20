@@ -6,7 +6,7 @@ import { SlideshowImages } from './SlideshowImages';
 import { SquareIconButton } from '../Button/SquareIconButton';
 import { LeftArrow, RightArrow } from './Arrow';
 
-interface Props {
+export interface Props {
   width: string;
   height: string;
   imgSrcs: string[];

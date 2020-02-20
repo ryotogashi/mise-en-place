@@ -3,6 +3,10 @@ import * as React from 'react';
 
 import { secondary } from '../../constants/colors';
 
+export interface Props {
+  list: string[];
+}
+
 const StyledListDiv = styled.div`
   margin: 16px;
   height: 300px;
@@ -26,10 +30,6 @@ const StyledListDiv = styled.div`
     }
   }
 `;
-
-interface Props {
-  list: string[];
-}
 
 export const BasicList = ({ list }: Props) => (
   <StyledListDiv>

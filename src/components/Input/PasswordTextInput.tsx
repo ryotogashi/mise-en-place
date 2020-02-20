@@ -6,7 +6,7 @@ import { ShowIcon } from './ShowIcon';
 import InputType from './input-type';
 import { BasicTextInput } from './BasicTextInput';
 
-interface Props extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> {
+export interface Props extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> {
   showHideIcon: boolean;
 }
 

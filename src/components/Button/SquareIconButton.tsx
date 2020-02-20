@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import * as React from 'react';
 
-interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   height: string;
   width: string;
   value: string;

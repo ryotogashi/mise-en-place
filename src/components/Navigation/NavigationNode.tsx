@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import * as React from 'react';
 
-interface Props {
+export interface Props {
   item: string;
   childItems: string[] | null;
   nodeLevel: number;

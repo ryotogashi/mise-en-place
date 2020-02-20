@@ -2,6 +2,10 @@ import styled from '@emotion/styled';
 import * as React from 'react';
 import { secondary, white } from '../../constants/colors';
 
+export interface Props extends React.HTMLAttributes<HTMLDivElement> {
+  values: string[];
+}
+
 const ToggleButtonDiv = styled.div`
   background-color: ${white};
   display: inline-block;
@@ -25,10 +29,6 @@ const ToggleButtonDiv = styled.div`
     }
   }
 `;
-
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  values: string[];
-}
 
 export const ToggleButton = ({ values, ...rest }: Props) => (
   <ToggleButtonDiv>

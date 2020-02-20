@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import { secondary, white } from '../../constants/colors';
 
-const BasicStyledButton = styled.button`
+export const BasicStyledButton = styled.button`
   background-color: ${white};
   border-radius: 5px;
   border: none;

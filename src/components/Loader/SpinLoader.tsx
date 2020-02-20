@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import * as React from 'react';
 import { secondary, white } from '../../constants/colors';
 
-interface Props {
+export interface Props {
   size: string;
   color: string;
   coverColor: string;

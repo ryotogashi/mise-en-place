@@ -5,7 +5,7 @@ import { secondary, white } from '../../constants/colors';
 type value = string;
 type item = string;
 
-interface Props {
+export interface Props {
   width: string;
   title: string;
   data: [value, item][];
