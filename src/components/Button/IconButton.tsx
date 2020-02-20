@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 
-const IconStyledButton = styled.div`
+export const IconStyledButton = styled.div`
   display: inline-block;
   margin: 16px;
   height: 24px;

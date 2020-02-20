@@ -2,6 +2,8 @@ import styled from '@emotion/styled';
 import * as React from 'react';
 import { secondary } from '../../constants/colors';
 
+export interface Props extends React.HTMLAttributes<HTMLInputElement> {}
+
 const StyledInput = styled.input`
   height: 24px;
   width: 70%;
@@ -26,6 +28,4 @@ const StyledInput = styled.input`
   }
 `;
 
-export const DateTextInput = ({ ...rest }: React.HTMLAttributes<HTMLInputElement>) => (
-  <StyledInput type="date" {...rest} />
-);
+export const DateTextInput = ({ ...rest }: Props) => <StyledInput type="date" {...rest} />;

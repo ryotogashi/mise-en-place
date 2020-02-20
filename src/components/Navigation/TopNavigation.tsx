@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import { white } from '../../constants/colors';
 
-interface Props {
+export interface Props {
   logo: string;
   navHeight: string;
   items: string[];

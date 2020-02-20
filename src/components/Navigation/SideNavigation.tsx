@@ -5,7 +5,7 @@ import { NavigationLogo } from './NavigationLogo';
 import { NavigationNode } from './NavigationNode';
 import { white } from '../../constants/colors';
 
-interface Props {
+export interface Props {
   logo: string;
   navHeight: string;
   navWidth: string;

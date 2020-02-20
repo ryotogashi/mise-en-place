@@ -5,7 +5,7 @@ import { BasicList } from '../List/BasicList';
 import { getRandomName } from '../../services/getRandomName';
 import InputType from '../Input/input-type';
 
-interface Props {
+export interface Props {
   isCaseIntensive: boolean;
 }
 

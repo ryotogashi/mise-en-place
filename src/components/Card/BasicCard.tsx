@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import * as React from 'react';
 
-interface Props {
+export interface Props {
   children: React.ReactNode;
   width: string;
   height: string;

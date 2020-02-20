@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import * as React from 'react';
 import { secondary, white } from '../../constants/colors';
 
-const MaterialStyledButton = styled.button`
+export const MaterialStyledButton = styled.button`
   background-color: ${white};
   border-radius: 5px;
   border: none;

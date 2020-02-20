@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import * as React from 'react';
 
-interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
+export interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
   height: string;
   width: string;

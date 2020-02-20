@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import * as React from 'react';
 
-interface Props extends React.InputHTMLAttributes<HTMLInputElement> {}
+export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 export const CustomCheckbox = ({ ...rest }: Props) => {
   const StyledLabel = styled.label`

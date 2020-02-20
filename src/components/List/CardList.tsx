@@ -3,6 +3,10 @@ import * as React from 'react';
 
 import { BasicCard } from '../Card/BasicCard';
 
+export interface Props {
+  list: string[];
+}
+
 const StyledListDiv = styled.div`
   margin: 16px;
   height: 400px;
@@ -16,10 +20,6 @@ const StyledListDiv = styled.div`
     width: 43%;
   }
 `;
-
-interface Props {
-  list: string[];
-}
 
 export const CardList = ({ list }: Props) => (
   <StyledListDiv>
