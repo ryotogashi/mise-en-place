@@ -5,13 +5,13 @@
   "main": "./dist/main.js",
   "scripts": {
     "build": "webpack --mode production",
-    "story": "start-storybook -p 6006",
     "build-story": "build-storybook",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "prettier": "prettier --write 'src/**/*.{ts,tsx}'",
+    "story": "start-storybook -p 6006",
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
-    "tslint-check": "tslint-config-prettier-check ./tslint.json",
-    "prettier": "prettier --write 'src/**/*.{ts,tsx}'"
+    "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
   "repository": {
     "type": "git",
