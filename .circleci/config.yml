@@ -24,9 +24,9 @@ jobs:
             - run: npm publish
 
 workflows:
-  build-and-test:
+  build-and-publish:
     jobs:
       - build-and-test
-  publish:
-    jobs:
-      - publish
+      - publish:
+        requires:
+          - build-and-test
