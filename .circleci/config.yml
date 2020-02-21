@@ -9,11 +9,11 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: npm install
-            - run: npm prettier
-            - run: npm lint
-            - run: npm test
-            - run: npm build
+            - run: npm run install
+            - run: npm run prettier
+            - run: npm run lint
+            - run: npm run test
+            - run: npm run build
   publish:
     executor:
       name: node/default
