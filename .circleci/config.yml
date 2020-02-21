@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  test1:
+  test:
     docker:
       - image: circleci/node@12.12.0
     steps:
@@ -33,10 +33,10 @@ workflows:
   version: 2.1
   build-and-publish:
     jobs:
-      - test1
+      - test
       - build:
-        requires:
-          - test1
+          requires:
+            - test
       - publish:
-        requires:
-          - build
+          requires:
+            - build
