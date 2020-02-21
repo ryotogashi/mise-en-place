@@ -18,6 +18,7 @@ jobs:
     executor:
       name: node/default
     steps:
+      - checkout
       - node/with-cache:
           steps:
             - run: npm version patch
