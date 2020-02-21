@@ -1,0 +1,30 @@
+version: 2.1
+orbs:
+  node: circleci/node@1.1.6
+jobs:
+  build-and-test:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run: npm prettier
+            - run: npm lint
+            - run: npm test
+            - run: npm build
+  publish:
+    executor:
+      name: node/default
+    steps:
+      - node/with-cache:
+          steps:
+            - run: npm version patch
+            - run: npm publish
+
+workflows:
+  build-and-test:
+    jobs:
+      - build-and-test
+      - publish
