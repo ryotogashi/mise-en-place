@@ -9,4 +9,4 @@ storybook-static/
 jest.config.js
 tsconfig.json
 tslint.json
-webpack.config.js
+/services
