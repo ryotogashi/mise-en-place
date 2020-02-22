@@ -1,27 +1,27 @@
-version: 2.1
+version: 2
 jobs:
-  test:
+  lint:
     docker:
-      - image: circleci/node@1.1.6
-    steps:
-      - checkout
-      - node/with-cache:
-          steps:
-            - run: npm run prettier
-            - run: npm run lint
-            - run: npm run test
-  build:
-    docker:
-      - image: circleci/node@1.1.6
+      - image: circleci/node:4.8.2
     steps:
       - checkout
       - node/with-cache:
           steps:
             - run: npm install
+            - run: npm run prettier
+            - run: npm run lint
+  test-and-build:
+    docker:
+      - image: circleci/node:4.8.2
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm run test
             - run: npm run build
   publish:
     docker:
-      - image: circleci/node@1.1.6
+      - image: circleci/node:4.8.2
     steps:
       - checkout
       - node/with-cache:
@@ -30,13 +30,13 @@ jobs:
             - run: npm publish
 
 workflows:
-  version: 2.1
+  version: 2
   build-and-publish:
     jobs:
-      - test
-      - build:
+      - lint
+      - test-and-build:
           requires:
-            - test
+            - lint
       - publish:
           requires:
-            - build
+            - test-and-build
