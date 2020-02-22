@@ -1,11 +1,5 @@
 version: 2
 jobs:
-  # install:
-  #   docker:
-  #     - image: circleci/node:4.8.2
-  #   steps:
-  #     - checkout
-  #     - run: npm install
   lint:
     docker:
       - image: circleci/node:4.8.2
@@ -32,13 +26,8 @@ workflows:
   version: 2
   build-and-deploy:
     jobs:
-      # - install
-      - lint:
-      # requires:
-      #   - install
-      - test-and-build:
-          # requires:
-          #   - install
+      - lint
+      - test-and-build
       - deploy:
           requires:
             - lint
