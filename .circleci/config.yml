@@ -5,29 +5,23 @@ jobs:
       - image: circleci/node:4.8.2
     steps:
       - checkout
-      - run:
-          steps:
-            - run: npm install
-            - run: npm run prettier
-            - run: npm run lint
+      - run: npm install
+      - run: npm run prettier
+      - run: npm run lint
   test-and-build:
     docker:
       - image: circleci/node:4.8.2
     steps:
       - checkout
-      - run:
-          steps:
-            - run: npm run test
-            - run: npm run build
+      - run: npm run test
+      - run: npm run build
   publish:
     docker:
       - image: circleci/node:4.8.2
     steps:
       - checkout
-      - run:
-          steps:
-            - run: npm version patch
-            - run: npm publish
+      - run: npm version patch
+      - run: npm publish
 
 workflows:
   version: 2
