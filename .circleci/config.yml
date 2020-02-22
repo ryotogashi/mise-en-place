@@ -1,11 +1,15 @@
 version: 2
 jobs:
+  install:
+    docker:
+      - image: circleci/node:4.8.2
+    steps:
+      - run: npm install
   lint:
     docker:
       - image: circleci/node:4.8.2
     steps:
       - checkout
-      - run: npm install
       - run: npm run prettier
       - run: npm run lint
   test-and-build:
@@ -27,10 +31,14 @@ workflows:
   version: 2
   build-and-publish:
     jobs:
-      - lint
+      - install
+      - lint:
+          requires:
+            - install
       - test-and-build:
           requires:
-            - lint
+            - install
       - publish:
           requires:
+            - lint
             - test-and-build
