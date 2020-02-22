@@ -20,7 +20,7 @@ jobs:
       - checkout
       - run: npm run test
       - run: npm run build
-  publish:
+  deploy:
     docker:
       - image: circleci/node:4.8.2
     steps:
@@ -30,7 +30,7 @@ jobs:
 
 workflows:
   version: 2
-  build-and-publish:
+  build-and-deploy:
     jobs:
       - install
       - lint:
@@ -39,7 +39,7 @@ workflows:
       - test-and-build:
           requires:
             - install
-      - publish:
+      - deploy:
           requires:
             - lint
             - test-and-build
