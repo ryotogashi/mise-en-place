@@ -4,7 +4,7 @@
   "description": "Mise en Place ui components built with React.",
   "main": "./dist/main.js",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "./node_modules/.bin/babel src --out-dir dist --extensions '.ts,.tsx'",
     "build-story": "build-storybook",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "prettier": "prettier --write 'src/**/*.{ts,tsx}'",
@@ -32,9 +32,11 @@
   },
   "homepage": "https://github.com/ryotogashi/mise-en-place#readme",
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
     "@babel/core": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
+    "@babel/preset-typescript": "^7.8.3",
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
     "@storybook/addon-actions": "^5.3.13",
@@ -58,9 +60,7 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.1.0",
     "tsutils": "^3.17.1",
-    "typescript": "^3.7.2",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "typescript": "^3.7.2"
   },
   "dependencies": {
     "react": "^16.12.0"
